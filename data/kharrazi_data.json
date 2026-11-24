@@ -1,0 +1,4507 @@
+{
+  "schemaVersion": "2.1.0-reconciled",
+  "users": [
+    {
+      "id": "usr-admin",
+      "username": "admin",
+      "fullName": "مهندس رضایی (مدیر فروشگاه)",
+      "role": "admin",
+      "isActive": true,
+      "mobile": "09121112233",
+      "email": "admin@negin-kharrazi.ir",
+      "department": "مدیریت ارشد",
+      "passwordHash": "74ea697c0f2002957e43973ed7a422e6be5e28a4a501617a374b092ebf829f26",
+      "failedLoginAttempts": 0,
+      "lockedUntil": null,
+      "lastLoginAt": "1403/07/22 08:30",
+      "lastLoginIp": "127.0.0.1",
+      "createdAt": "1403/01/01"
+    },
+    {
+      "id": "usr-accountant",
+      "username": "hesabdar",
+      "fullName": "خانم احمدی (حسابدار ارشد)",
+      "role": "accountant",
+      "isActive": true,
+      "mobile": "09123334455",
+      "email": "accounting@negin-kharrazi.ir",
+      "department": "واحد مالی و حسابداری",
+      "passwordHash": "74ea697c0f2002957e43973ed7a422e6be5e28a4a501617a374b092ebf829f26",
+      "failedLoginAttempts": 0,
+      "lockedUntil": null,
+      "lastLoginAt": "1403/07/22 09:00",
+      "lastLoginIp": "192.168.1.14",
+      "createdAt": "1403/01/01"
+    },
+    {
+      "id": "usr-cashier",
+      "username": "sandogh",
+      "fullName": "آقای کریمی (صندوق‌دار)",
+      "role": "cashier",
+      "isActive": true,
+      "mobile": "09125556677",
+      "email": "pos@negin-kharrazi.ir",
+      "department": "فروش و صندوق پیشخوان",
+      "passwordHash": "74ea697c0f2002957e43973ed7a422e6be5e28a4a501617a374b092ebf829f26",
+      "failedLoginAttempts": 0,
+      "lockedUntil": null,
+      "lastLoginAt": "1403/07/22 09:15",
+      "lastLoginIp": "192.168.1.21",
+      "createdAt": "1403/01/01"
+    },
+    {
+      "id": "usr-clerk",
+      "username": "anbar",
+      "fullName": "آقای حسینی (مسئول انبار)",
+      "role": "inventory_clerk",
+      "isActive": true,
+      "mobile": "09127778899",
+      "email": "warehouse@negin-kharrazi.ir",
+      "department": "انبار مرکزی و کاردکس",
+      "passwordHash": "74ea697c0f2002957e43973ed7a422e6be5e28a4a501617a374b092ebf829f26",
+      "failedLoginAttempts": 0,
+      "lockedUntil": null,
+      "lastLoginAt": "1403/07/22 08:45",
+      "lastLoginIp": "192.168.1.35",
+      "createdAt": "1403/01/01"
+    }
+  ],
+  "units": [
+    {
+      "id": "u-meter",
+      "name": "متر",
+      "symbol": "m",
+      "isDecimalAllowed": true,
+      "unitFamily": "length",
+      "description": "واحد مبنای فروش روبان، تور، کش، پارچه و لایی"
+    },
+    {
+      "id": "u-cm",
+      "name": "سانتی‌متر",
+      "symbol": "cm",
+      "isDecimalAllowed": true,
+      "unitFamily": "length",
+      "baseUnitId": "u-meter",
+      "baseUnitName": "متر",
+      "conversionFactor": 0.01,
+      "description": "برش دقیق، زیپ و نوارهای ظریف"
+    },
+    {
+      "id": "u-roll",
+      "name": "رول",
+      "symbol": "roll",
+      "isDecimalAllowed": false,
+      "unitFamily": "length",
+      "baseUnitId": "u-meter",
+      "baseUnitName": "متر",
+      "conversionFactor": 25,
+      "description": "رول روبان، قیطان، نوار اریب و کش (استاندارد ۲۵ متر)"
+    },
+    {
+      "id": "u-bolt",
+      "name": "طاقه",
+      "symbol": "bolt",
+      "isDecimalAllowed": false,
+      "unitFamily": "length",
+      "baseUnitId": "u-meter",
+      "baseUnitName": "متر",
+      "conversionFactor": 50,
+      "description": "طاقه پارچه، لایی چسب و توری (۵۰ متر)"
+    },
+    {
+      "id": "u-yard",
+      "name": "یارد",
+      "symbol": "yd",
+      "isDecimalAllowed": true,
+      "unitFamily": "length",
+      "baseUnitId": "u-meter",
+      "baseUnitName": "متر",
+      "conversionFactor": 0.9144,
+      "description": "یارد انگلیسی (۹۱٫۴۴ سانتی‌متر)"
+    },
+    {
+      "id": "u-item",
+      "name": "عدد",
+      "symbol": "pcs",
+      "isDecimalAllowed": false,
+      "unitFamily": "count",
+      "description": "واحد شمارش دکمه، قیچی، ماسوره، بشکاف و ابزار"
+    },
+    {
+      "id": "u-pair",
+      "name": "جفت",
+      "symbol": "pair",
+      "isDecimalAllowed": false,
+      "unitFamily": "count",
+      "baseUnitId": "u-item",
+      "baseUnitName": "عدد",
+      "conversionFactor": 2,
+      "description": "اپل لباس، میل بافتنی، قلاب و قزن جفتی"
+    },
+    {
+      "id": "u-pack",
+      "name": "بسته",
+      "symbol": "pack",
+      "isDecimalAllowed": false,
+      "unitFamily": "count",
+      "baseUnitId": "u-item",
+      "baseUnitName": "عدد",
+      "conversionFactor": 100,
+      "description": "بسته‌های ۱۰۰ تایی دکمه، سوزن ته‌گرد و پولک"
+    },
+    {
+      "id": "u-box",
+      "name": "کارتن",
+      "symbol": "box",
+      "isDecimalAllowed": false,
+      "unitFamily": "count",
+      "baseUnitId": "u-pack",
+      "baseUnitName": "بسته",
+      "conversionFactor": 24,
+      "description": "کارتن مادر بنکداری (۲۴ بسته)"
+    },
+    {
+      "id": "u-spool",
+      "name": "دوک",
+      "symbol": "spool",
+      "isDecimalAllowed": false,
+      "unitFamily": "count",
+      "baseUnitId": "u-item",
+      "baseUnitName": "عدد",
+      "conversionFactor": 1,
+      "description": "دوک خیاطی و نخ سردوز"
+    },
+    {
+      "id": "u-dozen",
+      "name": "جین",
+      "symbol": "dz",
+      "isDecimalAllowed": false,
+      "unitFamily": "count",
+      "baseUnitId": "u-item",
+      "baseUnitName": "عدد",
+      "conversionFactor": 12,
+      "description": "جین ۱۲ عددی زیپ و سنجاق"
+    },
+    {
+      "id": "u-gross",
+      "name": "قواره",
+      "symbol": "grs",
+      "isDecimalAllowed": false,
+      "unitFamily": "count",
+      "baseUnitId": "u-item",
+      "baseUnitName": "عدد",
+      "conversionFactor": 144,
+      "description": "قواره استاندارد دکمه و یراق (۱۴۴ عددی)"
+    },
+    {
+      "id": "u-kg",
+      "name": "کیلوگرم",
+      "symbol": "kg",
+      "isDecimalAllowed": true,
+      "unitFamily": "weight",
+      "description": "واحد مبنای فروش وزنی دکمه فله، مروارید، کش کیلویی و الیاف"
+    },
+    {
+      "id": "u-gram",
+      "name": "گرم",
+      "symbol": "g",
+      "isDecimalAllowed": true,
+      "unitFamily": "weight",
+      "baseUnitId": "u-kg",
+      "baseUnitName": "کیلوگرم",
+      "conversionFactor": 0.001,
+      "description": "فروش مثقال و گرم ملیله، منجوق و سنگ‌های تزیینی"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-threads",
+      "code": "10",
+      "name": "نخ و لوازم دوخت",
+      "description": "دوک، نخ قرقره، نخ پلی‌استر، نخ ابریشم و عمامه‌ای"
+    },
+    {
+      "id": "cat-ribbons",
+      "code": "20",
+      "name": "روبان، تور و یراق",
+      "description": "روبان ساتن، روبان حریر، تور دانتل، مکرومه، قیطان و نوار تزیینی"
+    },
+    {
+      "id": "cat-buttons",
+      "code": "30",
+      "name": "دکمه و زیپ",
+      "description": "دکمه مجلسی، پالتویی، پیراهنی، زیپ مخفی، زیپ فلزی و دندانه‌دار"
+    },
+    {
+      "id": "cat-elastics",
+      "code": "40",
+      "name": "کش و چسب‌های خیاطی",
+      "description": "کش ماسوره، کش ۱ تا ۱۰ سانت، لایی چسب، زانفیکس، چسب حرارتی"
+    },
+    {
+      "id": "cat-tools",
+      "code": "50",
+      "name": "ابزار و ملزومات خیاطی",
+      "description": "قیچی، سوزن خیاطی، سوزن ته‌گرد، رولت، صابون، بشکاف، گونیا"
+    },
+    {
+      "id": "cat-yarns",
+      "code": "60",
+      "name": "کاموا و بافتنی",
+      "description": "کاموا موهر، آلیزه، ناکو، میل بافتنی، قلاب و پوم‌پوم"
+    },
+    {
+      "id": "cat-beads",
+      "code": "70",
+      "name": "مروارید، منجوق و بدلیجات",
+      "description": "مروارید لپه‌ای، ملیله، پولک، سنگ حرارتی، چفت و قفل"
+    }
+  ],
+  "brands": [
+    {
+      "id": "br-1",
+      "name": "دمسه (DMC)",
+      "country": "فرانسه",
+      "description": "نخ‌های گلدوزی، کوبلن و عمامه‌ای اصل فرانسه"
+    },
+    {
+      "id": "br-2",
+      "name": "یونکس (YKK)",
+      "country": "ژاپن",
+      "description": "زیپ‌های مخفی مجلسی، استخوانی و دنده‌فلزی اورجینال"
+    },
+    {
+      "id": "br-3",
+      "name": "ناکو (Nako)",
+      "country": "ترکیه",
+      "description": "کاموا و ملزومات بافتنی اعلا"
+    },
+    {
+      "id": "br-4",
+      "name": "آیلار (Aylar)",
+      "country": "ایران",
+      "description": "دوک‌های پلی‌استر ۴۰/۲ خیاطی بدون پرز"
+    },
+    {
+      "id": "br-5",
+      "name": "پروانه (Parvaneh)",
+      "country": "ایران",
+      "description": "روبان‌های ساتن، حریر لمه‌دار و یراق‌آلات"
+    },
+    {
+      "id": "br-6",
+      "name": "دالفین (Dolphin)",
+      "country": "تایوان",
+      "description": "سوزن، قیچی دالبر و ابزار برش تخصصی"
+    },
+    {
+      "id": "br-7",
+      "name": "زرین (Zarrin)",
+      "country": "ایران",
+      "description": "کش شلواری، کش ماسوره، قیطان و زانفیکس"
+    }
+  ],
+  "personGroups": [
+    {
+      "id": "grp-1",
+      "code": "GRP-10",
+      "name": "مزون‌ها و کارگاه‌های خیاطی",
+      "description": "تولیدکنندگان لباس مجلسی و زنانه با خرید نسیه و هفتگی",
+      "defaultDiscountPercent": 5,
+      "defaultCreditLimit": 30000000
+    },
+    {
+      "id": "grp-2",
+      "code": "GRP-20",
+      "name": "بنکداران و عمده‌فروشان بازار",
+      "description": "مشتریان عمده‌فروش با حجم خرید بالا و تسویه چکی",
+      "defaultDiscountPercent": 10,
+      "defaultCreditLimit": 100000000
+    },
+    {
+      "id": "grp-3",
+      "code": "GRP-30",
+      "name": "تأمین‌کنندگان ملزومات و ابزار",
+      "description": "واردکنندگان زیپ، دکمه، قیچی و ملزومات خرازی",
+      "defaultDiscountPercent": 0,
+      "defaultCreditLimit": 200000000
+    },
+    {
+      "id": "grp-4",
+      "code": "GRP-40",
+      "name": "مشتریان خرد و متفرقه",
+      "description": "خرید نقدی یا کارتخوانی دخل فروشگاه",
+      "defaultDiscountPercent": 0,
+      "defaultCreditLimit": 0
+    }
+  ],
+  "products": [
+    {
+      "id": "prd-1",
+      "code": "KH-1001",
+      "barcode": "626010010001",
+      "name": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "categoryId": "cat-ribbons",
+      "categoryName": "روبان، تور و یراق",
+      "baseUnitId": "u-meter",
+      "baseUnitName": "متر",
+      "color": "قرمز لاکی",
+      "size": "۲٫۵ سانتیمتر",
+      "material": "ساتن براق",
+      "brand": "نگین",
+      "purchasePrice": 28000,
+      "retailPrice": 48000,
+      "wholesalePrice": 38000,
+      "minAllowedPrice": 35000,
+      "currentStock": 425,
+      "minStockAlert": 100,
+      "allowDecimal": true,
+      "unitConversions": [
+        {
+          "unitId": "u-roll",
+          "unitName": "رول (۲۵ متر)",
+          "conversionFactor": 25,
+          "price": 950000
+        }
+      ],
+      "isActive": true,
+      "createdAt": "1403/01/01",
+      "updatedAt": "1403/07/15"
+    },
+    {
+      "id": "prd-2",
+      "code": "KH-1002",
+      "barcode": "626010010002",
+      "name": "روبان حریر ۱٫۵ سانت شیری رنگ",
+      "categoryId": "cat-ribbons",
+      "categoryName": "روبان، تور و یراق",
+      "baseUnitId": "u-meter",
+      "baseUnitName": "متر",
+      "color": "شیری / نباتی",
+      "size": "۱٫۵ سانتیمتر",
+      "material": "حریر شیشه‌ای",
+      "brand": "پروانه",
+      "purchasePrice": 18000,
+      "retailPrice": 32000,
+      "wholesalePrice": 26000,
+      "minAllowedPrice": 24000,
+      "currentStock": 45,
+      "minStockAlert": 120,
+      "allowDecimal": true,
+      "unitConversions": [
+        {
+          "unitId": "u-roll",
+          "unitName": "رول (۵۰ متر)",
+          "conversionFactor": 50,
+          "price": 1250000
+        }
+      ],
+      "isActive": true,
+      "createdAt": "1403/01/02",
+      "updatedAt": "1403/07/18"
+    },
+    {
+      "id": "prd-3",
+      "code": "KH-2001",
+      "barcode": "626020010001",
+      "name": "دوک نخ پلی‌استر ۴۰/۲ مشکی چرخ خیاطی",
+      "categoryId": "cat-threads",
+      "categoryName": "نخ و لوازم دوخت",
+      "baseUnitId": "u-spool",
+      "baseUnitName": "دوک",
+      "color": "مشکی (کد 001)",
+      "size": "۵۰۰۰ یارد",
+      "material": "پلی‌استر ریسیده",
+      "brand": "آیلار (Aylar)",
+      "purchasePrice": 42000,
+      "retailPrice": 65000,
+      "wholesalePrice": 54000,
+      "minAllowedPrice": 50000,
+      "currentStock": 180,
+      "minStockAlert": 40,
+      "allowDecimal": false,
+      "unitConversions": [
+        {
+          "unitId": "u-box",
+          "unitName": "کارتن (۶۰ دوک)",
+          "conversionFactor": 60,
+          "price": 3120000
+        }
+      ],
+      "isActive": true,
+      "createdAt": "1403/01/02",
+      "updatedAt": "1403/07/10"
+    },
+    {
+      "id": "prd-4",
+      "code": "KH-3001",
+      "barcode": "626030010001",
+      "name": "دکمه پیراهنی صدفی ۱۸ لول سفید (بسته ۱۴۴ عددی)",
+      "categoryId": "cat-buttons",
+      "categoryName": "دکمه و زیپ",
+      "baseUnitId": "u-item",
+      "baseUnitName": "عدد",
+      "color": "سفید صدفی",
+      "size": "۱۸ لول",
+      "material": "پلی‌استر صدفی",
+      "brand": "ایتالیایی کپی",
+      "purchasePrice": 450,
+      "retailPrice": 900,
+      "wholesalePrice": 650,
+      "minAllowedPrice": 600,
+      "currentStock": 2880,
+      "minStockAlert": 500,
+      "allowDecimal": false,
+      "unitConversions": [
+        {
+          "unitId": "u-pack",
+          "unitName": "قواره (۱۴۴ عددی)",
+          "conversionFactor": 144,
+          "price": 85000
+        }
+      ],
+      "isActive": true,
+      "createdAt": "1403/01/05",
+      "updatedAt": "1403/07/08"
+    },
+    {
+      "id": "prd-5",
+      "code": "KH-3002",
+      "barcode": "626030010002",
+      "name": "زیپ مخفی ۵۰ سانتی سرمه‌ای مجلسی",
+      "categoryId": "cat-buttons",
+      "categoryName": "دکمه و زیپ",
+      "baseUnitId": "u-item",
+      "baseUnitName": "عدد",
+      "color": "سرمه‌ای تیره",
+      "size": "۵۰ سانتیمتر",
+      "material": "نایلون دندانه‌ریز",
+      "brand": "YKK اورجینال",
+      "purchasePrice": 16000,
+      "retailPrice": 28000,
+      "wholesalePrice": 22000,
+      "minAllowedPrice": 20000,
+      "currentStock": 18,
+      "minStockAlert": 50,
+      "allowDecimal": false,
+      "unitConversions": [],
+      "isActive": true,
+      "createdAt": "1403/01/05",
+      "updatedAt": "1403/07/19"
+    }
+  ],
+  "persons": [
+    {
+      "id": "per-1",
+      "code": "1001",
+      "name": "مزون دوخت پریسا (خانم عباسی)",
+      "personType": "customer",
+      "groupId": "grp-1",
+      "groupName": "مزون‌ها و کارگاه‌های خیاطی",
+      "phone": "02188443322",
+      "mobile": "09123456789",
+      "creditLimit": 25000000,
+      "currentBalance": -9870695456,
+      "address": "تهران، خیابان فلسطین شمالی، کوچه فرجام، پلاک ۱۲",
+      "notes": "مشتری دائمی و خوش‌حساب مزونی",
+      "isActive": true,
+      "createdAt": "1403/01/05",
+      "updatedAt": "1403/07/15"
+    },
+    {
+      "id": "per-2",
+      "code": "1002",
+      "name": "تولیدی پوشاک زنانه باران (آقای مرادی)",
+      "personType": "customer",
+      "groupId": "grp-1",
+      "groupName": "مزون‌ها و کارگاه‌های خیاطی",
+      "phone": "02155667788",
+      "mobile": "09129876543",
+      "creditLimit": 80000000,
+      "currentBalance": 18400000,
+      "address": "تهران، بازار بزرگ، سرای مشیر، طبقه دوم، پلاک ۴",
+      "notes": "خرید عمده روبان و زیپ و دکمه",
+      "isActive": true,
+      "createdAt": "1403/01/10",
+      "updatedAt": "1403/07/10"
+    },
+    {
+      "id": "per-3",
+      "code": "2001",
+      "name": "بازرگانی یراق و دکمه پارس (حاج قاسم تقوی)",
+      "personType": "supplier",
+      "groupId": "grp-3",
+      "groupName": "تأمین‌کنندگان ملزومات و ابزار",
+      "phone": "02133991122",
+      "mobile": "09121112233",
+      "creditLimit": 150000000,
+      "currentBalance": -32000000,
+      "address": "تهران، خیابان خیام، بازار پاچنار، پاساژ شکوفه، پلاک ۱۸",
+      "notes": "تأمین‌کننده اصلی دکمه، زیپ YKK و روبان ساتن وارداتی",
+      "isActive": true,
+      "createdAt": "1403/01/01",
+      "updatedAt": "1403/07/01"
+    },
+    {
+      "id": "per-4",
+      "code": "3001",
+      "name": "مشتری عمومی / متفرقه نقدی خرازی",
+      "personType": "customer",
+      "groupId": "grp-4",
+      "groupName": "مشتریان خرد و متفرقه",
+      "mobile": "09000000000",
+      "creditLimit": 0,
+      "currentBalance": 0,
+      "notes": "فروش روزمره دخل نقدی و کارتخوان به مشتریان گذری",
+      "isActive": true,
+      "createdAt": "1403/01/01",
+      "updatedAt": "1403/01/01"
+    }
+  ],
+  "warehouses": [
+    {
+      "id": "wh-central",
+      "code": "WH-01",
+      "name": "انبار مرکزی و بنکداری",
+      "type": "central",
+      "location": "تهران، بازار بزرگ، سرای مشیر، طبقه منفی یک، پلاک ۱۲",
+      "managerName": "آقای کریمی",
+      "phone": "۰۲۱-۵۵۶۶۷۷۰۱",
+      "isActive": true,
+      "isDefault": true,
+      "createdAt": "1403/01/01"
+    },
+    {
+      "id": "wh-shop",
+      "code": "WH-02",
+      "name": "انبار فروشگاه و قفسه پیشخوان",
+      "type": "retail",
+      "location": "فروشگاه اصلی، طبقه همکف، ردیف قفسه‌های الف و ب",
+      "managerName": "خانم احمدی",
+      "phone": "۰۲۱-۵۵۶۶۷۷۰۲",
+      "isActive": true,
+      "isDefault": false,
+      "createdAt": "1403/01/01"
+    },
+    {
+      "id": "wh-waste",
+      "code": "WH-03",
+      "name": "انبار ضایعات و مرجوعی",
+      "type": "waste",
+      "location": "انبار پشتی، بخش کنترل کیفیت و بررسی مرجوعی",
+      "managerName": "آقای صادقی",
+      "phone": "۰۲۱-۵۵۶۶۷۷۰۳",
+      "isActive": true,
+      "isDefault": false,
+      "createdAt": "1403/01/01"
+    }
+  ],
+  "warehouseStocks": [
+    {
+      "productId": "prd-1",
+      "warehouseId": "wh-central",
+      "quantity": 350,
+      "lastUpdated": "1403/07/18"
+    },
+    {
+      "productId": "prd-1",
+      "warehouseId": "wh-shop",
+      "quantity": 75,
+      "lastUpdated": "1405/08/26"
+    },
+    {
+      "productId": "prd-2",
+      "warehouseId": "wh-central",
+      "quantity": 45,
+      "lastUpdated": "1403/01/01"
+    },
+    {
+      "productId": "prd-3",
+      "warehouseId": "wh-central",
+      "quantity": 180,
+      "lastUpdated": "1403/07/15"
+    },
+    {
+      "productId": "prd-4",
+      "warehouseId": "wh-central",
+      "quantity": 2880,
+      "lastUpdated": "1403/01/01"
+    },
+    {
+      "productId": "prd-5",
+      "warehouseId": "wh-shop",
+      "quantity": 18,
+      "lastUpdated": "1403/07/14"
+    }
+  ],
+  "kardexEntries": [
+    {
+      "id": "kd-inv-1794913400628-1",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1405/08/26",
+      "referenceType": "sale_invoice",
+      "referenceTypeTitle": "فاکتور فروش",
+      "referenceId": "inv-1794913400628",
+      "referenceNumber": "INV-2898",
+      "inQuantity": 0,
+      "outQuantity": 1,
+      "unitName": "متر",
+      "unitPrice": 48000,
+      "totalValue": 48000,
+      "balanceQuantity": 425,
+      "balanceValue": 11900000,
+      "userId": "usr-admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "notes": "فاکتور فروش شماره INV-2898 (مزون دوخت پریسا (خانم عباسی))",
+      "createdAt": "۱۴۰۵/۸/۲۶"
+    },
+    {
+      "id": "kd-inv-1794913400628-0",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1405/08/26",
+      "referenceType": "sale_invoice",
+      "referenceTypeTitle": "فاکتور فروش",
+      "referenceId": "inv-1794913400628",
+      "referenceNumber": "INV-2898",
+      "inQuantity": 0,
+      "outQuantity": 1,
+      "unitName": "متر",
+      "unitPrice": 48000,
+      "totalValue": 48000,
+      "balanceQuantity": 426,
+      "balanceValue": 11928000,
+      "userId": "usr-admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "notes": "فاکتور فروش شماره INV-2898 (مزون دوخت پریسا (خانم عباسی))",
+      "createdAt": "۱۴۰۵/۸/۲۶"
+    },
+    {
+      "id": "kd-inv-1794675262714-1",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1405/08/23",
+      "referenceType": "sale_invoice",
+      "referenceTypeTitle": "فاکتور فروش",
+      "referenceId": "inv-1794675262713",
+      "referenceNumber": "INV-4138",
+      "inQuantity": 0,
+      "outQuantity": 1,
+      "unitName": "متر",
+      "unitPrice": 48000,
+      "totalValue": 48000,
+      "balanceQuantity": 427,
+      "balanceValue": 11956000,
+      "userId": "usr-admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "notes": "فاکتور فروش شماره INV-4138 (مزون دوخت پریسا (خانم عباسی))",
+      "createdAt": "۱۴۰۵/۸/۲۳"
+    },
+    {
+      "id": "kd-inv-1794675262714-0",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1405/08/23",
+      "referenceType": "sale_invoice",
+      "referenceTypeTitle": "فاکتور فروش",
+      "referenceId": "inv-1794675262713",
+      "referenceNumber": "INV-4138",
+      "inQuantity": 0,
+      "outQuantity": 1,
+      "unitName": "متر",
+      "unitPrice": 48000,
+      "totalValue": 48000,
+      "balanceQuantity": 428,
+      "balanceValue": 11984000,
+      "userId": "usr-admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "notes": "فاکتور فروش شماره INV-4138 (مزون دوخت پریسا (خانم عباسی))",
+      "createdAt": "۱۴۰۵/۸/۲۳"
+    },
+    {
+      "id": "kd-inv-1794054917719-1",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1405/08/16",
+      "referenceType": "sale_invoice",
+      "referenceTypeTitle": "فاکتور فروش",
+      "referenceId": "inv-1794054917719",
+      "referenceNumber": "INV-8564",
+      "inQuantity": 0,
+      "outQuantity": 1,
+      "unitName": "متر",
+      "unitPrice": 48000,
+      "totalValue": 48000,
+      "balanceQuantity": 429,
+      "balanceValue": 12012000,
+      "userId": "usr-admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "notes": "فاکتور فروش شماره INV-8564 (مزون دوخت پریسا (خانم عباسی))",
+      "createdAt": "۱۴۰۵/۸/۱۶"
+    },
+    {
+      "id": "kd-inv-1794054917719-0",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1405/08/16",
+      "referenceType": "sale_invoice",
+      "referenceTypeTitle": "فاکتور فروش",
+      "referenceId": "inv-1794054917719",
+      "referenceNumber": "INV-8564",
+      "inQuantity": 0,
+      "outQuantity": 18,
+      "unitName": "متر",
+      "unitPrice": 48000,
+      "totalValue": 864000,
+      "balanceQuantity": 430,
+      "balanceValue": 12040000,
+      "userId": "usr-admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "notes": "فاکتور فروش شماره INV-8564 (مزون دوخت پریسا (خانم عباسی))",
+      "createdAt": "۱۴۰۵/۸/۱۶"
+    },
+    {
+      "id": "kd-inv-1794054606052-1",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1405/08/16",
+      "referenceType": "sale_invoice",
+      "referenceTypeTitle": "فاکتور فروش",
+      "referenceId": "inv-1794054606052",
+      "referenceNumber": "INV-5585",
+      "inQuantity": 0,
+      "outQuantity": 1,
+      "unitName": "متر",
+      "unitPrice": 950000,
+      "totalValue": 950000,
+      "balanceQuantity": 448,
+      "balanceValue": 12544000,
+      "userId": "usr-admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "notes": "فاکتور فروش شماره INV-5585 (مزون دوخت پریسا (خانم عباسی))",
+      "createdAt": "۱۴۰۵/۸/۱۶"
+    },
+    {
+      "id": "kd-inv-1794054606052-0",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1405/08/16",
+      "referenceType": "sale_invoice",
+      "referenceTypeTitle": "فاکتور فروش",
+      "referenceId": "inv-1794054606052",
+      "referenceNumber": "INV-5585",
+      "inQuantity": 0,
+      "outQuantity": 1,
+      "unitName": "متر",
+      "unitPrice": 48000,
+      "totalValue": 48000,
+      "balanceQuantity": 449,
+      "balanceValue": 12572000,
+      "userId": "usr-admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "notes": "فاکتور فروش شماره INV-5585 (مزون دوخت پریسا (خانم عباسی))",
+      "createdAt": "۱۴۰۵/۸/۱۶"
+    },
+    {
+      "id": "kd-init-1",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-central",
+      "warehouseName": "انبار مرکزی و بنکداری",
+      "date": "1403/01/01",
+      "referenceType": "initial_stock",
+      "referenceTypeTitle": "موجودی اول دوره",
+      "referenceId": "init-doc-1",
+      "referenceNumber": "OP-1001",
+      "inQuantity": 450,
+      "outQuantity": 0,
+      "unitName": "متر",
+      "unitPrice": 1120,
+      "totalValue": 504000,
+      "balanceQuantity": 450,
+      "balanceValue": 504000,
+      "userName": "مدیر ارشد سیستم",
+      "notes": "موجودی اول دوره ثبت شده در انبار مرکزی",
+      "createdAt": "1403/01/01 08:00"
+    },
+    {
+      "id": "kd-init-1b",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1403/01/01",
+      "referenceType": "initial_stock",
+      "referenceTypeTitle": "موجودی اول دوره",
+      "referenceId": "init-doc-1b",
+      "referenceNumber": "OP-1001B",
+      "inQuantity": 100,
+      "outQuantity": 0,
+      "unitName": "متر",
+      "unitPrice": 1120,
+      "totalValue": 112000,
+      "balanceQuantity": 550,
+      "balanceValue": 616000,
+      "userName": "مدیر ارشد سیستم",
+      "notes": "موجودی اول دوره قفسه پیشخوان فروشگاه",
+      "createdAt": "1403/01/01 08:05"
+    },
+    {
+      "id": "kd-inv-1",
+      "productId": "prd-1",
+      "productCode": "KH-1001",
+      "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+      "warehouseId": "wh-central",
+      "warehouseName": "انبار مرکزی و بنکداری",
+      "date": "1403/07/18",
+      "referenceType": "sale_invoice",
+      "referenceTypeTitle": "فاکتور فروش",
+      "referenceId": "inv-1",
+      "referenceNumber": "1241",
+      "inQuantity": 0,
+      "outQuantity": 100,
+      "unitName": "متر",
+      "unitPrice": 1520,
+      "totalValue": 152000,
+      "balanceQuantity": 450,
+      "balanceValue": 504000,
+      "userName": "آقای کریمی",
+      "notes": "فروش به مزون دوخت پریسا (خانم عباسی)",
+      "createdAt": "1403/07/18 11:30"
+    },
+    {
+      "id": "kd-init-2",
+      "productId": "prd-2",
+      "productCode": "KH-1002",
+      "productName": "قیطان طلایی ۵ میل مغزی‌دار لمه (متر)",
+      "warehouseId": "wh-central",
+      "warehouseName": "انبار مرکزی و بنکداری",
+      "date": "1403/01/01",
+      "referenceType": "initial_stock",
+      "referenceTypeTitle": "موجودی اول دوره",
+      "referenceId": "init-doc-2",
+      "referenceNumber": "OP-1002",
+      "inQuantity": 45,
+      "outQuantity": 0,
+      "unitName": "متر",
+      "unitPrice": 8500,
+      "totalValue": 382500,
+      "balanceQuantity": 45,
+      "balanceValue": 382500,
+      "userName": "مدیر ارشد سیستم",
+      "notes": "موجودی اول دوره",
+      "createdAt": "1403/01/01 08:00"
+    },
+    {
+      "id": "kd-init-3",
+      "productId": "prd-3",
+      "productCode": "KH-2001",
+      "productName": "دوک نخ پلی‌استر ۴۰/۲ مشکی چرخ خیاطی",
+      "warehouseId": "wh-central",
+      "warehouseName": "انبار مرکزی و بنکداری",
+      "date": "1403/01/01",
+      "referenceType": "initial_stock",
+      "referenceTypeTitle": "موجودی اول دوره",
+      "referenceId": "init-doc-3",
+      "referenceNumber": "OP-1003",
+      "inQuantity": 180,
+      "outQuantity": 0,
+      "unitName": "دوک",
+      "unitPrice": 42000,
+      "totalValue": 7560000,
+      "balanceQuantity": 180,
+      "balanceValue": 7560000,
+      "userName": "مدیر ارشد سیستم",
+      "notes": "موجودی اول دوره",
+      "createdAt": "1403/01/01 08:00"
+    },
+    {
+      "id": "kd-init-4",
+      "productId": "prd-4",
+      "productCode": "KH-3001",
+      "productName": "دکمه پیراهنی صدفی ۱۸ لول سفید (بسته ۱۴۴ عددی)",
+      "warehouseId": "wh-central",
+      "warehouseName": "انبار مرکزی و بنکداری",
+      "date": "1403/01/01",
+      "referenceType": "initial_stock",
+      "referenceTypeTitle": "موجودی اول دوره",
+      "referenceId": "init-doc-4",
+      "referenceNumber": "OP-1004",
+      "inQuantity": 2880,
+      "outQuantity": 0,
+      "unitName": "عدد",
+      "unitPrice": 450,
+      "totalValue": 1296000,
+      "balanceQuantity": 2880,
+      "balanceValue": 1296000,
+      "userName": "مدیر ارشد سیستم",
+      "notes": "موجودی اول دوره (۲۰ قواره ۱۴۴ تایی)",
+      "createdAt": "1403/01/01 08:00"
+    },
+    {
+      "id": "kd-init-5",
+      "productId": "prd-5",
+      "productCode": "KH-3002",
+      "productName": "زیپ مخفی ۵۰ سانتی سرمه‌ای مجلسی",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1403/01/01",
+      "referenceType": "initial_stock",
+      "referenceTypeTitle": "موجودی اول دوره",
+      "referenceId": "init-doc-5",
+      "referenceNumber": "OP-1005",
+      "inQuantity": 20,
+      "outQuantity": 0,
+      "unitName": "عدد",
+      "unitPrice": 16000,
+      "totalValue": 320000,
+      "balanceQuantity": 20,
+      "balanceValue": 320000,
+      "userName": "مدیر ارشد سیستم",
+      "notes": "موجودی اول دوره",
+      "createdAt": "1403/01/01 08:00"
+    },
+    {
+      "id": "kd-adj-5",
+      "productId": "prd-5",
+      "productCode": "KH-3002",
+      "productName": "زیپ مخفی ۵۰ سانتی سرمه‌ای مجلسی",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1403/07/14",
+      "referenceType": "adjustment_minus",
+      "referenceTypeTitle": "تعدیل کسری (خرابی و ضایعات)",
+      "referenceId": "adj-501",
+      "referenceNumber": "ADJ-1403-03",
+      "inQuantity": 0,
+      "outQuantity": 2,
+      "unitName": "عدد",
+      "unitPrice": 16000,
+      "totalValue": 32000,
+      "balanceQuantity": 18,
+      "balanceValue": 288000,
+      "userName": "مهندس رضایی",
+      "notes": "کسری ناشی از پارگی دندانه زیپ در نمونه‌گیری مشتری",
+      "createdAt": "1403/07/14 19:35"
+    }
+  ],
+  "goodsReceipts": [
+    {
+      "id": "rcp-101",
+      "receiptNumber": "REC-1403-01",
+      "supplierId": "per-3",
+      "supplierName": "بازرگانی یراق و دکمه پارس (حاج قاسم تقوی)",
+      "warehouseId": "wh-central",
+      "warehouseName": "انبار مرکزی و بنکداری",
+      "date": "1403/07/15",
+      "status": "approved",
+      "items": [
+        {
+          "id": "rcp-it-1",
+          "productId": "prd-3",
+          "productCode": "KH-2001",
+          "productName": "دوک نخ پلی‌استر ۴۰/۲ مشکی چرخ خیاطی",
+          "unitId": "u-spool",
+          "unitName": "دوک",
+          "quantity": 100,
+          "conversionFactor": 1,
+          "baseQuantity": 100,
+          "unitPrice": 42000,
+          "totalPrice": 4200000,
+          "notes": "بارگیری پلمپ بدون نقص"
+        }
+      ],
+      "totalQuantity": 100,
+      "totalAmount": 4200000,
+      "driverName": "علی رضایی",
+      "driverMobile": "۰۹۱۲۱۲۳۴۵۶۷",
+      "waybillNumber": "WB-99882",
+      "approvedBy": "مهدی کریمی (انباردار مرکزی)",
+      "approvedAt": "1403/07/15 14:20",
+      "createdBy": "مهدی کریمی",
+      "createdAt": "1403/07/15 10:30"
+    }
+  ],
+  "purchaseProformas": [
+    {
+      "id": "prf-201",
+      "proformaNumber": "PRF-1403-05",
+      "supplierId": "per-3",
+      "supplierName": "بازرگانی یراق و دکمه پارس (حاج قاسم تقوی)",
+      "targetWarehouseId": "wh-central",
+      "targetWarehouseName": "انبار مرکزی و بنکداری",
+      "date": "1403/07/20",
+      "validUntil": "1403/07/30",
+      "status": "draft",
+      "items": [
+        {
+          "id": "prf-it-1",
+          "productId": "prd-5",
+          "productCode": "KH-3002",
+          "productName": "زیپ مخفی ۵۰ سانتی سرمه‌ای مجلسی",
+          "unitId": "u-item",
+          "unitName": "عدد",
+          "conversionFactor": 1,
+          "quantity": 200,
+          "baseQuantity": 200,
+          "unitPrice": 15500,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 3100000
+        }
+      ],
+      "subtotal": 3100000,
+      "totalDiscount": 0,
+      "taxAmount": 0,
+      "finalAmount": 3100000,
+      "notes": "استعلام قیمت جهت شارژ اقلام با موجودی بحرانی (نقطه سفارش)",
+      "createdBy": "مدیر خرید",
+      "createdAt": "1403/07/20 09:15"
+    }
+  ],
+  "warehouseTransfers": [
+    {
+      "id": "trf-301",
+      "transferNumber": "TRF-1403-12",
+      "sourceWarehouseId": "wh-central",
+      "sourceWarehouseName": "انبار مرکزی و بنکداری",
+      "destinationWarehouseId": "wh-shop",
+      "destinationWarehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1403/07/16",
+      "status": "approved",
+      "items": [
+        {
+          "id": "trf-it-1",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "unitId": "u-roll",
+          "unitName": "رول",
+          "quantity": 10,
+          "conversionFactor": 25,
+          "baseQuantity": 250,
+          "unitCost": 28000,
+          "totalCost": 280000
+        }
+      ],
+      "totalQuantity": 10,
+      "totalCost": 280000,
+      "reason": "شارژ قفسه پیشخوان فروشگاه جهت فروش خرد",
+      "approvedBy": "آقای کریمی",
+      "approvedAt": "1403/07/16 16:00",
+      "auditTrail": [
+        {
+          "action": "ثبت پیش‌نویس انتقال",
+          "userName": "خانم احمدی",
+          "timestamp": "1403/07/16 11:00"
+        },
+        {
+          "action": "تایید خروج از انبار مبدأ و ورود به مقصد",
+          "userName": "آقای کریمی",
+          "timestamp": "1403/07/16 16:00",
+          "notes": "اقلام تحویل خانم احمدی شد"
+        }
+      ],
+      "createdBy": "خانم احمدی",
+      "createdAt": "1403/07/16 11:00"
+    }
+  ],
+  "stocktakingSessions": [
+    {
+      "id": "stk-401",
+      "code": "ST-1403-01",
+      "title": "انبارگردانی میان‌دوره پاییز ۱۴۰۳ - انبار فروشگاه",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "countRound": 1,
+      "date": "1403/07/14",
+      "status": "approved",
+      "items": [
+        {
+          "id": "stk-it-1",
+          "productId": "prd-5",
+          "productCode": "KH-3002",
+          "productName": "زیپ مخفی ۵۰ سانتی سرمه‌ای مجلسی",
+          "unitName": "عدد",
+          "systemQuantity": 20,
+          "countedQuantity": 18,
+          "varianceQuantity": -2,
+          "unitCost": 16000,
+          "varianceValue": -32000,
+          "varianceStatus": "deficit",
+          "notes": "۲ عدد پارگی دندانه زیپ در نمونه‌گیری مشتری"
+        },
+        {
+          "id": "stk-it-2",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "unitName": "متر",
+          "systemQuantity": 250,
+          "countedQuantity": 250,
+          "varianceQuantity": 0,
+          "unitCost": 1120,
+          "varianceValue": 0,
+          "varianceStatus": "matched",
+          "notes": "موجودی کاملاً منطبق"
+        }
+      ],
+      "totalItemsCount": 2,
+      "totalDeficitValue": 32000,
+      "totalSurplusValue": 0,
+      "netVarianceValue": -32000,
+      "approvedBy": "مهندس رضایی (مدیر فروشگاه)",
+      "approvedAt": "1403/07/14 19:30",
+      "auditTrail": [
+        {
+          "action": "شمارش فیزیکی اقلام",
+          "userName": "تیم انبارگردانی",
+          "timestamp": "1403/07/14 17:00"
+        },
+        {
+          "action": "تایید نهایی و صدور سند تعدیل کسری",
+          "userName": "مهندس رضایی",
+          "timestamp": "1403/07/14 19:30",
+          "notes": "کسری ناچیز مورد تایید قرار گرفت"
+        }
+      ],
+      "notes": "انبارگردانی با حضور حسابرس داخلی انجام شد.",
+      "createdBy": "حسابرس داخلی",
+      "createdAt": "1403/07/14 15:00"
+    }
+  ],
+  "inventoryAdjustments": [
+    {
+      "id": "adj-501",
+      "adjustmentNumber": "ADJ-1403-03",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "date": "1403/07/14",
+      "type": "minus",
+      "reasonCode": "damage",
+      "reasonTitle": "خرابی، پارگی و ضایعات فیزیکی",
+      "reasonDescription": "۲ عدد زیپ مخفی به علت شکستگی ماشین زیپ در نمونه‌گیری مشتری غیرقابل فروش شد و به انبار ضایعات منتقل گردید.",
+      "status": "approved",
+      "items": [
+        {
+          "id": "adj-it-1",
+          "productId": "prd-5",
+          "productCode": "KH-3002",
+          "productName": "زیپ مخفی ۵۰ سانتی سرمه‌ای مجلسی",
+          "unitName": "عدد",
+          "quantity": 2,
+          "unitCost": 16000,
+          "totalCost": 32000
+        }
+      ],
+      "totalQuantity": 2,
+      "totalCost": 32000,
+      "approvedBy": "مهندس رضایی",
+      "approvedAt": "1403/07/14 19:35",
+      "auditTrail": [
+        {
+          "action": "ثبت برگه تعدیل کسری",
+          "userName": "انباردار فروشگاه",
+          "timestamp": "1403/07/14 19:00"
+        },
+        {
+          "action": "تایید قطعی برگه تعدیل",
+          "userName": "مهندس رضایی",
+          "timestamp": "1403/07/14 19:35"
+        }
+      ],
+      "notes": "پیرو صورت‌جلسه انبارگردانی ST-1403-01",
+      "createdBy": "انباردار فروشگاه",
+      "createdAt": "1403/07/14 19:00"
+    }
+  ],
+  "accessoryCostTypes": [
+    {
+      "id": "act-1",
+      "code": "NOT-01",
+      "name": "خرج‌کار، یراق‌آلات و متعلقات تزیینی",
+      "category": "notion",
+      "defaultAllocationMethod": "value",
+      "description": "دکمه‌های ویژه، مارک فلزی، نگین، زنجیر و سگک به کار رفته در سفارش",
+      "isActive": true
+    },
+    {
+      "id": "act-2",
+      "code": "FRG-02",
+      "name": "کرایه حمل، باربری و پیک ملزومات",
+      "category": "freight",
+      "defaultAllocationMethod": "weight",
+      "description": "باربری از بازار تهران، هزینه وانت و پیک موتوری ارسال کالا",
+      "isActive": true
+    },
+    {
+      "id": "act-3",
+      "code": "SRV-03",
+      "name": "کارمزد برش نوار، سرکجی و متراژکشی",
+      "category": "service",
+      "defaultAllocationMethod": "length",
+      "description": "خدمات برش طاقه به رول، چاک‌زدن و نواردوزی سفارشی",
+      "isActive": true
+    },
+    {
+      "id": "act-4",
+      "code": "PKG-04",
+      "name": "ملزومات بسته‌بندی، سلفون و پاکت",
+      "category": "packaging",
+      "defaultAllocationMethod": "quantity",
+      "description": "کارتن‌های بسته‌بندی، سلفون ضخیم و هدر چاپ‌شده اختصاصی",
+      "isActive": true
+    },
+    {
+      "id": "act-5",
+      "code": "SRV-05",
+      "name": "کارمزد آبکاری، رنگرزی و چاپ مارک",
+      "category": "service",
+      "defaultAllocationMethod": "value",
+      "description": "آبکاری دکمه‌های فلزی و رنگرزی سفارشی زیپ و تور",
+      "isActive": true
+    },
+    {
+      "id": "act-6",
+      "code": "NOT-06",
+      "name": "پرت، ضایعات و افت پارچه و روبان",
+      "category": "notion",
+      "defaultAllocationMethod": "quantity",
+      "description": "درصد محاسبه‌شده ضایعات انتهای طاقه و نمونه‌برداری مشتری",
+      "isActive": true
+    },
+    {
+      "id": "act-7",
+      "code": "OVH-07",
+      "name": "سربار عمومی انبار و نگهداری ملزومات",
+      "category": "overhead",
+      "defaultAllocationMethod": "overhead",
+      "description": "هزینه‌های سربار عمومی غیرقابل انتساب به یک کالای خاص",
+      "isActive": true
+    }
+  ],
+  "accessoryCosts": [
+    {
+      "id": "acc-1",
+      "trackingCode": "EXP-101",
+      "title": "باربری محموله روبان و زیپ از بازار تهران",
+      "costTypeId": "act-2",
+      "costTypeName": "کرایه حمل، باربری و پیک ملزومات",
+      "amount": 350000,
+      "date": "1403/07/12",
+      "allocationMethod": "weight",
+      "targetType": "products",
+      "treasuryAccountId": "tr-1",
+      "treasuryAccountTitle": "صندوق نقدی شماره ۱ فروشگاه",
+      "recipientOrPayer": "باربری وطن",
+      "allocatedItems": [
+        {
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "quantity": 20,
+          "unitName": "رول",
+          "originalUnitCost": 28000,
+          "allocatedShare": 140000,
+          "allocatedPerUnit": 7000,
+          "newUnitCost": 35000,
+          "weight": 0.35,
+          "length": 25
+        },
+        {
+          "productId": "prd-3",
+          "productCode": "KH-2001",
+          "productName": "دوک نخ پلی‌استر ۴۰/۲ مشکی چرخ خیاطی",
+          "quantity": 50,
+          "unitName": "دوک",
+          "originalUnitCost": 42000,
+          "allocatedShare": 210000,
+          "allocatedPerUnit": 4200,
+          "newUnitCost": 46200,
+          "weight": 0.15,
+          "length": 0
+        }
+      ],
+      "notes": "تسهیم بر مبنای وزن کل محموله طبق بارنامه رسمی باربری",
+      "createdAt": "1403/07/12"
+    }
+  ],
+  "financialCategories": [
+    {
+      "id": "fcat-exp-1",
+      "code": "601",
+      "title": "کرایه حمل و باربری ملزومات خرازی",
+      "type": "expense",
+      "description": "هزینه باربری و حمل انواع خرج‌کار، روبان و نخ",
+      "isActive": true
+    },
+    {
+      "id": "fcat-exp-2",
+      "code": "602",
+      "title": "اجاره و شارژ ماهانه فروشگاه و انبار",
+      "type": "expense",
+      "description": "هزینه اجاره مغازه و انبارهای نگهداری کالا",
+      "isActive": true
+    },
+    {
+      "id": "fcat-exp-3",
+      "code": "603",
+      "title": "قبوض آب، برق، گاز و اینترنت تجاری",
+      "type": "expense",
+      "description": "هزینه‌های انرژی و ارتباطات فروشگاه",
+      "isActive": true
+    },
+    {
+      "id": "fcat-exp-4",
+      "code": "604",
+      "title": "حقوق، دستمزد و پورسانت پرسنل",
+      "type": "expense",
+      "description": "حقوق ماهیانه صندوق‌داران و کارگران انبار",
+      "isActive": true
+    },
+    {
+      "id": "fcat-exp-5",
+      "code": "605",
+      "title": "ملزومات اداری، بسته‌بندی، چسب و نایلون",
+      "type": "expense",
+      "description": "هزینه‌های مصرفی بسته‌بندی برای فروش روزمره",
+      "isActive": true
+    },
+    {
+      "id": "fcat-exp-6",
+      "code": "606",
+      "title": "پذیرایی و تنخواه روزانه دخل",
+      "type": "expense",
+      "description": "هزینه‌های تنخواه نقدی روزانه فروشگاه",
+      "isActive": true
+    },
+    {
+      "id": "fcat-exp-7",
+      "code": "607",
+      "title": "تعمیرات و نگهداری دکور و تجهیزات",
+      "type": "expense",
+      "description": "تعمیرات کامپیوترها، بارکدخوان، پرینتر و قفسه‌بندی",
+      "isActive": true
+    },
+    {
+      "id": "fcat-inc-1",
+      "code": "403",
+      "title": "سود سپرده کوتاه‌مدت بانکی",
+      "type": "income",
+      "description": "سود واریزی حساب‌های پس‌انداز و جاری بانکی",
+      "isActive": true
+    },
+    {
+      "id": "fcat-inc-2",
+      "code": "404",
+      "title": "درآمد فروش ضایعات کارتن و نایلون",
+      "type": "income",
+      "description": "عواید ناشی از فروش کارتن‌های خالی و ضایعات انبار",
+      "isActive": true
+    },
+    {
+      "id": "fcat-inc-3",
+      "code": "405",
+      "title": "تخفیفات نقدی تسویه فاکتورها",
+      "type": "income",
+      "description": "تخفیفات دریافتی از تأمین‌کنندگان بابت تسویه زودتر از موعد",
+      "isActive": true
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv-1794913400628",
+      "invoiceNumber": "INV-2898",
+      "invoiceType": "sale",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "personPreviousBalance": -9870695456,
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "fiscalYearId": "۱۴۰۳",
+      "date": "1403/07/26",
+      "status": "approved",
+      "items": [
+        {
+          "id": "item-1794913338956-lj16",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "quantity": 1,
+          "unitId": "u-meter",
+          "unitName": "متر",
+          "conversionFactor": 1,
+          "baseQuantity": 1,
+          "unitPrice": 48000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 48000
+        },
+        {
+          "id": "item-1794913339109-h3xh",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "quantity": 1,
+          "unitId": "u-meter",
+          "unitName": "متر",
+          "conversionFactor": 1,
+          "baseQuantity": 1,
+          "unitPrice": 48000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 48000
+        }
+      ],
+      "subtotal": 96000,
+      "totalDiscount": 0,
+      "taxAmount": 0,
+      "finalAmount": 96000,
+      "paidAmount": 96000,
+      "remainingAmount": 0,
+      "payments": [
+        {
+          "id": "pay-1",
+          "method": "pos",
+          "amount": 96000,
+          "accountTitle": "دستگاه کارتخوان فروشگاه"
+        }
+      ],
+      "accountingVoucherId": "vch-1794913400629",
+      "notes": "فاکتور فروش ثبت‌شده در سامانه",
+      "printConfig": {
+        "templateStyle": "holoo_classic"
+      },
+      "refundAction": "credit_balance",
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۲۶"
+    },
+    {
+      "id": "inv-1794675262713",
+      "invoiceNumber": "INV-4138",
+      "invoiceType": "sale",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "personPreviousBalance": -9870695456,
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "fiscalYearId": "۱۴۰۳",
+      "date": "1403/07/23",
+      "status": "approved",
+      "items": [
+        {
+          "id": "item-1794675236204-m5id",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "quantity": 1,
+          "unitId": "u-meter",
+          "unitName": "متر",
+          "conversionFactor": 1,
+          "baseQuantity": 1,
+          "unitPrice": 48000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 48000
+        },
+        {
+          "id": "item-1794675236761-65bj",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "quantity": 1,
+          "unitId": "u-meter",
+          "unitName": "متر",
+          "conversionFactor": 1,
+          "baseQuantity": 1,
+          "unitPrice": 48000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 48000
+        }
+      ],
+      "subtotal": 96000,
+      "totalDiscount": 0,
+      "taxAmount": 0,
+      "finalAmount": 96000,
+      "paidAmount": 96000,
+      "remainingAmount": 0,
+      "payments": [
+        {
+          "id": "pay-1",
+          "method": "pos",
+          "amount": 96000,
+          "accountTitle": "دستگاه کارتخوان فروشگاه"
+        }
+      ],
+      "accountingVoucherId": "vch-1794675262714",
+      "notes": "فاکتور فروش ثبت‌شده در سامانه",
+      "printConfig": {
+        "templateStyle": "holoo_classic"
+      },
+      "refundAction": "credit_balance",
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۲۳"
+    },
+    {
+      "id": "inv-1794054917719",
+      "invoiceNumber": "INV-8564",
+      "invoiceType": "sale",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "personPreviousBalance": 5848000,
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "fiscalYearId": "۱۴۰۳",
+      "date": "1403/07/16",
+      "status": "approved",
+      "items": [
+        {
+          "id": "item-1794054876711-8f3i",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "quantity": 18,
+          "unitId": "u-meter",
+          "unitName": "متر",
+          "conversionFactor": 1,
+          "baseQuantity": 18,
+          "unitPrice": 48000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 864000
+        },
+        {
+          "id": "item-1794054876822-cdoa",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "quantity": 1,
+          "unitId": "u-meter",
+          "unitName": "متر",
+          "conversionFactor": 1,
+          "baseQuantity": 1,
+          "unitPrice": 48000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 48000
+        }
+      ],
+      "subtotal": 912000,
+      "totalDiscount": 0,
+      "taxAmount": 0,
+      "finalAmount": 912000,
+      "paidAmount": 912000,
+      "remainingAmount": 0,
+      "payments": [
+        {
+          "id": "pay-1",
+          "method": "cheque",
+          "amount": 912000,
+          "accountTitle": "دستگاه کارتخوان فروشگاه"
+        }
+      ],
+      "accountingVoucherId": "vch-1794054917720",
+      "notes": "فاکتور فروش ثبت‌شده در سامانه",
+      "printConfig": {
+        "templateStyle": "holoo_classic"
+      },
+      "refundAction": "credit_balance",
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۶"
+    },
+    {
+      "id": "inv-1794054606052",
+      "invoiceNumber": "INV-5585",
+      "invoiceType": "sale",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "personPreviousBalance": 4850000,
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "fiscalYearId": "۱۴۰۳",
+      "date": "1403/07/16",
+      "status": "approved",
+      "items": [
+        {
+          "id": "item-1794054560394-b6mh",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "quantity": 1,
+          "unitId": "u-meter",
+          "unitName": "متر",
+          "conversionFactor": 1,
+          "baseQuantity": 1,
+          "unitPrice": 48000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 48000
+        },
+        {
+          "id": "item-1794054564991-43oo",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "quantity": 1,
+          "unitId": "u-meter",
+          "unitName": "متر",
+          "conversionFactor": 1,
+          "baseQuantity": 1,
+          "unitPrice": 950000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 950000
+        }
+      ],
+      "subtotal": 998000,
+      "totalDiscount": 0,
+      "taxAmount": 0,
+      "finalAmount": 998000,
+      "paidAmount": 0,
+      "remainingAmount": 998000,
+      "payments": [],
+      "accountingVoucherId": "vch-1794054606052",
+      "notes": "فاکتور فروش ثبت‌شده در سامانه",
+      "printConfig": {
+        "templateStyle": "holoo_classic"
+      },
+      "refundAction": "credit_balance",
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۶"
+    },
+    {
+      "id": "inv-1240",
+      "invoiceNumber": "1240",
+      "invoiceType": "sale",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "warehouseId": "wh-central",
+      "warehouseName": "انبار مرکزی و بنکداری",
+      "fiscalYearId": "fy-1403",
+      "date": "1403/07/18",
+      "status": "approved",
+      "items": [
+        {
+          "id": "it-1",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "unitId": "u-roll",
+          "unitName": "رول (۲۵ متر)",
+          "conversionFactor": 25,
+          "quantity": 4,
+          "baseQuantity": 100,
+          "unitPrice": 950000,
+          "discount": 100000,
+          "tax": 0,
+          "totalPrice": 3700000,
+          "color": "قرمز لاکی",
+          "size": "۲٫۵ سانت"
+        }
+      ],
+      "subtotal": 3800000,
+      "totalDiscount": 100000,
+      "taxAmount": 0,
+      "finalAmount": 3700000,
+      "paidAmount": 2000000,
+      "remainingAmount": 1700000,
+      "accountingVoucherId": "vch-1001",
+      "createdBy": "آقای کریمی",
+      "createdAt": "1403/07/18 11:28"
+    },
+    {
+      "id": "inv-1241",
+      "invoiceNumber": "1241",
+      "invoiceType": "sale",
+      "personId": "per-2",
+      "personName": "تولیدی پوشاک زنانه باران (آقای مرادی)",
+      "warehouseId": "wh-central",
+      "warehouseName": "انبار مرکزی و بنکداری",
+      "fiscalYearId": "fy-1403",
+      "date": "1403/07/12",
+      "status": "approved",
+      "items": [
+        {
+          "id": "it-1241-1",
+          "productId": "prd-3",
+          "productCode": "KH-2001",
+          "productName": "دوک نخ پلی‌استر ۴۰/۲ مشکی چرخ خیاطی",
+          "unitId": "u-spool",
+          "unitName": "دوک",
+          "conversionFactor": 1,
+          "quantity": 50,
+          "baseQuantity": 50,
+          "unitPrice": 54000,
+          "discount": 50000,
+          "tax": 0,
+          "totalPrice": 2650000,
+          "color": "مشکی (کد 001)",
+          "size": "۵۰۰۰ یارد"
+        },
+        {
+          "id": "it-1241-2",
+          "productId": "prd-4",
+          "productCode": "KH-3001",
+          "productName": "دکمه پیراهنی صدفی ۱۸ لول سفید (بسته ۱۴۴ عددی)",
+          "unitId": "u-pack",
+          "unitName": "قواره (۱۴۴ عددی)",
+          "conversionFactor": 144,
+          "quantity": 10,
+          "baseQuantity": 1440,
+          "unitPrice": 85000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 850000,
+          "color": "سفید صدفی",
+          "size": "۱۸ لول"
+        }
+      ],
+      "subtotal": 3550000,
+      "totalDiscount": 50000,
+      "taxAmount": 0,
+      "finalAmount": 3500000,
+      "paidAmount": 1500000,
+      "remainingAmount": 2000000,
+      "createdBy": "آقای کریمی",
+      "createdAt": "1403/07/12 10:15"
+    },
+    {
+      "id": "inv-1242-cash",
+      "invoiceNumber": "1242",
+      "invoiceType": "sale",
+      "personId": "per-4",
+      "personName": "مشتری عمومی / متفرقه نقدی خرازی",
+      "warehouseId": "wh-shop",
+      "warehouseName": "انبار فروشگاه و قفسه پیشخوان",
+      "fiscalYearId": "fy-1403",
+      "date": "1403/07/20",
+      "status": "approved",
+      "items": [
+        {
+          "id": "it-1242-1",
+          "productId": "prd-2",
+          "productCode": "KH-1002",
+          "productName": "روبان حریر ۱٫۵ سانت شیری رنگ",
+          "unitId": "u-meter",
+          "unitName": "متر",
+          "conversionFactor": 1,
+          "quantity": 20,
+          "baseQuantity": 20,
+          "unitPrice": 32000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 640000,
+          "color": "شیری / نباتی",
+          "size": "۱٫۵ سانتیمتر"
+        },
+        {
+          "id": "it-1242-2",
+          "productId": "prd-5",
+          "productCode": "KH-3002",
+          "productName": "زیپ مخفی ۵۰ سانتی سرمه‌ای مجلسی",
+          "unitId": "u-item",
+          "unitName": "عدد",
+          "conversionFactor": 1,
+          "quantity": 10,
+          "baseQuantity": 10,
+          "unitPrice": 28000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 280000,
+          "color": "سرمه‌ای تیره",
+          "size": "۵۰ سانتیمتر"
+        }
+      ],
+      "subtotal": 920000,
+      "totalDiscount": 0,
+      "taxAmount": 0,
+      "finalAmount": 920000,
+      "paidAmount": 920000,
+      "remainingAmount": 0,
+      "createdBy": "آقای کریمی",
+      "createdAt": "1403/07/20 16:40"
+    },
+    {
+      "id": "inv-2050",
+      "invoiceNumber": "2050",
+      "invoiceType": "purchase",
+      "personId": "per-3",
+      "personName": "بازرگانی یراق و دکمه پارس (حاج قاسم تقوی)",
+      "warehouseId": "wh-central",
+      "warehouseName": "انبار مرکزی و بنکداری",
+      "fiscalYearId": "fy-1403",
+      "date": "1403/07/05",
+      "status": "approved",
+      "items": [
+        {
+          "id": "it-2050-1",
+          "productId": "prd-3",
+          "productCode": "KH-2001",
+          "productName": "دوک نخ پلی‌استر ۴۰/۲ مشکی چرخ خیاطی",
+          "unitId": "u-spool",
+          "unitName": "دوک",
+          "conversionFactor": 1,
+          "quantity": 100,
+          "baseQuantity": 100,
+          "unitPrice": 42000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 4200000
+        },
+        {
+          "id": "it-2050-2",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "unitId": "u-roll",
+          "unitName": "رول (۲۵ متر)",
+          "conversionFactor": 25,
+          "quantity": 10,
+          "baseQuantity": 250,
+          "unitPrice": 700000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 7000000
+        }
+      ],
+      "subtotal": 11200000,
+      "totalDiscount": 0,
+      "taxAmount": 0,
+      "finalAmount": 11200000,
+      "paidAmount": 5000000,
+      "remainingAmount": 6200000,
+      "createdBy": "مهندس رضایی",
+      "createdAt": "1403/07/05 09:30"
+    },
+    {
+      "id": "inv-ret-101",
+      "invoiceNumber": "RET-101",
+      "invoiceType": "return_sale",
+      "originalInvoiceId": "inv-1240",
+      "originalInvoiceNumber": "1240",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "warehouseId": "wh-central",
+      "warehouseName": "انبار مرکزی و بنکداری",
+      "fiscalYearId": "fy-1403",
+      "date": "1403/07/19",
+      "status": "approved",
+      "returnReason": "مغایرت کد رنگ ۱ رول روبان ساتن با نمونه دوخت مزون",
+      "refundAction": "credit_balance",
+      "items": [
+        {
+          "id": "it-ret-1",
+          "productId": "prd-1",
+          "productCode": "KH-1001",
+          "productName": "روبان ساتن ۲٫۵ سانت قرمز نگین (رول ۲۵ متری)",
+          "unitId": "u-roll",
+          "unitName": "رول (۲۵ متر)",
+          "conversionFactor": 25,
+          "quantity": 1,
+          "baseQuantity": 25,
+          "unitPrice": 925000,
+          "discount": 0,
+          "tax": 0,
+          "totalPrice": 925000
+        }
+      ],
+      "subtotal": 925000,
+      "totalDiscount": 0,
+      "taxAmount": 0,
+      "finalAmount": 925000,
+      "paidAmount": 0,
+      "remainingAmount": 0,
+      "createdBy": "خانم احمدی",
+      "createdAt": "1403/07/19 13:10"
+    }
+  ],
+  "accountsChart": [
+    {
+      "id": "acc-10",
+      "code": "10",
+      "title": "دارایی‌های جاری",
+      "level": "group",
+      "accountType": "asset",
+      "balance": 0
+    },
+    {
+      "id": "acc-101",
+      "code": "101",
+      "title": "موجودی نقد و بانک",
+      "level": "general",
+      "accountType": "asset",
+      "parentCode": "10",
+      "balance": 0
+    },
+    {
+      "id": "acc-10101",
+      "code": "10101",
+      "title": "صندوق اصلی فروشگاه",
+      "level": "subsidiary",
+      "accountType": "asset",
+      "parentCode": "101",
+      "balance": 28450000
+    },
+    {
+      "id": "acc-10104",
+      "code": "10104",
+      "title": "صندوق شماره ۲ دخل انبار",
+      "level": "subsidiary",
+      "accountType": "asset",
+      "parentCode": "101",
+      "balance": 5000000
+    },
+    {
+      "id": "acc-10102",
+      "code": "10102",
+      "title": "بانک ملی - جاری ۵۴۲۱",
+      "level": "subsidiary",
+      "accountType": "asset",
+      "parentCode": "101",
+      "balance": 142800000
+    },
+    {
+      "id": "acc-10105",
+      "code": "10105",
+      "title": "بانک ملت شعبه سعدی (حساب جاری)",
+      "level": "subsidiary",
+      "accountType": "asset",
+      "parentCode": "101",
+      "balance": 65000000
+    },
+    {
+      "id": "acc-10103",
+      "code": "10103",
+      "title": "بانک ملت - دستگاه کارتخوان POS",
+      "level": "subsidiary",
+      "accountType": "asset",
+      "parentCode": "101",
+      "balance": 87500000
+    },
+    {
+      "id": "acc-102",
+      "code": "102",
+      "title": "اسناد دریافتنی (چک‌ها)",
+      "level": "general",
+      "accountType": "asset",
+      "parentCode": "10",
+      "balance": 35000000
+    },
+    {
+      "id": "acc-103",
+      "code": "103",
+      "title": "حساب‌های دریافتنی تجاری (بدهکاران)",
+      "level": "general",
+      "accountType": "asset",
+      "parentCode": "10",
+      "balance": 23250000
+    },
+    {
+      "id": "acc-104",
+      "code": "104",
+      "title": "موجودی کالای فروشگاه خرازی",
+      "level": "general",
+      "accountType": "asset",
+      "parentCode": "10",
+      "balance": 326400000
+    },
+    {
+      "id": "acc-20",
+      "code": "20",
+      "title": "بدهی‌های جاری",
+      "level": "group",
+      "accountType": "liability",
+      "balance": 0
+    },
+    {
+      "id": "acc-201",
+      "code": "201",
+      "title": "حساب‌های پرداختنی تجاری (بستانکاران)",
+      "level": "general",
+      "accountType": "liability",
+      "parentCode": "20",
+      "balance": 32000000
+    },
+    {
+      "id": "acc-202",
+      "code": "202",
+      "title": "اسناد پرداختنی (چک‌های صادره)",
+      "level": "general",
+      "accountType": "liability",
+      "parentCode": "20",
+      "balance": 25000000
+    },
+    {
+      "id": "acc-30",
+      "code": "30",
+      "title": "حقوق صاحبان سهام و سرمایه",
+      "level": "group",
+      "accountType": "equity",
+      "balance": 0
+    },
+    {
+      "id": "acc-301",
+      "code": "301",
+      "title": "سرمایه اولیه فروشگاه",
+      "level": "general",
+      "accountType": "equity",
+      "parentCode": "30",
+      "balance": 500000000
+    },
+    {
+      "id": "acc-302",
+      "code": "302",
+      "title": "سود و زیان انباشته",
+      "level": "general",
+      "accountType": "equity",
+      "parentCode": "30",
+      "balance": 142150000
+    },
+    {
+      "id": "acc-40",
+      "code": "40",
+      "title": "درآمدها",
+      "level": "group",
+      "accountType": "revenue",
+      "balance": 0
+    },
+    {
+      "id": "acc-401",
+      "code": "401",
+      "title": "درآمد حاصل از فروش کالا و ملزومات",
+      "level": "general",
+      "accountType": "revenue",
+      "parentCode": "40",
+      "balance": 215400000
+    },
+    {
+      "id": "acc-402",
+      "code": "402",
+      "title": "برگشت از فروش و تخفیفات",
+      "level": "general",
+      "accountType": "revenue",
+      "parentCode": "40",
+      "balance": -3200000
+    },
+    {
+      "id": "acc-50",
+      "code": "50",
+      "title": "بهای تمام شده کالای فروش رفته",
+      "level": "group",
+      "accountType": "expense",
+      "balance": 0
+    },
+    {
+      "id": "acc-501",
+      "code": "501",
+      "title": "قیمت تمام شده اجناس فروخته شده",
+      "level": "general",
+      "accountType": "expense",
+      "parentCode": "50",
+      "balance": 138000000
+    },
+    {
+      "id": "acc-60",
+      "code": "60",
+      "title": "هزینه‌های عمومی و اداری",
+      "level": "group",
+      "accountType": "expense",
+      "balance": 0
+    },
+    {
+      "id": "acc-601",
+      "code": "601",
+      "title": "هزینه اجاره، شارژ و قبوض فروشگاه",
+      "level": "general",
+      "accountType": "expense",
+      "parentCode": "60",
+      "balance": 18500000
+    },
+    {
+      "id": "acc-602",
+      "code": "602",
+      "title": "هزینه حمل و باربری اجناس خرازی",
+      "level": "general",
+      "accountType": "expense",
+      "parentCode": "60",
+      "balance": 4200000
+    }
+  ],
+  "vouchers": [
+    {
+      "id": "vch-1794913400629",
+      "voucherNumber": "1013",
+      "date": "1403/07/26",
+      "description": "سند خودکار فروش فاکتور INV-2898 (مزون دوخت پریسا (خانم عباسی))",
+      "fiscalYearId": "۱۴۰۳",
+      "status": "approved",
+      "lines": [
+        {
+          "id": "vl-pay-1794913400629-0.870886068974835",
+          "accountCode": "10103",
+          "accountTitle": "بانک ملت - کارتخوان POS",
+          "debit": 96000,
+          "credit": 0,
+          "description": "دریافت فاکتور فروش شماره INV-2898"
+        },
+        {
+          "id": "vl-rev-1794913400629",
+          "accountCode": "401",
+          "accountTitle": "درآمد حاصل از فروش کالا و ملزومات خرازی",
+          "debit": 0,
+          "credit": 96000,
+          "description": "فروش فاکتور شماره INV-2898 به مزون دوخت پریسا (خانم عباسی)"
+        }
+      ],
+      "totalDebit": 96000,
+      "totalCredit": 96000,
+      "isBalanced": true,
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۲۶"
+    },
+    {
+      "id": "vch-1794675262714",
+      "voucherNumber": "1012",
+      "date": "1403/07/23",
+      "description": "سند خودکار فروش فاکتور INV-4138 (مزون دوخت پریسا (خانم عباسی))",
+      "fiscalYearId": "۱۴۰۳",
+      "status": "approved",
+      "lines": [
+        {
+          "id": "vl-pay-1794675262714-0.838894566202181",
+          "accountCode": "10103",
+          "accountTitle": "بانک ملت - کارتخوان POS",
+          "debit": 96000,
+          "credit": 0,
+          "description": "دریافت فاکتور فروش شماره INV-4138"
+        },
+        {
+          "id": "vl-rev-1794675262714",
+          "accountCode": "401",
+          "accountTitle": "درآمد حاصل از فروش کالا و ملزومات خرازی",
+          "debit": 0,
+          "credit": 96000,
+          "description": "فروش فاکتور شماره INV-4138 به مزون دوخت پریسا (خانم عباسی)"
+        }
+      ],
+      "totalDebit": 96000,
+      "totalCredit": 96000,
+      "isBalanced": true,
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۲۳"
+    },
+    {
+      "id": "vch-1794203633198-269",
+      "voucherNumber": "1011",
+      "date": "۱۴۰۵/۸/۱۸",
+      "description": "وصول چک شماره 76545678 صیادی و واریز به حساب «بانک ملی شعبه بازار (حساب جاری)» - طرف حساب: مزون دوخت پریسا (خانم عباسی)",
+      "fiscalYearId": "۱۴۰۳",
+      "status": "approved",
+      "referenceType": "cheque",
+      "referenceNumber": "76545678",
+      "lines": [
+        {
+          "id": "vl-chq-col-d-1794203633197",
+          "accountCode": "10102",
+          "accountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+          "debit": 9876543456,
+          "credit": 0,
+          "description": "وصول چک در بانک ملی شعبه بازار (حساب جاری)"
+        },
+        {
+          "id": "vl-chq-col-c-1794203633197",
+          "accountCode": "102",
+          "accountTitle": "اسناد دریافتنی (چک‌ها)",
+          "debit": 0,
+          "credit": 9876543456,
+          "description": "تسویه اسناد دریافتنی چک 76545678"
+        }
+      ],
+      "totalDebit": 9876543456,
+      "totalCredit": 9876543456,
+      "isBalanced": true,
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۸"
+    },
+    {
+      "id": "vch-1794203614698-160",
+      "voucherNumber": "1010",
+      "date": "1403/07/18",
+      "description": "دریافت چک صیادی شماره 76545678 از «مزون دوخت پریسا (خانم عباسی)» بابت تسویه حساب",
+      "fiscalYearId": "۱۴۰۳",
+      "status": "approved",
+      "referenceType": "cheque",
+      "referenceNumber": "76545678",
+      "lines": [
+        {
+          "id": "vl-chq-init-d-1794203614695",
+          "accountCode": "102",
+          "accountTitle": "اسناد دریافتنی (چک‌ها)",
+          "debit": 9876543456,
+          "credit": 0,
+          "description": "ثبت چک دریافتی شماره 76545678 در صندوق اسناد"
+        },
+        {
+          "id": "vl-chq-init-c-1794203614695",
+          "accountCode": "103",
+          "accountTitle": "حساب‌های دریافتنی تجاری (بدهکاران)",
+          "personId": "per-1",
+          "personName": "مزون دوخت پریسا (خانم عباسی)",
+          "debit": 0,
+          "credit": 9876543456,
+          "description": "کاهش بدهی مزون دوخت پریسا (خانم عباسی) بابت تحویل چک 76545678"
+        }
+      ],
+      "totalDebit": 9876543456,
+      "totalCredit": 9876543456,
+      "isBalanced": true,
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۸"
+    },
+    {
+      "id": "vch-1794203360175-946",
+      "voucherNumber": "1009",
+      "date": "۱۴۰۵/۸/۱۸",
+      "description": "وصول چک شماره 634407 صیادی و واریز به حساب «بانک ملی شعبه بازار (حساب جاری)» - طرف حساب: مزون دوخت پریسا (خانم عباسی)",
+      "fiscalYearId": "۱۴۰۳",
+      "status": "approved",
+      "referenceType": "cheque",
+      "referenceNumber": "634407",
+      "lines": [
+        {
+          "id": "vl-chq-col-d-1794203360171",
+          "accountCode": "10102",
+          "accountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+          "debit": 912000,
+          "credit": 0,
+          "description": "وصول چک در بانک ملی شعبه بازار (حساب جاری)"
+        },
+        {
+          "id": "vl-chq-col-c-1794203360171",
+          "accountCode": "102",
+          "accountTitle": "اسناد دریافتنی (چک‌ها)",
+          "debit": 0,
+          "credit": 912000,
+          "description": "تسویه اسناد دریافتنی چک 634407"
+        }
+      ],
+      "totalDebit": 912000,
+      "totalCredit": 912000,
+      "isBalanced": true,
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۸"
+    },
+    {
+      "id": "vch-1794054917720",
+      "voucherNumber": "1008",
+      "date": "1403/07/16",
+      "description": "سند خودکار فروش فاکتور INV-8564 (مزون دوخت پریسا (خانم عباسی))",
+      "fiscalYearId": "۱۴۰۳",
+      "status": "approved",
+      "lines": [
+        {
+          "id": "vl-pay-1794054917720-0.4370760893365784",
+          "accountCode": "102",
+          "accountTitle": "اسناد دریافتنی تجاری",
+          "debit": 912000,
+          "credit": 0,
+          "description": "دریافت فاکتور فروش شماره INV-8564"
+        },
+        {
+          "id": "vl-rev-1794054917720",
+          "accountCode": "401",
+          "accountTitle": "درآمد حاصل از فروش کالا و ملزومات خرازی",
+          "debit": 0,
+          "credit": 912000,
+          "description": "فروش فاکتور شماره INV-8564 به مزون دوخت پریسا (خانم عباسی)"
+        }
+      ],
+      "totalDebit": 912000,
+      "totalCredit": 912000,
+      "isBalanced": true,
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۶"
+    },
+    {
+      "id": "vch-1794054606052",
+      "voucherNumber": "1007",
+      "date": "1403/07/16",
+      "description": "سند خودکار فروش فاکتور INV-5585 (مزون دوخت پریسا (خانم عباسی))",
+      "fiscalYearId": "۱۴۰۳",
+      "status": "approved",
+      "lines": [
+        {
+          "id": "vl-rem-1794054606052",
+          "accountCode": "103",
+          "accountTitle": "حساب‌های دریافتنی - مزون دوخت پریسا (خانم عباسی)",
+          "personId": "per-1",
+          "personName": "مزون دوخت پریسا (خانم عباسی)",
+          "debit": 998000,
+          "credit": 0,
+          "description": "مانده نسیه فاکتور فروش شماره INV-5585"
+        },
+        {
+          "id": "vl-rev-1794054606052",
+          "accountCode": "401",
+          "accountTitle": "درآمد حاصل از فروش کالا و ملزومات خرازی",
+          "debit": 0,
+          "credit": 998000,
+          "description": "فروش فاکتور شماره INV-5585 به مزون دوخت پریسا (خانم عباسی)"
+        }
+      ],
+      "totalDebit": 998000,
+      "totalCredit": 998000,
+      "isBalanced": true,
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۶"
+    },
+    {
+      "id": "vch-1794054440556-638",
+      "voucherNumber": "1006",
+      "date": "۱۴۰۵/۸/۱۶",
+      "description": "وصول چک شماره 784512 صیادی و واریز به حساب «بانک ملی شعبه بازار (حساب جاری)» - طرف حساب: تولیدی پوشاک زنانه باران",
+      "fiscalYearId": "۱۴۰۳",
+      "status": "approved",
+      "referenceType": "cheque",
+      "referenceNumber": "784512",
+      "lines": [
+        {
+          "id": "vl-chq-col-d-1794054440554",
+          "accountCode": "10102",
+          "accountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+          "debit": 15000000,
+          "credit": 0,
+          "description": "وصول چک در بانک ملی شعبه بازار (حساب جاری)"
+        },
+        {
+          "id": "vl-chq-col-c-1794054440554",
+          "accountCode": "102",
+          "accountTitle": "اسناد دریافتنی (چک‌ها)",
+          "debit": 0,
+          "credit": 15000000,
+          "description": "تسویه اسناد دریافتنی چک 784512"
+        }
+      ],
+      "totalDebit": 15000000,
+      "totalCredit": 15000000,
+      "isBalanced": true,
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۶"
+    },
+    {
+      "id": "vch-1001",
+      "voucherNumber": "1001",
+      "date": "1403/01/01",
+      "description": "سند افتتاحیه دوره مالی ۱۴۰۳ فروشگاه و انبار خرازی",
+      "fiscalYearId": "fy-1403",
+      "status": "approved",
+      "referenceType": "opening_balance",
+      "referenceNumber": "OPN-1403",
+      "lines": [
+        {
+          "id": "vl-opn-1",
+          "accountCode": "10101",
+          "accountTitle": "صندوق اصلی فروشگاه",
+          "debit": 25000000,
+          "credit": 0,
+          "description": "موجودی اولیه صندوق نقد اصلی"
+        },
+        {
+          "id": "vl-opn-1b",
+          "accountCode": "10104",
+          "accountTitle": "صندوق شماره ۲ دخل انبار",
+          "debit": 5000000,
+          "credit": 0,
+          "description": "موجودی اولیه صندوق شماره ۲ انبار"
+        },
+        {
+          "id": "vl-opn-2",
+          "accountCode": "10102",
+          "accountTitle": "بانک ملی - جاری ۵۴۲۱",
+          "debit": 124800000,
+          "credit": 0,
+          "description": "موجودی اولیه حساب جاری بانک ملی"
+        },
+        {
+          "id": "vl-opn-2b",
+          "accountCode": "10105",
+          "accountTitle": "بانک ملت شعبه سعدی (حساب جاری)",
+          "debit": 65000000,
+          "credit": 0,
+          "description": "موجودی اولیه حساب جاری بانک ملت سعدی"
+        },
+        {
+          "id": "vl-opn-3",
+          "accountCode": "10103",
+          "accountTitle": "بانک ملت - دستگاه کارتخوان POS",
+          "debit": 72500000,
+          "credit": 0,
+          "description": "موجودی اولیه پایانه پوز ملت"
+        },
+        {
+          "id": "vl-opn-4",
+          "accountCode": "102",
+          "accountTitle": "اسناد دریافتنی (چک‌ها)",
+          "debit": 35000000,
+          "credit": 0,
+          "description": "موجودی چک‌های صیادی دریافتنی"
+        },
+        {
+          "id": "vl-opn-5a",
+          "accountCode": "103",
+          "accountTitle": "حساب‌های دریافتنی تجاری (بدهکاران)",
+          "personId": "per-1",
+          "personName": "مزون دوخت پریسا (خانم عباسی)",
+          "debit": 9050000,
+          "credit": 0,
+          "description": "مانده اول دوره مزون دوخت پریسا"
+        },
+        {
+          "id": "vl-opn-5b",
+          "accountCode": "103",
+          "accountTitle": "حساب‌های دریافتنی تجاری (بدهکاران)",
+          "personId": "per-2",
+          "personName": "تولیدی پوشاک زنانه باران",
+          "debit": 36400000,
+          "credit": 0,
+          "description": "مانده اول دوره تولیدی پوشاک زنانه باران"
+        },
+        {
+          "id": "vl-opn-6",
+          "accountCode": "104",
+          "accountTitle": "موجودی کالای فروشگاه خرازی",
+          "debit": 326400000,
+          "credit": 0,
+          "description": "ارزش ریالی موجودی اولیه اقلام خرازی و خرج‌کار"
+        },
+        {
+          "id": "vl-opn-7",
+          "accountCode": "201",
+          "accountTitle": "حساب‌های پرداختنی تجاری (بستانکاران)",
+          "personId": "per-3",
+          "personName": "بازرگانی یراق و دکمه پارس (حاج قاسم تقوی)",
+          "debit": 0,
+          "credit": 32000000,
+          "description": "مانده بدهی اول دوره به بازرگانی یراق و دکمه پارس"
+        },
+        {
+          "id": "vl-opn-8",
+          "accountCode": "202",
+          "accountTitle": "اسناد پرداختنی (چک‌های صادره)",
+          "debit": 0,
+          "credit": 25000000,
+          "description": "چک‌های صادره در وجه بنکداران"
+        },
+        {
+          "id": "vl-opn-9",
+          "accountCode": "301",
+          "accountTitle": "سرمایه اولیه فروشگاه",
+          "debit": 0,
+          "credit": 500000000,
+          "description": "سرمایه ثبتی شرکا"
+        },
+        {
+          "id": "vl-opn-10",
+          "accountCode": "302",
+          "accountTitle": "سود و زیان انباشته",
+          "debit": 0,
+          "credit": 142150000,
+          "description": "سود انباشته سنوات قبل"
+        }
+      ],
+      "totalDebit": 699150000,
+      "totalCredit": 699150000,
+      "isBalanced": true,
+      "createdBy": "مدیر ارشد مالی",
+      "createdAt": "1403/01/01"
+    },
+    {
+      "id": "vch-1002",
+      "voucherNumber": "1002",
+      "date": "1403/07/02",
+      "description": "دریافت وجه از مزون دوخت پریسا (خانم عباسی) بابت تسویه علی‌الحساب - پیگیری: RCV-40112",
+      "fiscalYearId": "fy-1403",
+      "status": "approved",
+      "referenceType": "treasury",
+      "referenceId": "tr-tx-101",
+      "referenceNumber": "TRX-1001",
+      "lines": [
+        {
+          "id": "vl-1002-1",
+          "accountCode": "10101",
+          "accountTitle": "صندوق نقدی اصلی فروشگاه",
+          "debit": 4200000,
+          "credit": 0,
+          "description": "دریافت نقدی در صندوق فروشگاه"
+        },
+        {
+          "id": "vl-1002-2",
+          "accountCode": "103",
+          "accountTitle": "حساب‌های دریافتنی تجاری (بدهکاران)",
+          "personId": "per-1",
+          "personName": "مزون دوخت پریسا (خانم عباسی)",
+          "debit": 0,
+          "credit": 4200000,
+          "description": "کاهش مانده بدهی مزون پریسا"
+        }
+      ],
+      "totalDebit": 4200000,
+      "totalCredit": 4200000,
+      "isBalanced": true,
+      "createdBy": "مدیر ارشد مالی",
+      "createdAt": "1403/07/02"
+    },
+    {
+      "id": "vch-1003",
+      "voucherNumber": "1003",
+      "date": "1403/07/04",
+      "description": "پرداخت هزینه ملزومات اداری، بسته‌بندی، چسب و نایلون - پیگیری: EXP-90021",
+      "fiscalYearId": "fy-1403",
+      "status": "approved",
+      "referenceType": "treasury",
+      "referenceId": "tr-tx-102",
+      "referenceNumber": "TRX-1002",
+      "lines": [
+        {
+          "id": "vl-1003-1",
+          "accountCode": "601",
+          "accountTitle": "هزینه‌های عمومی و اداری",
+          "debit": 750000,
+          "credit": 0,
+          "description": "خرید رول نایلون حباب‌دار و چسب پهن"
+        },
+        {
+          "id": "vl-1003-2",
+          "accountCode": "10101",
+          "accountTitle": "صندوق نقدی اصلی فروشگاه",
+          "debit": 0,
+          "credit": 750000,
+          "description": "پرداخت از صندوق نقدی فروشگاه"
+        }
+      ],
+      "totalDebit": 750000,
+      "totalCredit": 750000,
+      "isBalanced": true,
+      "createdBy": "مدیر ارشد مالی",
+      "createdAt": "1403/07/04"
+    },
+    {
+      "id": "vch-1004",
+      "voucherNumber": "1004",
+      "date": "1403/07/03",
+      "description": "واریز وجه پایا از تولیدی پوشاک زنانه باران - پیگیری: SATNA-88120",
+      "fiscalYearId": "fy-1403",
+      "status": "approved",
+      "referenceType": "treasury",
+      "referenceId": "tr-tx-103",
+      "referenceNumber": "TRX-1003",
+      "lines": [
+        {
+          "id": "vl-1004-1",
+          "accountCode": "10102",
+          "accountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+          "debit": 18000000,
+          "credit": 0,
+          "description": "واریز پایا به حساب جاری بانک ملی"
+        },
+        {
+          "id": "vl-1004-2",
+          "accountCode": "103",
+          "accountTitle": "حساب‌های دریافتنی تجاری (بدهکاران)",
+          "personId": "per-2",
+          "personName": "تولیدی پوشاک زنانه باران",
+          "debit": 0,
+          "credit": 18000000,
+          "description": "کاهش بدهی تولیدی باران"
+        }
+      ],
+      "totalDebit": 18000000,
+      "totalCredit": 18000000,
+      "isBalanced": true,
+      "createdBy": "مدیر ارشد مالی",
+      "createdAt": "1403/07/03"
+    },
+    {
+      "id": "vch-1005",
+      "voucherNumber": "1005",
+      "date": "1403/07/07",
+      "description": "درآمد فروش ضایعات کارتن و نایلون - پیگیری: POS-77412",
+      "fiscalYearId": "fy-1403",
+      "status": "approved",
+      "referenceType": "treasury",
+      "referenceId": "tr-tx-105",
+      "referenceNumber": "TRX-1005",
+      "lines": [
+        {
+          "id": "vl-1005-1",
+          "accountCode": "10103",
+          "accountTitle": "دستگاه کارتخوان به پرداخت ملت",
+          "debit": 15000000,
+          "credit": 0,
+          "description": "واریز شاپرک به حساب کارتخوان"
+        },
+        {
+          "id": "vl-1005-2",
+          "accountCode": "401",
+          "accountTitle": "سایر درآمدهای عملیاتی و متفرقه",
+          "debit": 0,
+          "credit": 15000000,
+          "description": "فروش ضایعات انبار"
+        }
+      ],
+      "totalDebit": 15000000,
+      "totalCredit": 15000000,
+      "isBalanced": true,
+      "createdBy": "مدیر ارشد مالی",
+      "createdAt": "1403/07/07"
+    }
+  ],
+  "treasuryAccounts": [
+    {
+      "id": "tr-cash-1",
+      "type": "cash",
+      "title": "صندوق نقدی اصلی فروشگاه",
+      "balance": 28450000,
+      "initialBalance": 25000000,
+      "accountingAccountCode": "10101",
+      "isActive": true,
+      "createdAt": "1403/01/01"
+    },
+    {
+      "id": "tr-cash-2",
+      "type": "cash",
+      "title": "صندوق شماره ۲ دخل انبار",
+      "balance": 5000000,
+      "initialBalance": 5000000,
+      "accountingAccountCode": "10104",
+      "isActive": true,
+      "createdAt": "1403/01/01"
+    },
+    {
+      "id": "tr-bank-1",
+      "type": "bank",
+      "title": "بانک ملی شعبه بازار (حساب جاری)",
+      "accountNumber": "0105421980007",
+      "shebaNumber": "IR120170000000105421980007",
+      "branchName": "شعبه بازار بزرگ تهران",
+      "bankName": "بانک ملی ایران",
+      "balance": 10035255456,
+      "initialBalance": 124800000,
+      "accountingAccountCode": "10102",
+      "isActive": true,
+      "createdAt": "1403/01/01"
+    },
+    {
+      "id": "tr-bank-2",
+      "type": "bank",
+      "title": "بانک ملت شعبه سعدی (حساب جاری)",
+      "accountNumber": "482165439876",
+      "shebaNumber": "IR890120000000482165439876",
+      "branchName": "شعبه سعدی جنوبی",
+      "bankName": "بانک ملت",
+      "balance": 65000000,
+      "initialBalance": 65000000,
+      "accountingAccountCode": "10105",
+      "isActive": true,
+      "createdAt": "1403/01/01"
+    },
+    {
+      "id": "tr-pos-1",
+      "type": "pos",
+      "title": "دستگاه کارتخوان به پرداخت ملت",
+      "accountNumber": "4821-6543-9876",
+      "bankName": "بانک ملت",
+      "balance": 87692000,
+      "initialBalance": 72500000,
+      "accountingAccountCode": "10103",
+      "isActive": true,
+      "createdAt": "1403/01/01"
+    }
+  ],
+  "treasuryTransactions": [
+    {
+      "id": "tr-tx-1794913400629-0",
+      "transactionType": "receive",
+      "treasuryAccountId": "tr-pos-1",
+      "treasuryAccountTitle": "دستگاه کارتخوان به پرداخت ملت",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "amount": 96000,
+      "date": "1405/08/26",
+      "trackingNumber": "601459",
+      "description": "دریافت کارتخوان فاکتور شماره INV-2898",
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۲۶"
+    },
+    {
+      "id": "tr-tx-1794675262714-0",
+      "transactionType": "receive",
+      "treasuryAccountId": "tr-pos-1",
+      "treasuryAccountTitle": "دستگاه کارتخوان به پرداخت ملت",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "amount": 96000,
+      "date": "1405/08/23",
+      "trackingNumber": "804296",
+      "description": "دریافت کارتخوان فاکتور شماره INV-4138",
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۲۳"
+    },
+    {
+      "id": "tr-chq-col-1794203633201",
+      "transactionNumber": "TRX-1007",
+      "transactionType": "receive",
+      "treasuryAccountId": "tr-bank-1",
+      "treasuryAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "destinationAccountId": "tr-bank-1",
+      "destinationAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "amount": 9876543456,
+      "date": "۱۴۰۵/۸/۱۸",
+      "trackingNumber": "CHQ-76545678",
+      "description": "واریز وجه وصول چک صیادی شماره 76545678 (مزون دوخت پریسا (خانم عباسی))",
+      "paymentMethod": "cheque",
+      "voucherId": "vch-1794203633198-269",
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۸"
+    },
+    {
+      "id": "tr-chq-col-1794203360180",
+      "transactionNumber": "TRX-1006",
+      "transactionType": "receive",
+      "treasuryAccountId": "tr-bank-1",
+      "treasuryAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "destinationAccountId": "tr-bank-1",
+      "destinationAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "amount": 912000,
+      "date": "۱۴۰۵/۸/۱۸",
+      "trackingNumber": "CHQ-634407",
+      "description": "واریز وجه وصول چک صیادی شماره 634407 (مزون دوخت پریسا (خانم عباسی))",
+      "paymentMethod": "cheque",
+      "voucherId": "vch-1794203360175-946",
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۸"
+    },
+    {
+      "id": "tr-chq-col-1794054440562",
+      "transactionNumber": "TRX-1005",
+      "transactionType": "receive",
+      "treasuryAccountId": "tr-bank-1",
+      "treasuryAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "destinationAccountId": "tr-bank-1",
+      "destinationAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "personId": "per-2",
+      "personName": "تولیدی پوشاک زنانه باران",
+      "amount": 15000000,
+      "date": "۱۴۰۵/۸/۱۶",
+      "trackingNumber": "CHQ-784512",
+      "description": "واریز وجه وصول چک صیادی شماره 784512 (تولیدی پوشاک زنانه باران)",
+      "paymentMethod": "cheque",
+      "voucherId": "vch-1794054440556-638",
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۶"
+    },
+    {
+      "id": "tr-tx-101",
+      "transactionNumber": "TRX-1001",
+      "transactionType": "receive",
+      "treasuryAccountId": "tr-cash-1",
+      "treasuryAccountTitle": "صندوق نقدی اصلی فروشگاه",
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "amount": 4200000,
+      "date": "1403/07/02",
+      "trackingNumber": "RCV-40112",
+      "description": "دریافت نقدی از مشتری بابت تسویه علی‌الحساب سفارش دوخت و روبان",
+      "settlementType": "partial",
+      "paymentMethod": "cash",
+      "createdBy": "مدیر ارشد سیستم",
+      "createdAt": "1403/07/02"
+    },
+    {
+      "id": "tr-tx-102",
+      "transactionNumber": "TRX-1002",
+      "transactionType": "expense",
+      "treasuryAccountId": "tr-cash-1",
+      "treasuryAccountTitle": "صندوق نقدی اصلی فروشگاه",
+      "sourceAccountId": "tr-cash-1",
+      "sourceAccountTitle": "صندوق نقدی اصلی فروشگاه",
+      "expenseCategoryId": "fcat-exp-5",
+      "expenseCategoryName": "ملزومات اداری، بسته‌بندی، چسب و نایلون",
+      "amount": 750000,
+      "date": "1403/07/04",
+      "trackingNumber": "EXP-90021",
+      "description": "خرید رول نایلون حباب‌دار و چسب پهن بسته‌بندی",
+      "paymentMethod": "cash",
+      "createdBy": "مدیر ارشد سیستم",
+      "createdAt": "1403/07/04"
+    },
+    {
+      "id": "tr-tx-103",
+      "transactionNumber": "TRX-1003",
+      "transactionType": "receive",
+      "treasuryAccountId": "tr-bank-1",
+      "treasuryAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "destinationAccountId": "tr-bank-1",
+      "destinationAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "personId": "per-2",
+      "personName": "تولیدی پوشاک زنانه باران",
+      "amount": 18000000,
+      "date": "1403/07/03",
+      "trackingNumber": "SATNA-88120",
+      "description": "واریز پایا از طرف خریدار بابت تسویه فاکتور خرید عمده ملزومات",
+      "settlementType": "partial",
+      "paymentMethod": "bank_transfer",
+      "createdBy": "مدیر ارشد سیستم",
+      "createdAt": "1403/07/03"
+    },
+    {
+      "id": "tr-tx-105",
+      "transactionNumber": "TRX-1005",
+      "transactionType": "income",
+      "treasuryAccountId": "tr-pos-1",
+      "treasuryAccountTitle": "دستگاه کارتخوان به پرداخت ملت",
+      "destinationAccountId": "tr-pos-1",
+      "destinationAccountTitle": "دستگاه کارتخوان به پرداخت ملت",
+      "expenseCategoryId": "fcat-inc-2",
+      "expenseCategoryName": "درآمد فروش ضایعات کارتن و نایلون",
+      "amount": 15000000,
+      "date": "1403/07/07",
+      "trackingNumber": "POS-77412",
+      "description": "تسویه جمع شاپرک حاصل از تراکنش‌های کارتخوان متفرقه",
+      "paymentMethod": "pos",
+      "createdBy": "مدیر ارشد سیستم",
+      "createdAt": "1403/07/07"
+    }
+  ],
+  "cheques": [
+    {
+      "id": "chq-1794203614700",
+      "chequeType": "received",
+      "chequeNumber": "76545678",
+      "sayadNumber": "09876543456789",
+      "bankName": "بانک ملی ایران",
+      "branchName": "مرکزی",
+      "accountNumber": "",
+      "dueDate": "1405/08/18",
+      "issueDate": "1405/08/18",
+      "amount": 9876543456,
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "status": "collected",
+      "statusHistory": [
+        {
+          "id": "chq-hist-1794203633201-86zq",
+          "timestamp": "2026-11-09T05:53:53.201Z",
+          "date": "۱۴۰۵/۸/۱۸",
+          "fromStatus": "registered",
+          "toStatus": "collected",
+          "actionTitle": "وصول قطعی چک و واریز به بانک",
+          "description": "تغییر وضعیت به collected",
+          "performedBy": "مهندس رضایی (مدیر فروشگاه)",
+          "relatedAccountId": "tr-bank-1",
+          "relatedAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+          "targetPersonId": "",
+          "voucherId": "vch-1794203633198-269"
+        },
+        {
+          "id": "chq-hist-1794203614700-tl5p",
+          "timestamp": "2026-11-09T05:53:34.700Z",
+          "date": "۱۴۰۵/۸/۱۸",
+          "fromStatus": "-",
+          "toStatus": "registered",
+          "actionTitle": "ثبت اولیه چک دریافتی",
+          "description": "دریافت چک صیادی به شماره 76545678 از مزون دوخت پریسا (خانم عباسی) و ثبت در صندوق اسناد",
+          "performedBy": "مهندس رضایی (مدیر فروشگاه)",
+          "voucherId": "vch-1794203614698-160"
+        }
+      ],
+      "voucherId": "vch-1794203633198-269",
+      "notes": "ثبت چک صیادی در سیستم",
+      "createdBy": "مهندس رضایی (مدیر فروشگاه)",
+      "createdAt": "۱۴۰۵/۸/۱۸",
+      "depositedBankAccountId": "tr-bank-1",
+      "depositedBankAccountTitle": "بانک ملی شعبه بازار (حساب جاری)"
+    },
+    {
+      "id": "chq-1794054917720-0",
+      "chequeType": "received",
+      "chequeNumber": "634407",
+      "bankName": "بانک ملی",
+      "branchName": "",
+      "accountNumber": "",
+      "sayadNumber": "",
+      "dueDate": "1405/08/16",
+      "amount": 912000,
+      "personId": "per-1",
+      "personName": "مزون دوخت پریسا (خانم عباسی)",
+      "status": "collected",
+      "notes": "چک دریافتی فاکتور شماره INV-8564",
+      "createdAt": "۱۴۰۵/۸/۱۶",
+      "depositedBankAccountId": "tr-bank-1",
+      "depositedBankAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "statusHistory": [
+        {
+          "id": "chq-hist-1794203360180-8wt5",
+          "timestamp": "2026-11-09T05:49:20.180Z",
+          "date": "۱۴۰۵/۸/۱۸",
+          "fromStatus": "registered",
+          "toStatus": "collected",
+          "actionTitle": "وصول قطعی چک و واریز به بانک",
+          "description": "تغییر وضعیت به collected",
+          "performedBy": "مهندس رضایی (مدیر فروشگاه)",
+          "relatedAccountId": "tr-bank-1",
+          "relatedAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+          "targetPersonId": "",
+          "voucherId": "vch-1794203360175-946"
+        }
+      ],
+      "voucherId": "vch-1794203360175-946"
+    },
+    {
+      "id": "chq-1",
+      "chequeType": "received",
+      "chequeNumber": "784512",
+      "sayadNumber": "2105874512963341",
+      "bankName": "بانک صادرات",
+      "branchName": "شعبه جمهوری",
+      "accountNumber": "020485123000",
+      "amount": 15000000,
+      "issueDate": "1403/07/01",
+      "dueDate": "1403/08/15",
+      "personId": "per-2",
+      "personName": "تولیدی پوشاک زنانه باران",
+      "status": "collected",
+      "notes": "بابت تسویه فاکتور خرید عمده زیپ و روبان",
+      "statusHistory": [
+        {
+          "id": "chq-hist-1794054440562-pxpw",
+          "timestamp": "2026-11-07T12:27:20.562Z",
+          "date": "۱۴۰۵/۸/۱۶",
+          "fromStatus": "registered",
+          "toStatus": "collected",
+          "actionTitle": "وصول قطعی چک و واریز به بانک",
+          "description": "وصول قطعی چک و واریز به بانک",
+          "performedBy": "مهندس رضایی (مدیر فروشگاه)",
+          "relatedAccountId": "tr-bank-1",
+          "relatedAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+          "targetPersonId": "per-3",
+          "voucherId": "vch-1794054440556-638"
+        },
+        {
+          "id": "hist-chq-1",
+          "timestamp": "2024-09-22T08:00:00.000Z",
+          "date": "1403/07/01",
+          "fromStatus": "-",
+          "toStatus": "registered",
+          "actionTitle": "ثبت اولیه چک صیادی دریافتی",
+          "description": "دریافت چک صیادی از تولیدی پوشاک زنانه باران و ثبت نزد صندوق",
+          "performedBy": "مدیر ارشد سیستم"
+        }
+      ],
+      "createdAt": "1403/07/01",
+      "depositedBankAccountId": "tr-bank-1",
+      "depositedBankAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "voucherId": "vch-1794054440556-638"
+    },
+    {
+      "id": "chq-2",
+      "chequeType": "issued",
+      "chequeNumber": "441209",
+      "sayadNumber": "7891234560128841",
+      "bankName": "بانک ملی ایران",
+      "branchName": "شعبه بازار بزرگ",
+      "accountNumber": "0105421980007",
+      "sourceAccountId": "tr-bank-1",
+      "sourceAccountTitle": "بانک ملی شعبه بازار (حساب جاری)",
+      "amount": 25000000,
+      "issueDate": "1403/07/05",
+      "dueDate": "1403/08/20",
+      "personId": "per-3",
+      "personName": "بازرگانی یراق و دکمه پارس (حاج قاسم تقوی)",
+      "status": "registered",
+      "notes": "بابت پیش‌پرداخت خرید عمده زیپ و روبان",
+      "statusHistory": [
+        {
+          "id": "hist-chq-2",
+          "timestamp": "2024-09-26T10:00:00.000Z",
+          "date": "1403/07/05",
+          "fromStatus": "-",
+          "toStatus": "registered",
+          "actionTitle": "صدور چک صیادی بانکی",
+          "description": "صدور چک از حساب جاری بانک ملی در وجه بازرگانی یراق و دکمه پارس",
+          "performedBy": "مدیر ارشد سیستم"
+        }
+      ],
+      "createdAt": "1403/07/05"
+    }
+  ],
+  "fiscalYears": [
+    {
+      "id": "fy-1402",
+      "code": "1402",
+      "title": "سال مالی ۱۴۰۲",
+      "startDate": "1402/01/01",
+      "endDate": "1402/12/29",
+      "status": "closed",
+      "isClosed": true,
+      "isActive": false,
+      "isLeapYear": false,
+      "description": "دوره مالی بسته‌شده سال ۱۴۰۲ (دارای آرشیو کامل اسناد اختتامیه و صورت‌های مالی)",
+      "nextFiscalYearId": "fy-1403",
+      "openingVoucherId": "vch-open-1402",
+      "openingVoucherNumber": "901",
+      "closingTemporaryVoucherId": "vch-close-temp-1402",
+      "closingTemporaryVoucherNumber": "997",
+      "closingPermanentVoucherId": "vch-close-perm-1402",
+      "closingPermanentVoucherNumber": "998",
+      "closedAt": "1402/12/29",
+      "closedBy": "مهندس مهدی رضایی (مدیر ارشد)",
+      "auditTrail": [
+        {
+          "action": "تعریف سال مالی ۱۴۰۲ و ثبت تراز افتتاحیه",
+          "userName": "مهندس مهدی رضایی",
+          "timestamp": "1402/01/01 08:30"
+        },
+        {
+          "action": "کنترل نهایی دفاتر، بستن حساب‌های موقت و صدور سند اختتامیه ۹۹۸",
+          "userName": "خانم محمدی (حسابدار ارشد)",
+          "timestamp": "1402/12/29 21:00"
+        },
+        {
+          "action": "انتقال مانده‌ها به سند افتتاحیه سال مالی ۱۴۰۳ (سند ۱۰۰۱)",
+          "userName": "مهندس مهدی رضایی",
+          "timestamp": "1403/01/01 08:00"
+        }
+      ],
+      "archivedSnapshot": {
+        "capturedAt": "1402/12/29",
+        "capturedBy": "خانم محمدی (حسابدار ارشد)",
+        "summary": {
+          "netSales": 485000000,
+          "cogs": 310000000,
+          "grossProfit": 175000000,
+          "totalExpenses": 42000000,
+          "otherIncome": 3500000,
+          "netProfit": 136500000,
+          "totalAssets": 416840000,
+          "totalLiabilities": 72000000,
+          "totalEquity": 344840000,
+          "cashAndBankBalance": 332800000,
+          "accountsReceivable": 25550000,
+          "notesReceivable": 35000000,
+          "inventoryValuation": 23490000,
+          "accountsPayable": 45000000,
+          "notesPayable": 27000000,
+          "invoicesCount": 142,
+          "vouchersCount": 98
+        },
+        "personBalances": [
+          {
+            "personId": "per-1",
+            "code": "1001",
+            "name": "مزون دوخت پریسا (خانم عباسی)",
+            "personType": "customer",
+            "balance": 15800000
+          },
+          {
+            "personId": "per-2",
+            "code": "1002",
+            "name": "تولیدی مانتو و پوشاک کلاسیک",
+            "personType": "customer",
+            "balance": 9750000
+          },
+          {
+            "personId": "per-3",
+            "code": "2001",
+            "name": "بازرگانی نخ و زیپ رازی (تأمین‌کننده)",
+            "personType": "supplier",
+            "balance": -45000000
+          }
+        ],
+        "treasuryBalances": [
+          {
+            "accountId": "tr-1",
+            "title": "صندوق نقدی فروشگاه (دخل اصلی)",
+            "type": "cash",
+            "balance": 18500000
+          },
+          {
+            "accountId": "tr-2",
+            "title": "بانک ملی - حساب جاری ۵۴۲۱",
+            "type": "bank",
+            "balance": 185000000
+          },
+          {
+            "accountId": "tr-3",
+            "title": "بانک ملت - کارتخوان POS فروشگاه",
+            "type": "pos",
+            "balance": 129300000
+          }
+        ],
+        "inventoryBalances": [
+          {
+            "productId": "prd-1",
+            "code": "KH-1001",
+            "name": "روبان ساتن ۲٫۵ سانت قرمز نگین",
+            "unitName": "متر",
+            "quantity": 1200,
+            "unitCost": 1120,
+            "totalValuation": 1344000
+          },
+          {
+            "productId": "prd-2",
+            "code": "KH-1002",
+            "name": "قیطان طلایی ۵ میل مغزی‌دار لمه",
+            "unitName": "متر",
+            "quantity": 340,
+            "unitCost": 8500,
+            "totalValuation": 2890000
+          },
+          {
+            "productId": "prd-3",
+            "code": "KH-2001",
+            "name": "دوک نخ پلی‌استر ۴۰/۲ مشکی چرخ خیاطی",
+            "unitName": "دوک",
+            "quantity": 420,
+            "unitCost": 42000,
+            "totalValuation": 17640000
+          },
+          {
+            "productId": "prd-4",
+            "code": "KH-3001",
+            "name": "دکمه پیراهنی صدفی ۱۸ لول سفید",
+            "unitName": "عدد",
+            "quantity": 2880,
+            "unitCost": 450,
+            "totalValuation": 1296000
+          },
+          {
+            "productId": "prd-5",
+            "code": "KH-3002",
+            "name": "زیپ مخفی ۵۰ سانتی سرمه‌ای مجلسی",
+            "unitName": "عدد",
+            "quantity": 20,
+            "unitCost": 16000,
+            "totalValuation": 320000
+          }
+        ],
+        "pendingCheques": [
+          {
+            "chequeId": "chq-1",
+            "chequeNumber": "654120",
+            "chequeType": "received",
+            "personName": "مزون دوخت پریسا",
+            "bankName": "بانک صادرات",
+            "dueDate": "1403/08/15",
+            "amount": 15000000,
+            "status": "registered"
+          },
+          {
+            "chequeId": "chq-3",
+            "chequeNumber": "982104",
+            "chequeType": "issued",
+            "personName": "بازرگانی نخ و زیپ رازی",
+            "bankName": "بانک ملی",
+            "dueDate": "1403/08/05",
+            "amount": 27000000,
+            "status": "registered"
+          }
+        ],
+        "vouchers": [
+          {
+            "id": "vch-close-temp-1402",
+            "voucherNumber": "997",
+            "date": "1402/12/29",
+            "description": "سند بستن حساب‌های موقت سود و زیانی پایان سال مالی ۱۴۰۲",
+            "fiscalYearId": "1402",
+            "status": "permanent",
+            "referenceType": "closing_temporary",
+            "totalDebit": 488500000,
+            "totalCredit": 488500000,
+            "isBalanced": true,
+            "createdBy": "خانم محمدی (حسابدار ارشد)",
+            "createdAt": "1402/12/29",
+            "lines": [
+              {
+                "id": "l-1402-1",
+                "accountCode": "401",
+                "accountTitle": "درآمد فروش کالا و ملزومات خرازی",
+                "debit": 485000000,
+                "credit": 0
+              },
+              {
+                "id": "l-1402-2",
+                "accountCode": "403",
+                "accountTitle": "سایر درآمدهای عملیاتی",
+                "debit": 3500000,
+                "credit": 0
+              },
+              {
+                "id": "l-1402-3",
+                "accountCode": "501",
+                "accountTitle": "بهای تمام‌شده کالای فروش‌رفته (COGS)",
+                "debit": 0,
+                "credit": 310000000
+              },
+              {
+                "id": "l-1402-4",
+                "accountCode": "601",
+                "accountTitle": "هزینه‌های عمومی و اداری فروشگاه",
+                "debit": 0,
+                "credit": 42000000
+              },
+              {
+                "id": "l-1402-5",
+                "accountCode": "302",
+                "accountTitle": "سود و زیان انباشته (انتقال سود خالص ۱۴۰۲)",
+                "debit": 0,
+                "credit": 136500000
+              }
+            ]
+          },
+          {
+            "id": "vch-close-perm-1402",
+            "voucherNumber": "998",
+            "date": "1402/12/29",
+            "description": "سند اختتامیه حساب‌های دائمی ترازنامه پایان سال مالی ۱۴۰۲",
+            "fiscalYearId": "1402",
+            "status": "permanent",
+            "referenceType": "closing_permanent",
+            "totalDebit": 416840000,
+            "totalCredit": 416840000,
+            "isBalanced": true,
+            "createdBy": "خانم محمدی (حسابدار ارشد)",
+            "createdAt": "1402/12/29",
+            "lines": [
+              {
+                "id": "l-1402-p1",
+                "accountCode": "201",
+                "accountTitle": "حساب‌های پرداختنی تجاری - بازرگانی رازی",
+                "personId": "per-3",
+                "personName": "بازرگانی نخ و زیپ رازی",
+                "debit": 45000000,
+                "credit": 0
+              },
+              {
+                "id": "l-1402-p2",
+                "accountCode": "202",
+                "accountTitle": "اسناد پرداختنی تجاری",
+                "debit": 27000000,
+                "credit": 0
+              },
+              {
+                "id": "l-1402-p3",
+                "accountCode": "301",
+                "accountTitle": "سرمایه اولیه فروشگاه خرازی",
+                "debit": 208340000,
+                "credit": 0
+              },
+              {
+                "id": "l-1402-p4",
+                "accountCode": "302",
+                "accountTitle": "سود و زیان انباشته پایان سال ۱۴۰۲",
+                "debit": 136500000,
+                "credit": 0
+              },
+              {
+                "id": "l-1402-p5",
+                "accountCode": "10101",
+                "accountTitle": "صندوق نقدی فروشگاه",
+                "debit": 0,
+                "credit": 18500000
+              },
+              {
+                "id": "l-1402-p6",
+                "accountCode": "10102",
+                "accountTitle": "بانک ملی - جاری ۵۴۲۱",
+                "debit": 0,
+                "credit": 185000000
+              },
+              {
+                "id": "l-1402-p7",
+                "accountCode": "10103",
+                "accountTitle": "بانک ملت - کارتخوان POS",
+                "debit": 0,
+                "credit": 129300000
+              },
+              {
+                "id": "l-1402-p8",
+                "accountCode": "102",
+                "accountTitle": "اسناد دریافتنی تجاری",
+                "debit": 0,
+                "credit": 35000000
+              },
+              {
+                "id": "l-1402-p9",
+                "accountCode": "103",
+                "accountTitle": "حساب‌های دریافتنی تجاری (مشتریان بدهکار)",
+                "debit": 0,
+                "credit": 25550000
+              },
+              {
+                "id": "l-1402-p10",
+                "accountCode": "104",
+                "accountTitle": "موجودی کالای انبار پایان دوره",
+                "debit": 0,
+                "credit": 23490000
+              }
+            ]
+          }
+        ],
+        "invoices": []
+      },
+      "createdBy": "مهندس مهدی رضایی",
+      "createdAt": "1402/01/01"
+    },
+    {
+      "id": "fy-1403",
+      "code": "1403",
+      "title": "سال مالی ۱۴۰۳ (دوره جاری)",
+      "startDate": "1403/01/01",
+      "endDate": "1403/12/30",
+      "status": "open",
+      "isClosed": false,
+      "isActive": true,
+      "isLeapYear": true,
+      "description": "سال مالی جاری فروشگاه خرازی نگین (کبیسه ۳۰ اسفند) - انتقالی از اختتامیه سال ۱۴۰۲",
+      "previousFiscalYearId": "fy-1402",
+      "openingVoucherId": "vch-1001",
+      "openingVoucherNumber": "1001",
+      "auditTrail": [
+        {
+          "action": "افتتاح سال مالی ۱۴۰۳ و صدور خودکار سند افتتاحیه شماره ۱۰۰۱ از اختتامیه ۱۴۰۲",
+          "userName": "مهندس مهدی رضایی",
+          "timestamp": "1403/01/01 08:00"
+        }
+      ],
+      "createdBy": "مهندس مهدی رضایی",
+      "createdAt": "1403/01/01"
+    }
+  ],
+  "rolePermissions": [
+    {
+      "role": "admin",
+      "title": "مدیر ارشد سیستم",
+      "description": "دسترسی کامل به تمامی ماژول‌ها، ثبت نهایی، ابطال، مدیریت سال مالی، تنظیم سطوح دسترسی و اطلاعات محرمانه",
+      "badgeColor": "rose",
+      "isSystemAdmin": true,
+      "modules": {
+        "dashboard": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "base_info": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "sales": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "purchases": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "inventory": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "treasury": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "accounting": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "reports": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "fiscal_year": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "users_security": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "settings": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        }
+      },
+      "confidential": {
+        "canViewPurchasePrice": true,
+        "canViewProfitMargins": true,
+        "canViewBankSecrets": true,
+        "canViewSecurityLogs": true,
+        "maxAllowedDiscountPercent": 100
+      },
+      "updatedAt": "1403/01/01",
+      "updatedBy": "سیستم (پیش‌فرض)"
+    },
+    {
+      "role": "accountant",
+      "title": "حسابدار ارشد",
+      "description": "مدیریت کامل حسابداری دوطرفه، خزانه‌داری، چک‌ها، گزارش‌های مالی و سال مالی؛ بدون مجوز تغییر تنظیمات امنیتی کاربران",
+      "badgeColor": "indigo",
+      "isSystemAdmin": false,
+      "modules": {
+        "dashboard": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "base_info": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": false,
+          "cancel": false,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "sales": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "purchases": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "inventory": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": true,
+          "cancel": false,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "treasury": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "accounting": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "reports": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": true,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "fiscal_year": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": false,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "users_security": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": true
+        },
+        "settings": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": true,
+          "export": false,
+          "reports": false
+        }
+      },
+      "confidential": {
+        "canViewPurchasePrice": true,
+        "canViewProfitMargins": true,
+        "canViewBankSecrets": true,
+        "canViewSecurityLogs": true,
+        "maxAllowedDiscountPercent": 25
+      },
+      "updatedAt": "1403/01/01",
+      "updatedBy": "سیستم (پیش‌فرض)"
+    },
+    {
+      "role": "cashier",
+      "title": "صندوق‌دار فروشگاه",
+      "description": "صدور و ثبت نهایی فاکتور فروش، دریافت و پرداخت صندوق و چاپ فاکتور؛ بدون دسترسی به بهای تمام‌شده، سود خالص، اسناد حسابداری و ابطال قطعی",
+      "badgeColor": "emerald",
+      "isSystemAdmin": false,
+      "modules": {
+        "dashboard": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "base_info": {
+          "view": true,
+          "create": true,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": true,
+          "export": false,
+          "reports": false
+        },
+        "sales": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": false,
+          "print": true,
+          "export": false,
+          "reports": true
+        },
+        "purchases": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "inventory": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "treasury": {
+          "view": true,
+          "create": true,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": true,
+          "export": false,
+          "reports": true
+        },
+        "accounting": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "reports": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": true,
+          "export": false,
+          "reports": true
+        },
+        "fiscal_year": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "users_security": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "settings": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        }
+      },
+      "confidential": {
+        "canViewPurchasePrice": false,
+        "canViewProfitMargins": false,
+        "canViewBankSecrets": false,
+        "canViewSecurityLogs": false,
+        "maxAllowedDiscountPercent": 10
+      },
+      "updatedAt": "1403/01/01",
+      "updatedBy": "سیستم (پیش‌فرض)"
+    },
+    {
+      "role": "inventory_clerk",
+      "title": "انباردار و مسئول کالا",
+      "description": "تعریف و ویرایش کالاها، واحدهای سنجش، رسید انبار، انتقال بین انبارها، کاردکس و انبارگردانی؛ بدون دسترسی به خزانه‌داری، بانک و حسابداری",
+      "badgeColor": "amber",
+      "isSystemAdmin": false,
+      "modules": {
+        "dashboard": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "base_info": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": false,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "sales": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": true,
+          "export": false,
+          "reports": false
+        },
+        "purchases": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": false,
+          "cancel": false,
+          "print": true,
+          "export": false,
+          "reports": true
+        },
+        "inventory": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "approve": true,
+          "cancel": false,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "treasury": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "accounting": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "reports": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": true,
+          "export": true,
+          "reports": true
+        },
+        "fiscal_year": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "users_security": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        },
+        "settings": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "approve": false,
+          "cancel": false,
+          "print": false,
+          "export": false,
+          "reports": false
+        }
+      },
+      "confidential": {
+        "canViewPurchasePrice": true,
+        "canViewProfitMargins": false,
+        "canViewBankSecrets": false,
+        "canViewSecurityLogs": false,
+        "maxAllowedDiscountPercent": 0
+      },
+      "updatedAt": "1403/01/01",
+      "updatedBy": "سیستم (پیش‌فرض)"
+    }
+  ],
+  "securityPolicy": {
+    "sessionTimeoutMinutes": 480,
+    "maxFailedLoginAttempts": 5,
+    "lockoutDurationMinutes": 15,
+    "minPasswordLength": 6,
+    "requireMixedCaseAndNumbers": true,
+    "enforceBackendRbac": true,
+    "maskConfidentialPricesForUnauthorized": true,
+    "logAllPrintAndExportActions": true,
+    "blockSqlAndXssPayloads": true,
+    "allowConcurrentSessions": true,
+    "updatedAt": "1403/01/01",
+    "updatedBy": "مدیر ارشد سیستم"
+  },
+  "auditLogs": [
+    {
+      "id": "log-1795511238373-8730",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "approve",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "موتور حسابداری",
+      "description": "اجرای کامل ۸ آزمون یکپارچه عملیاتی (خرید، فروش جزئی، برگشت جزئی، تسویه ترکیبی، چک دریافتی، وصول چک، هزینه، بستن سال مالی) - نتیجه: ۱۰۰٪ موفق",
+      "entityId": "suite-1795511238373",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۹/۳ ۱۲:۳۷:۱۸"
+    },
+    {
+      "id": "log-1795511238299-5543",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "export",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "پشتیبان‌گیری",
+      "description": "اجرای موفق آزمون عملیاتی پشتیبان‌گیری و بازیابی پایگاه داده (SHA-256: 0a42c6284ba5)",
+      "entityId": "bkp-test-1795511238299",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۹/۳ ۱۲:۳۷:۱۸"
+    },
+    {
+      "id": "log-1794913400637-2000",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "create",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "صدور فاکتور",
+      "description": "ثبت فاکتور فروش شماره INV-2898 به مبلغ ۹۶٬۰۰۰ تومان",
+      "entityId": "inv-1794913400628",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۲۶ ۱۴:۳۳:۲۰"
+    },
+    {
+      "id": "log-1794675262720-2920",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "create",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "صدور فاکتور",
+      "description": "ثبت فاکتور فروش شماره INV-4138 به مبلغ ۹۶٬۰۰۰ تومان",
+      "entityId": "inv-1794675262713",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۲۳ ۲۰:۲۴:۲۲"
+    },
+    {
+      "id": "log-1794204110986-9039",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "export",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "پشتیبان‌گیری",
+      "description": "اجرای موفق آزمون عملیاتی پشتیبان‌گیری و بازیابی پایگاه داده (SHA-256: cbc0f718eb10)",
+      "entityId": "bkp-test-1794204110986",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۸ ۱۰:۰۱:۵۰"
+    },
+    {
+      "id": "log-1794204086169-7977",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "approve",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "موتور حسابداری",
+      "description": "اجرای کامل ۸ آزمون یکپارچه عملیاتی (خرید، فروش جزئی، برگشت جزئی، تسویه ترکیبی، چک دریافتی، وصول چک، هزینه، بستن سال مالی) - نتیجه: ۱۰۰٪ موفق",
+      "entityId": "suite-1794204086169",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۸ ۱۰:۰۱:۲۶"
+    },
+    {
+      "id": "log-1794203633201-3331",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "update",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "چک و اسناد",
+      "description": "تغییر وضعیت چک 76545678 به «وصول قطعی چک و واریز به بانک»",
+      "entityId": "chq-1794203614700",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۸ ۹:۵۳:۵۳"
+    },
+    {
+      "id": "log-1794203633198-5749",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "create",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "اسناد حسابداری",
+      "description": "ثبت سند حسابداری دوطرفه شماره 1011 به تراز ۹٬۸۷۶٬۵۴۳٬۴۵۶ تومان - وصول چک شماره 76545678 صیادی و واریز به حساب «بانک ملی شعبه بازار (حساب جاری)» - طرف حساب: مزون دوخت پریسا (خانم عباسی)",
+      "entityId": "vch-1794203633198-269",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۸ ۹:۵۳:۵۳"
+    },
+    {
+      "id": "log-1794203614701-8907",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "create",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "چک و اسناد",
+      "description": "ثبت چک دریافتی شماره 76545678 به مبلغ ۹٬۸۷۶٬۵۴۳٬۴۵۶ تومان",
+      "entityId": "chq-1794203614700",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۸ ۹:۵۳:۳۴"
+    },
+    {
+      "id": "log-1794203614698-9554",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "create",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "اسناد حسابداری",
+      "description": "ثبت سند حسابداری دوطرفه شماره 1010 به تراز ۹٬۸۷۶٬۵۴۳٬۴۵۶ تومان - دریافت چک صیادی شماره 76545678 از «مزون دوخت پریسا (خانم عباسی)» بابت تسویه حساب",
+      "entityId": "vch-1794203614698-160",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۸ ۹:۵۳:۳۴"
+    },
+    {
+      "id": "log-1794203360180-7260",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "update",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "چک و اسناد",
+      "description": "تغییر وضعیت چک 634407 به «وصول قطعی چک و واریز به بانک»",
+      "entityId": "chq-1794054917720-0",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۸ ۹:۴۹:۲۰"
+    },
+    {
+      "id": "log-1794203360175-9525",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "create",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "اسناد حسابداری",
+      "description": "ثبت سند حسابداری دوطرفه شماره 1009 به تراز ۹۱۲٬۰۰۰ تومان - وصول چک شماره 634407 صیادی و واریز به حساب «بانک ملی شعبه بازار (حساب جاری)» - طرف حساب: مزون دوخت پریسا (خانم عباسی)",
+      "entityId": "vch-1794203360175-946",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۸ ۹:۴۹:۲۰"
+    },
+    {
+      "id": "log-1794054917720-1989",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "create",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "صدور فاکتور",
+      "description": "ثبت فاکتور فروش شماره INV-8564 به مبلغ ۹۱۲٬۰۰۰ تومان",
+      "entityId": "inv-1794054917719",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۶ ۱۶:۳۵:۱۷"
+    },
+    {
+      "id": "log-1794054606053-514",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "create",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "صدور فاکتور",
+      "description": "ثبت فاکتور فروش شماره INV-5585 به مبلغ ۹۹۸٬۰۰۰ تومان",
+      "entityId": "inv-1794054606052",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۶ ۱۶:۳۰:۰۶"
+    },
+    {
+      "id": "log-1794054440562-7546",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "update",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "چک و اسناد",
+      "description": "تغییر وضعیت چک 784512 به «وصول قطعی چک و واریز به بانک»",
+      "entityId": "chq-1",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۶ ۱۶:۲۷:۲۰"
+    },
+    {
+      "id": "log-1794054440556-5844",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "create",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "اسناد حسابداری",
+      "description": "ثبت سند حسابداری دوطرفه شماره 1006 به تراز ۱۵٬۰۰۰٬۰۰۰ تومان - وصول چک شماره 784512 صیادی و واریز به حساب «بانک ملی شعبه بازار (حساب جاری)» - طرف حساب: تولیدی پوشاک زنانه باران",
+      "entityId": "vch-1794054440556-638",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۶ ۱۶:۲۷:۲۰"
+    },
+    {
+      "id": "log-1794047834996-4591",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "approve",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "موتور حسابداری",
+      "description": "اجرای کامل ۸ آزمون یکپارچه عملیاتی (خرید، فروش جزئی، برگشت جزئی، تسویه ترکیبی، چک دریافتی، وصول چک، هزینه، بستن سال مالی) - نتیجه: ۱۰۰٪ موفق",
+      "entityId": "suite-1794047834996",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۶ ۱۴:۳۷:۱۴"
+    },
+    {
+      "id": "log-1794047834932-1360",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "export",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "پشتیبان‌گیری",
+      "description": "اجرای موفق آزمون عملیاتی پشتیبان‌گیری و بازیابی پایگاه داده (SHA-256: d661385aa826)",
+      "entityId": "bkp-test-1794047834932",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۶ ۱۴:۳۷:۱۴"
+    },
+    {
+      "id": "log-1794040794421-4466",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "approve",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "موتور حسابداری",
+      "description": "اجرای کامل ۸ آزمون یکپارچه عملیاتی (خرید، فروش جزئی، برگشت جزئی، تسویه ترکیبی، چک دریافتی، وصول چک، هزینه، بستن سال مالی) - نتیجه: ۱۰۰٪ موفق",
+      "entityId": "suite-1794040794421",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۶ ۱۲:۳۹:۵۴"
+    },
+    {
+      "id": "log-1794040794357-270",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "export",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "پشتیبان‌گیری",
+      "description": "اجرای موفق آزمون عملیاتی پشتیبان‌گیری و بازیابی پایگاه داده (SHA-256: 77bf64a4b55f)",
+      "entityId": "bkp-test-1794040794356",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۱۶ ۱۲:۳۹:۵۴"
+    },
+    {
+      "id": "log-1793108805769-2510",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "approve",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "موتور حسابداری",
+      "description": "اجرای کامل ۸ آزمون یکپارچه عملیاتی (خرید، فروش جزئی، برگشت جزئی، تسویه ترکیبی، چک دریافتی، وصول چک، هزینه، بستن سال مالی) - نتیجه: ۱۰۰٪ موفق",
+      "entityId": "suite-1793108805769",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۵ ۱۳:۴۶:۴۵"
+    },
+    {
+      "id": "log-1793108805709-6187",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "export",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "پشتیبان‌گیری",
+      "description": "اجرای موفق آزمون عملیاتی پشتیبان‌گیری و بازیابی پایگاه داده (SHA-256: e14c97e2bb9f)",
+      "entityId": "bkp-test-1793108805708",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۵ ۱۳:۴۶:۴۵"
+    },
+    {
+      "id": "log-1793099664114-3390",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "approve",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "موتور حسابداری",
+      "description": "اجرای کامل ۸ آزمون یکپارچه عملیاتی (خرید، فروش جزئی، برگشت جزئی، تسویه ترکیبی، چک دریافتی، وصول چک، هزینه، بستن سال مالی) - نتیجه: ۱۰۰٪ موفق",
+      "entityId": "suite-1793099664114",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۵ ۱۱:۱۴:۲۴"
+    },
+    {
+      "id": "log-1793099663999-8094",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "export",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "پشتیبان‌گیری",
+      "description": "اجرای موفق آزمون عملیاتی پشتیبان‌گیری و بازیابی پایگاه داده (SHA-256: 681c5335d64d)",
+      "entityId": "bkp-test-1793099663999",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۵ ۱۱:۱۴:۲۳"
+    },
+    {
+      "id": "log-1793020255092-4793",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "approve",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "موتور حسابداری",
+      "description": "اجرای کامل ۸ آزمون یکپارچه عملیاتی (خرید، فروش جزئی، برگشت جزئی، تسویه ترکیبی، چک دریافتی، وصول چک، هزینه، بستن سال مالی) - نتیجه: ۱۰۰٪ موفق",
+      "entityId": "suite-1793020255092",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۴ ۱۳:۱۰:۵۵"
+    },
+    {
+      "id": "log-1793020255037-2274",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "export",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "پشتیبان‌گیری",
+      "description": "اجرای موفق آزمون عملیاتی پشتیبان‌گیری و بازیابی پایگاه داده (SHA-256: 926f692bbdb6)",
+      "entityId": "bkp-test-1793020255037",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۴ ۱۳:۱۰:۵۵"
+    },
+    {
+      "id": "log-1793020079882-8473",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "approve",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "موتور حسابداری",
+      "description": "اجرای کامل ۸ آزمون یکپارچه عملیاتی (خرید، فروش جزئی، برگشت جزئی، تسویه ترکیبی، چک دریافتی، وصول چک، هزینه، بستن سال مالی) - نتیجه: دارای خطا",
+      "entityId": "suite-1793020079882",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۴ ۱۳:۰۷:۵۹"
+    },
+    {
+      "id": "log-1793020079830-7747",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "export",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "پشتیبان‌گیری",
+      "description": "اجرای موفق آزمون عملیاتی پشتیبان‌گیری و بازیابی پایگاه داده (SHA-256: d4d09278338d)",
+      "entityId": "bkp-test-1793020079830",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "۱۴۰۵/۸/۴ ۱۳:۰۷:۵۹"
+    },
+    {
+      "id": "log-seed-1",
+      "userId": "usr-admin",
+      "username": "admin",
+      "userName": "مهندس رضایی (مدیر فروشگاه)",
+      "userRole": "admin",
+      "action": "login",
+      "category": "auth_session",
+      "severity": "info",
+      "status": "success",
+      "module": "احراز هویت و نشست",
+      "permissionModule": "users_security",
+      "permissionAction": "view",
+      "description": "ورود موفق مدیر ارشد به سامانه و ایجاد نشست فعال (IP: 127.0.0.1)",
+      "ipAddress": "127.0.0.1",
+      "endpoint": "POST /api/auth/login",
+      "timestamp": "1403/07/22 ۰۸:۳۰:۱۲"
+    },
+    {
+      "id": "log-seed-2",
+      "userId": "usr-accountant",
+      "username": "hesabdar",
+      "userName": "خانم احمدی (حسابدار ارشد)",
+      "userRole": "accountant",
+      "action": "approve",
+      "category": "sensitive_operation",
+      "severity": "info",
+      "status": "success",
+      "module": "حسابداری دوطرفه",
+      "permissionModule": "accounting",
+      "permissionAction": "approve",
+      "entityId": "vch-1002",
+      "description": "قطعی‌سازی سند حسابداری شماره ۱۰۰۲ (فروش روبان ساتن به مزون پریسا)",
+      "ipAddress": "192.168.1.14",
+      "endpoint": "PUT /api/accounting/vouchers/vch-1002",
+      "beforeData": {
+        "status": "draft"
+      },
+      "afterData": {
+        "status": "permanent"
+      },
+      "timestamp": "1403/07/22 ۰۹:۲۰:۴۵"
+    },
+    {
+      "id": "log-seed-3",
+      "userId": "usr-cashier",
+      "username": "sandogh",
+      "userName": "آقای کریمی (صندوق‌دار)",
+      "userRole": "cashier",
+      "action": "unauthorized_access",
+      "category": "failed_attempt",
+      "severity": "critical",
+      "status": "blocked",
+      "module": "مدیریت سال مالی شمسی",
+      "permissionModule": "fiscal_year",
+      "permissionAction": "approve",
+      "description": "تلاش غیرمجاز صندوق‌دار برای دسترسی به عملیات بستن سال مالی (مسدود شده توسط گارد Backend با کد 403)",
+      "ipAddress": "192.168.1.21",
+      "endpoint": "POST /api/fiscal-years/fy-1403/close-and-rollover",
+      "timestamp": "1403/07/22 ۱۰:۰۵:۱۸"
+    },
+    {
+      "id": "log-seed-4",
+      "userId": "usr-clerk",
+      "username": "anbar",
+      "userName": "آقای حسینی (مسئول انبار)",
+      "userRole": "inventory_clerk",
+      "action": "update",
+      "category": "change_history",
+      "severity": "info",
+      "status": "success",
+      "module": "اطلاعات پایه و کالا",
+      "permissionModule": "base_info",
+      "permissionAction": "edit",
+      "entityId": "prd-1",
+      "description": "ویرایش نقطه سفارش کالای «روبان ساتن ۲٫۵ سانت قرمز نگین» از ۸۰ به ۱۰۰ متر",
+      "ipAddress": "192.168.1.35",
+      "endpoint": "POST /api/products",
+      "beforeData": {
+        "minStockAlert": 80
+      },
+      "afterData": {
+        "minStockAlert": 100
+      },
+      "timestamp": "1403/07/22 ۱۱:۱۲:۰۴"
+    },
+    {
+      "id": "log-seed-5",
+      "userId": "usr-cashier",
+      "username": "sandogh",
+      "userName": "آقای کریمی (صندوق‌دار)",
+      "userRole": "cashier",
+      "action": "failed_login",
+      "category": "failed_attempt",
+      "severity": "warning",
+      "status": "failed",
+      "module": "احراز هویت و نشست",
+      "description": "تلاش ناموفق ورود برای نام کاربری «sandogh» به علت اشتباه بودن کلمه عبور (مرتبه ۱ از ۵)",
+      "ipAddress": "192.168.1.21",
+      "endpoint": "POST /api/auth/login",
+      "timestamp": "1403/07/22 ۱۱:۴۰:۳۰"
+    }
+  ],
+  "settings": {
+    "storeName": "فروشگاه خرازی و ملزومات خیاطی نگین",
+    "storeOwner": "مهندس مهدی رضایی",
+    "phone": "۰۲۱-۵۵۴۴۳۳۲۲",
+    "address": "تهران، بازار بزرگ، بازار آهنگران، کوچه تکیه رضوی، پلاک ۴۴",
+    "currency": "تومان",
+    "defaultTaxPercent": 0,
+    "activeFiscalYear": "۱۴۰۳",
+    "allowNegativeStock": false,
+    "requireBalancedVouchers": true,
+    "printHeaderNote": "فروش انواع نخ، زیپ، دکمه، روبان، کش و ملزومات تخصصی مزون و خیاطی",
+    "printFooterNote": "اجناس فروخته شده پس از ۲۴ ساعت در صورت سلامت بسته‌بندی قابل تعویض است. از خرید شما سپاسگزاریم."
+  },
+  "savedAt": "2026-11-24T09:07:18.373Z"
+}

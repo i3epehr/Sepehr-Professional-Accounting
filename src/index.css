@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Vazirmatn FD', 'Vazirmatn', Tahoma, sans-serif;
+  --font-mono: 'Vazirmatn FD', 'Vazirmatn', Tahoma, sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Vazirmatn FD', 'Vazirmatn', Tahoma, sans-serif !important;
+    font-feature-settings: "ss01" 1, "tnum" 1;
+    font-variant-numeric: tabular-nums;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  *,
+  *::before,
+  *::after,
+  button,
+  input,
+  select,
+  textarea,
+  table,
+  th,
+  td,
+  code,
+  kbd,
+  pre,
+  .font-mono {
+    font-family: 'Vazirmatn FD', 'Vazirmatn', Tahoma, sans-serif !important;
+    font-feature-settings: "ss01" 1, "tnum" 1;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Harmonized Dark Mode overrides for any legacy un-prefixed containers */
+html.dark {
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  color-scheme: light;
+}
+
+html.dark .bg-white:not(#holoo-printable-invoice):not(#holoo-printable-invoice *) {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+html.dark .bg-slate-50:not(#holoo-printable-invoice *),
+html.dark .bg-slate-50\/50:not(#holoo-printable-invoice *),
+html.dark .bg-slate-50\/60:not(#holoo-printable-invoice *),
+html.dark .bg-slate-50\/70:not(#holoo-printable-invoice *),
+html.dark .bg-slate-50\/80:not(#holoo-printable-invoice *) {
+  background-color: #1e293b;
+}
+
+html.dark .bg-slate-100:not(#holoo-printable-invoice *) {
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+html.dark .border-slate-100:not(#holoo-printable-invoice *),
+html.dark .border-slate-200:not(#holoo-printable-invoice *),
+html.dark .border-slate-200\/80:not(#holoo-printable-invoice *),
+html.dark .border-slate-300:not(#holoo-printable-invoice *) {
+  border-color: #334155;
+}
+
+html.dark .divide-slate-100:not(#holoo-printable-invoice *) > :not([hidden]) ~ :not([hidden]),
+html.dark .divide-slate-200:not(#holoo-printable-invoice *) > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1e293b;
+}
+
+html.dark .text-slate-900:not(#holoo-printable-invoice *),
+html.dark .text-slate-800:not(#holoo-printable-invoice *) {
+  color: #f8fafc;
+}
+
+html.dark .text-slate-700:not(#holoo-printable-invoice *),
+html.dark .text-slate-600:not(#holoo-printable-invoice *) {
+  color: #cbd5e1;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Clean Print stylesheet */
+@media print {
+  header,
+  aside,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  main {
+    padding: 0 !important;
+    background: white !important;
+  }
+}
