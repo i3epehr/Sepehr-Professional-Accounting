@@ -314,7 +314,7 @@ export const InvoiceCustomizerModal: React.FC<InvoiceCustomizerModalProps> = ({
 
             {/* Custom Notes */}
             <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400">
                 عنوان فاکتور
               </label>
               <input
@@ -324,7 +324,7 @@ export const InvoiceCustomizerModal: React.FC<InvoiceCustomizerModalProps> = ({
                 className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold"
               />
 
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 pt-2">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 pt-2">
                 پیام تشکر / پاورقی
               </label>
               <input
@@ -334,7 +334,7 @@ export const InvoiceCustomizerModal: React.FC<InvoiceCustomizerModalProps> = ({
                 className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs"
               />
 
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 pt-2">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 pt-2">
                 شرایط و قوانین پایین فاکتور (تسویه و مرجوعی)
               </label>
               <textarea
@@ -384,7 +384,7 @@ export const InvoiceCustomizerModal: React.FC<InvoiceCustomizerModalProps> = ({
                   </h4>
                   {config.showGuildName && (
                     <p className="text-[10px] text-teal-800 font-bold mt-0.5">
-                      {settings.guildName || 'صنف خرازی، خیاطی و ملزومات پوشاک'}
+                      {settings.guildName || 'صنف بازرگانی و فروشگاهی'}
                     </p>
                   )}
                   <p className="text-[10.5px] text-slate-600 font-bold mt-0.5">

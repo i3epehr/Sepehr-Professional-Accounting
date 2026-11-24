@@ -1402,7 +1402,7 @@ export const TreasuryModule: React.FC = () => {
       {activeTab === 'categories' && (
         <div className="space-y-4">
           <div className="flex justify-between items-center">
-            <h3 className="text-sm font-black text-slate-800">سرفصل‌ها و دسته‌بندی‌های هزینه و درآمد خرازی</h3>
+            <h3 className="text-sm font-black text-slate-800">سرفصل‌ها و دسته‌بندی‌های هزینه و درآمد</h3>
             <button
               onClick={() => setIsCategoryModalOpen(true)}
               className="flex items-center gap-1 text-xs font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg border border-indigo-200 transition-colors"
@@ -1450,7 +1450,7 @@ export const TreasuryModule: React.FC = () => {
 
             <form onSubmit={handleSaveAccount} className="space-y-4 mt-4 text-xs">
               <div>
-                <label className="block font-bold text-slate-700 mb-1">نوع منبع مالی</label>
+                <label className="block font-medium text-slate-500 mb-1">نوع منبع مالی</label>
                 <div className="grid grid-cols-3 gap-2">
                   <button
                     type="button"
@@ -1483,7 +1483,7 @@ export const TreasuryModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">عنوان حساب یا صندوق *</label>
+                <label className="block font-medium text-slate-500 mb-1">عنوان حساب یا صندوق *</label>
                 <input
                   type="text"
                   required
@@ -1498,7 +1498,7 @@ export const TreasuryModule: React.FC = () => {
                 <>
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <label className="block font-bold text-slate-700 mb-1">نام بانک</label>
+                      <label className="block font-medium text-slate-500 mb-1">نام بانک</label>
                       <input
                         type="text"
                         value={accBankName}
@@ -1507,7 +1507,7 @@ export const TreasuryModule: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label className="block font-bold text-slate-700 mb-1">نام شعبه</label>
+                      <label className="block font-medium text-slate-500 mb-1">نام شعبه</label>
                       <input
                         type="text"
                         placeholder="مثال: شعبه بازار تهران"
@@ -1519,7 +1519,7 @@ export const TreasuryModule: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block font-bold text-slate-700 mb-1">شماره حساب یا پایانه کارتخوان</label>
+                    <label className="block font-medium text-slate-500 mb-1">شماره حساب یا پایانه کارتخوان</label>
                     <input
                       type="text"
                       placeholder="0105421980007"
@@ -1531,7 +1531,7 @@ export const TreasuryModule: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block font-bold text-slate-700 mb-1">شماره شبا (IBAN)</label>
+                    <label className="block font-medium text-slate-500 mb-1">شماره شبا (IBAN)</label>
                     <input
                       type="text"
                       placeholder="IR..."
@@ -1545,7 +1545,7 @@ export const TreasuryModule: React.FC = () => {
               )}
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">موجودی افتتاحیه / اولیه (ریال)</label>
+                <label className="block font-medium text-slate-500 mb-1">موجودی افتتاحیه / اولیه (ریال)</label>
                 <input
                   type="number"
                   min="0"
@@ -1660,7 +1660,7 @@ export const TreasuryModule: React.FC = () => {
               {/* Person Selector for Receive & Pay */}
               {(txType === 'receive' || txType === 'pay') && (
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">طرف حساب *</label>
+                  <label className="block font-medium text-slate-500 mb-1">طرف حساب *</label>
                   <select
                     value={txPersonId}
                     onChange={(e) => {
@@ -1731,7 +1731,7 @@ export const TreasuryModule: React.FC = () => {
               {/* Category Selector for Income & Expense */}
               {(txType === 'income' || txType === 'expense') && (
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">سرفصل دسته‌بندی مالی *</label>
+                  <label className="block font-medium text-slate-500 mb-1">سرفصل دسته‌بندی مالی *</label>
                   <select
                     value={txCategoryId}
                     onChange={(e) => setTxCategoryId(e.target.value)}
@@ -1751,7 +1751,7 @@ export const TreasuryModule: React.FC = () => {
               {/* Account and Method */}
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">
+                  <label className="block font-medium text-slate-500 mb-1">
                     {txType === 'receive' || txType === 'income' ? 'واریز به حساب / صندوق *' : 'برداشت از حساب / صندوق *'}
                   </label>
                   <select
@@ -1768,7 +1768,7 @@ export const TreasuryModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">روش پرداخت / دریافت</label>
+                  <label className="block font-medium text-slate-500 mb-1">روش پرداخت / دریافت</label>
                   <select
                     value={txPaymentMethod}
                     onChange={(e) => setTxPaymentMethod(e.target.value as any)}
@@ -1785,7 +1785,7 @@ export const TreasuryModule: React.FC = () => {
               {/* Amount & Date & Tracking */}
               <div className="grid grid-cols-3 gap-3">
                 <div className="col-span-1">
-                  <label className="block font-bold text-slate-700 mb-1">مبلغ (ریال) *</label>
+                  <label className="block font-medium text-slate-500 mb-1">مبلغ (ریال) *</label>
                   <input
                     type="number"
                     min="1"
@@ -1798,7 +1798,7 @@ export const TreasuryModule: React.FC = () => {
                 </div>
 
                 <div className="col-span-1">
-                  <label className="block font-bold text-slate-700 mb-1">شماره پیگیری / فیش</label>
+                  <label className="block font-medium text-slate-500 mb-1">شماره پیگیری / فیش</label>
                   <input
                     type="text"
                     placeholder="شماره پیگیری"
@@ -1810,7 +1810,7 @@ export const TreasuryModule: React.FC = () => {
                 </div>
 
                 <div className="col-span-1">
-                  <label className="block font-bold text-slate-700 mb-1">تاریخ تراکنش</label>
+                  <label className="block font-medium text-slate-500 mb-1">تاریخ تراکنش</label>
                   <input
                     type="text"
                     value={txDate}
@@ -1822,7 +1822,7 @@ export const TreasuryModule: React.FC = () => {
 
               {/* Description */}
               <div>
-                <label className="block font-bold text-slate-700 mb-1">شرح عملیات / بابت</label>
+                <label className="block font-medium text-slate-500 mb-1">شرح عملیات / بابت</label>
                 <input
                   type="text"
                   placeholder="توضیحات و شرح ثبت در دفاتر حسابداری"
@@ -1876,7 +1876,7 @@ export const TreasuryModule: React.FC = () => {
             <form onSubmit={handleSaveTransfer} className="space-y-4 mt-4 text-xs">
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">از حساب (مبدأ برداشت) *</label>
+                  <label className="block font-medium text-slate-500 mb-1">از حساب (مبدأ برداشت) *</label>
                   <select
                     value={trfSourceId}
                     onChange={(e) => setTrfSourceId(e.target.value)}
@@ -1891,7 +1891,7 @@ export const TreasuryModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">به حساب (مقصد واریز) *</label>
+                  <label className="block font-medium text-slate-500 mb-1">به حساب (مقصد واریز) *</label>
                   <select
                     value={trfDestId}
                     onChange={(e) => setTrfDestId(e.target.value)}
@@ -1908,7 +1908,7 @@ export const TreasuryModule: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">مبلغ انتقال (ریال) *</label>
+                  <label className="block font-medium text-slate-500 mb-1">مبلغ انتقال (ریال) *</label>
                   <input
                     type="number"
                     min="1"
@@ -1921,7 +1921,7 @@ export const TreasuryModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">شماره ارجاع / پیگیری</label>
+                  <label className="block font-medium text-slate-500 mb-1">شماره ارجاع / پیگیری</label>
                   <input
                     type="text"
                     placeholder="پیگیری"
@@ -1934,7 +1934,7 @@ export const TreasuryModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">شرح انتقال</label>
+                <label className="block font-medium text-slate-500 mb-1">شرح انتقال</label>
                 <input
                   type="text"
                   placeholder="مثال: برداشت نقدی از بانک جهت شارژ صندوق دخل فروشگاه"
@@ -1980,7 +1980,7 @@ export const TreasuryModule: React.FC = () => {
 
             <form onSubmit={handleSaveCheque} className="space-y-4 mt-4 text-xs">
               <div>
-                <label className="block font-bold text-slate-700 mb-1">نوع چک</label>
+                <label className="block font-medium text-slate-500 mb-1">نوع چک</label>
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     type="button"
@@ -2005,7 +2005,7 @@ export const TreasuryModule: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">شماره سریال چک *</label>
+                  <label className="block font-medium text-slate-500 mb-1">شماره سریال چک *</label>
                   <input
                     type="text"
                     required
@@ -2018,7 +2018,7 @@ export const TreasuryModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">شناسه صیادی (۱۶ رقم)</label>
+                  <label className="block font-medium text-slate-500 mb-1">شناسه صیادی (۱۶ رقم)</label>
                   <input
                     type="text"
                     maxLength={16}
@@ -2033,7 +2033,7 @@ export const TreasuryModule: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">بانک صادرکننده *</label>
+                  <label className="block font-medium text-slate-500 mb-1">بانک صادرکننده *</label>
                   <input
                     type="text"
                     required
@@ -2044,7 +2044,7 @@ export const TreasuryModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">شعبه</label>
+                  <label className="block font-medium text-slate-500 mb-1">شعبه</label>
                   <input
                     type="text"
                     placeholder="مثال: شعبه بازار"
@@ -2057,7 +2057,7 @@ export const TreasuryModule: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">طرف حساب مرتبط *</label>
+                  <label className="block font-medium text-slate-500 mb-1">طرف حساب مرتبط *</label>
                   <select
                     value={chequePersonId}
                     onChange={(e) => setChequePersonId(e.target.value)}
@@ -2072,7 +2072,7 @@ export const TreasuryModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">مبلغ چک (ریال) *</label>
+                  <label className="block font-medium text-slate-500 mb-1">مبلغ چک (ریال) *</label>
                   <input
                     type="number"
                     min="1"
@@ -2087,7 +2087,7 @@ export const TreasuryModule: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">تاریخ صدور</label>
+                  <label className="block font-medium text-slate-500 mb-1">تاریخ صدور</label>
                   <input
                     type="text"
                     value={issueDate}
@@ -2097,7 +2097,7 @@ export const TreasuryModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">تاریخ سررسید *</label>
+                  <label className="block font-medium text-slate-500 mb-1">تاریخ سررسید *</label>
                   <input
                     type="text"
                     required
@@ -2110,7 +2110,7 @@ export const TreasuryModule: React.FC = () => {
 
               {chequeType === 'issued' && (
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">حساب بانکی صادرکننده چک *</label>
+                  <label className="block font-medium text-slate-500 mb-1">حساب بانکی صادرکننده چک *</label>
                   <select
                     value={chequeSourceAccountId}
                     onChange={(e) => setChequeSourceAccountId(e.target.value)}
@@ -2128,7 +2128,7 @@ export const TreasuryModule: React.FC = () => {
               )}
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">یادداشت / بابت</label>
+                <label className="block font-medium text-slate-500 mb-1">یادداشت / بابت</label>
                 <input
                   type="text"
                   placeholder="بابت تسویه فاکتور خرید یا فروش"
@@ -2208,7 +2208,7 @@ export const TreasuryModule: React.FC = () => {
               {/* Account Selector for Deposited and Collected */}
               {(targetChequeStatus === 'deposited' || targetChequeStatus === 'collected') && (
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">حساب بانکی مقصد واریز وجه *</label>
+                  <label className="block font-medium text-slate-500 mb-1">حساب بانکی مقصد واریز وجه *</label>
                   <select
                     value={transitionBankAccountId}
                     onChange={(e) => setTransitionBankAccountId(e.target.value)}
@@ -2228,7 +2228,7 @@ export const TreasuryModule: React.FC = () => {
               {/* Person Selector for Transferred (Endorsed) */}
               {targetChequeStatus === 'transferred' && (
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">طرف حساب دریافت‌کننده چک (تأمین‌کننده) *</label>
+                  <label className="block font-medium text-slate-500 mb-1">طرف حساب دریافت‌کننده چک (تأمین‌کننده) *</label>
                   <select
                     value={transitionPersonId}
                     onChange={(e) => setTransitionPersonId(e.target.value)}
@@ -2248,7 +2248,7 @@ export const TreasuryModule: React.FC = () => {
               {/* Bounce Reason */}
               {targetChequeStatus === 'bounced' && (
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">علت برگشت خوردن چک *</label>
+                  <label className="block font-medium text-slate-500 mb-1">علت برگشت خوردن چک *</label>
                   <select
                     value={transitionBounceReason}
                     onChange={(e) => setTransitionBounceReason(e.target.value)}
@@ -2264,7 +2264,7 @@ export const TreasuryModule: React.FC = () => {
               )}
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">توضیحات و شرح در تاریخچه</label>
+                <label className="block font-medium text-slate-500 mb-1">توضیحات و شرح در تاریخچه</label>
                 <input
                   type="text"
                   placeholder="شرح عملیات تغییر وضعیت"
@@ -2369,7 +2369,7 @@ export const TreasuryModule: React.FC = () => {
 
             <form onSubmit={handleSaveCategory} className="space-y-4 mt-4 text-xs">
               <div>
-                <label className="block font-bold text-slate-700 mb-1">نوع سرفصل</label>
+                <label className="block font-medium text-slate-500 mb-1">نوع سرفصل</label>
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     type="button"
@@ -2393,7 +2393,7 @@ export const TreasuryModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">عنوان سرفصل *</label>
+                <label className="block font-medium text-slate-500 mb-1">عنوان سرفصل *</label>
                 <input
                   type="text"
                   required
@@ -2405,7 +2405,7 @@ export const TreasuryModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">کد سرفصل حسابداری</label>
+                <label className="block font-medium text-slate-500 mb-1">کد سرفصل حسابداری</label>
                 <input
                   type="text"
                   placeholder="مثال: 608"
@@ -2417,7 +2417,7 @@ export const TreasuryModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">توضیحات</label>
+                <label className="block font-medium text-slate-500 mb-1">توضیحات</label>
                 <input
                   type="text"
                   placeholder="شرح موارد مصرف این سرفصل"

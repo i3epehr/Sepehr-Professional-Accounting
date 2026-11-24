@@ -1391,7 +1391,7 @@ export const UsersModule: React.FC = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
               <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                   مهلت انقضای نشست (دقیقه)
                 </label>
                 <input
@@ -1409,7 +1409,7 @@ export const UsersModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                   حداکثر تلاش ناموفق ورود (قفل حساب)
                 </label>
                 <input
@@ -1428,7 +1428,7 @@ export const UsersModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                   مدت قفل خودکار حساب (دقیقه)
                 </label>
                 <input
@@ -1446,7 +1446,7 @@ export const UsersModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                   حداقل طول مجاز رمز عبور
                 </label>
                 <input
@@ -1868,7 +1868,7 @@ export const UsersModule: React.FC = () => {
             <form onSubmit={handleSaveUser} className="p-5 space-y-3.5 text-xs">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     نام و نام خانوادگی *
                   </label>
                   <input
@@ -1882,7 +1882,7 @@ export const UsersModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     نام کاربری انگلیسی *
                   </label>
                   <input
@@ -1898,7 +1898,7 @@ export const UsersModule: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     نقش سیستمی (RBAC) *
                   </label>
                   <select
@@ -1914,7 +1914,7 @@ export const UsersModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     واحد سازمانی
                   </label>
                   <input
@@ -1929,7 +1929,7 @@ export const UsersModule: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     شماره همراه
                   </label>
                   <input
@@ -1942,7 +1942,7 @@ export const UsersModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     {editingUser ? 'کلمه عبور جدید (اختیاری)' : 'کلمه عبور اولیه *'}
                   </label>
                   <input
@@ -2003,7 +2003,7 @@ export const UsersModule: React.FC = () => {
             </div>
             <form onSubmit={handleResetPassword} className="p-4 space-y-3 text-xs">
               <div>
-                <label className="block font-bold mb-1">کلمه عبور جدید (شامل حروف و اعداد)</label>
+                <label className="block font-medium mb-1">کلمه عبور جدید (شامل حروف و اعداد)</label>
                 <input
                   type="text"
                   required

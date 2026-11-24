@@ -188,7 +188,7 @@ export const UnitsModule: React.FC = () => {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
         <div>
           <div className="flex items-center gap-2">
-            <h2 className="text-lg font-black text-slate-800">واحدهای اندازه‌گیری و ضرایب تبدیل خرازی</h2>
+            <h2 className="text-lg font-black text-slate-800">واحدهای اندازه‌گیری و ضرایب تبدیل</h2>
             <span className="text-xs bg-indigo-50 text-indigo-700 px-2.5 py-0.5 rounded-full font-bold border border-indigo-100">
               {toPersianDigits(units.length)} واحد تعریف‌شده
             </span>
@@ -231,7 +231,7 @@ export const UnitsModule: React.FC = () => {
           }`}
         >
           <Layers className="w-4 h-4" />
-          <span>جدول واحدهای اندازه‌گیری خرازی ({toPersianDigits(units.length)})</span>
+          <span>جدول واحدهای اندازه‌گیری ({toPersianDigits(units.length)})</span>
         </button>
 
         <button
@@ -243,7 +243,7 @@ export const UnitsModule: React.FC = () => {
           }`}
         >
           <Calculator className="w-4 h-4" />
-          <span>ماشین‌حساب هوشمند تبدیل واحد خرازی</span>
+          <span>ماشین‌حساب هوشمند تبدیل واحد</span>
         </button>
 
         <button
@@ -336,7 +336,7 @@ export const UnitsModule: React.FC = () => {
                     </div>
 
                     <p className="text-xs text-slate-500 mt-3 leading-relaxed">
-                      {u.description || 'واحد استاندارد برای فروش و انبارداری اقلام خرازی'}
+                      {u.description || 'واحد استاندارد برای فروش و انبارداری اقلام'}
                     </p>
 
                     <div className="mt-4 pt-3 border-t border-slate-100 space-y-2 text-xs">
@@ -402,7 +402,7 @@ export const UnitsModule: React.FC = () => {
           <div className="bg-gradient-to-tr from-slate-900 via-indigo-950 to-slate-900 p-6 rounded-2xl text-white shadow-md border border-slate-800">
             <div className="flex items-center gap-2 text-indigo-400 font-bold text-xs mb-2">
               <Calculator className="w-4 h-4" />
-              <span>ماشین حساب تبدیل واحد سریع خرازی (تست لحظه‌ای ضرایب تبدیل)</span>
+              <span>ماشین حساب تبدیل واحد سریع (تست لحظه‌ای ضرایب تبدیل)</span>
             </div>
             <p className="text-xs text-slate-300 max-w-2xl leading-relaxed">
               فروشندگان هنگام فروش روبان، کش، زیپ، دکمه یا منجوق می‌توانند مقدار را با هر واحدی (رول، متر، بسته، کیلوگرم، قواره) وارد کنند؛ سیستم به صورت دقیق تبدیل ریاضی را انجام داده و فرمول را شفاف نمایش می‌دهد:
@@ -506,7 +506,7 @@ export const UnitsModule: React.FC = () => {
             <div>
               <div className="flex items-center gap-2">
                 <FlaskConical className="w-5 h-5 text-indigo-600" />
-                <h3 className="font-black text-slate-800 text-sm">میز آزمون خودکار محاسبات سیستم خرازی</h3>
+                <h3 className="font-black text-slate-800 text-sm">میز آزمون خودکار محاسبات سیستم</h3>
                 {testResults.length > 0 && (
                   <span className="text-xs bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full border border-emerald-200">
                     {toPersianDigits(testResults.filter((r) => r.passed).length)} از {toPersianDigits(testResults.length)} آزمون موفق (۱۰۰٪)
@@ -584,7 +584,7 @@ export const UnitsModule: React.FC = () => {
                   <Scale className="w-5 h-5" />
                 </div>
                 <h3 className="font-black text-slate-800 text-sm">
-                  {editingUnit ? `ویرایش واحد «${editingUnit.name}»` : 'تعریف واحد اندازه‌گیری جدید خرازی'}
+                  {editingUnit ? `ویرایش واحد «${editingUnit.name}»` : 'تعریف واحد اندازه‌گیری جدید'}
                 </h3>
               </div>
               <button
@@ -598,7 +598,7 @@ export const UnitsModule: React.FC = () => {
             <form onSubmit={handleSaveUnit} className="mt-4 space-y-4 text-xs">
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">نام واحد (فارسی) *</label>
+                  <label className="block font-medium text-slate-500 mb-1">نام واحد (فارسی) *</label>
                   <input
                     type="text"
                     required
@@ -609,7 +609,7 @@ export const UnitsModule: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">نماد اختصاری</label>
+                  <label className="block font-medium text-slate-500 mb-1">نماد اختصاری</label>
                   <input
                     type="text"
                     placeholder="مثلاً: roll, m, pcs"
@@ -622,7 +622,7 @@ export const UnitsModule: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">خانواده فیزیکی</label>
+                  <label className="block font-medium text-slate-500 mb-1">خانواده فیزیکی</label>
                   <select
                     value={modalForm.unitFamily || 'count'}
                     onChange={(e) => setModalForm({ ...modalForm, unitFamily: e.target.value as UnitFamily })}
@@ -636,7 +636,7 @@ export const UnitsModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">پذیرش مقادیر اعشاری</label>
+                  <label className="block font-medium text-slate-500 mb-1">پذیرش مقادیر اعشاری</label>
                   <select
                     value={modalForm.isDecimalAllowed ? 'true' : 'false'}
                     onChange={(e) => setModalForm({ ...modalForm, isDecimalAllowed: e.target.value === 'true' })}
@@ -652,7 +652,7 @@ export const UnitsModule: React.FC = () => {
                 <div className="text-[11px] font-bold text-indigo-700">رابطه واحد فرعی با واحد مبنا:</div>
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block font-bold text-slate-600 mb-1">واحد اصلی مبنا</label>
+                    <label className="block font-medium text-slate-600 mb-1">واحد اصلی مبنا</label>
                     <select
                       value={modalForm.baseUnitId || ''}
                       onChange={(e) => setModalForm({ ...modalForm, baseUnitId: e.target.value })}
@@ -670,7 +670,7 @@ export const UnitsModule: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block font-bold text-slate-600 mb-1">ضریب تبدیل</label>
+                    <label className="block font-medium text-slate-600 mb-1">ضریب تبدیل</label>
                     <input
                       type="number"
                       step="any"
@@ -684,7 +684,7 @@ export const UnitsModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">توضیحات و کاربرد در خرازی</label>
+                <label className="block font-medium text-slate-500 mb-1">توضیحات و کاربرد واحد</label>
                 <textarea
                   rows={2}
                   placeholder="مثلا: هر رول شامل ۲۵ متر روبان یا کش است..."

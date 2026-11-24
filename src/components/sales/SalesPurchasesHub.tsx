@@ -712,7 +712,7 @@ export const SalesPurchasesHub: React.FC<SalesPurchasesHubProps> = ({ onOpenNewI
             </p>
 
             <div>
-              <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+              <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                 دلیل ابطال (الزامی برای رویدادنگار امنیتی و ممیزی):
               </label>
               <textarea

@@ -177,7 +177,7 @@ export const BaseInfoModule: React.FC = () => {
           </div>
           <div>
             <h1 className="text-base font-black text-slate-800 dark:text-slate-100">
-              ماژول جامع اطلاعات پایه سیستم حسابداری خرازی
+              ماژول جامع اطلاعات پایه سیستم حسابداری
             </h1>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
               مدیریت یکپارچه کالاها، اشخاص و طرف‌حساب‌ها، گروه‌بندی، برندها، دسته‌ها و واحدهای سنجش متصل به پایگاه داده دائمی
@@ -459,7 +459,7 @@ export const BaseInfoModule: React.FC = () => {
             </div>
             <form onSubmit={handleSaveGroup} className="p-5 space-y-3.5 text-xs">
               <div>
-                <label className="block font-bold mb-1">کد گروه</label>
+                <label className="block font-medium mb-1">کد گروه</label>
                 <input
                   type="text"
                   required
@@ -469,7 +469,7 @@ export const BaseInfoModule: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block font-bold mb-1">نام گروه</label>
+                <label className="block font-medium mb-1">نام گروه</label>
                 <input
                   type="text"
                   required
@@ -481,7 +481,7 @@ export const BaseInfoModule: React.FC = () => {
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold mb-1">درصد تخفیف پیش‌فرض (%)</label>
+                  <label className="block font-medium mb-1">درصد تخفیف پیش‌فرض (%)</label>
                   <input
                     type="number"
                     min="0"
@@ -492,7 +492,7 @@ export const BaseInfoModule: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block font-bold mb-1">سقف اعتبار پیش‌فرض (ریال)</label>
+                  <label className="block font-medium mb-1">سقف اعتبار پیش‌فرض (ریال)</label>
                   <input
                     type="number"
                     min="0"
@@ -503,7 +503,7 @@ export const BaseInfoModule: React.FC = () => {
                 </div>
               </div>
               <div>
-                <label className="block font-bold mb-1">توضیحات</label>
+                <label className="block font-medium mb-1">توضیحات</label>
                 <textarea
                   rows={2}
                   value={editingGroup.description || ''}
@@ -545,7 +545,7 @@ export const BaseInfoModule: React.FC = () => {
             </div>
             <form onSubmit={handleSaveBrand} className="p-5 space-y-3.5 text-xs">
               <div>
-                <label className="block font-bold mb-1">نام برند <span className="text-rose-500">*</span></label>
+                <label className="block font-medium mb-1">نام برند <span className="text-rose-500">*</span></label>
                 <input
                   type="text"
                   required
@@ -556,7 +556,7 @@ export const BaseInfoModule: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block font-bold mb-1">کشور مبدأ / تولیدکننده</label>
+                <label className="block font-medium mb-1">کشور مبدأ / تولیدکننده</label>
                 <input
                   type="text"
                   placeholder="مثال: ژاپن، فرانسه، ترکیه، ایران"
@@ -566,7 +566,7 @@ export const BaseInfoModule: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block font-bold mb-1">توضیحات</label>
+                <label className="block font-medium mb-1">توضیحات</label>
                 <textarea
                   rows={2}
                   placeholder="نخ، زیپ، روبان یا ابزار..."
@@ -609,7 +609,7 @@ export const BaseInfoModule: React.FC = () => {
             </div>
             <form onSubmit={handleSaveCategory} className="p-5 space-y-3.5 text-xs">
               <div>
-                <label className="block font-bold mb-1">کد دسته</label>
+                <label className="block font-medium mb-1">کد دسته</label>
                 <input
                   type="text"
                   required
@@ -619,7 +619,7 @@ export const BaseInfoModule: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block font-bold mb-1">عنوان دسته‌بندی <span className="text-rose-500">*</span></label>
+                <label className="block font-medium mb-1">عنوان دسته‌بندی <span className="text-rose-500">*</span></label>
                 <input
                   type="text"
                   required
@@ -630,7 +630,7 @@ export const BaseInfoModule: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block font-bold mb-1">توضیحات</label>
+                <label className="block font-medium mb-1">توضیحات</label>
                 <textarea
                   rows={2}
                   value={editingCategory.description || ''}

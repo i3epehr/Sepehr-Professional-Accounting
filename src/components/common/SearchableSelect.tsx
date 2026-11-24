@@ -80,7 +80,7 @@ export const SearchableSelect: React.FC<SearchableSelectProps> = ({
   return (
     <div className={`relative ${className}`} ref={containerRef} dir="rtl">
       {label && (
-        <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+        <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
           {label} {required && <span className="text-rose-500">*</span>}
         </label>
       )}

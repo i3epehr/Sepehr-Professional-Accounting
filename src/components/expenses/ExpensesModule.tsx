@@ -59,7 +59,7 @@ export const ExpensesModule: React.FC = () => {
     {
       id: 'exp-1',
       type: 'expense',
-      category: 'کرایه حمل و باربری ملزومات خرازی',
+      category: 'کرایه حمل و باربری کالا',
       amount: 450000,
       date: '1403/07/10',
       treasuryAccountTitle: 'صندوق نقدی شماره ۱ فروشگاه',
@@ -73,7 +73,7 @@ export const ExpensesModule: React.FC = () => {
       amount: 15000000,
       date: '1403/07/01',
       treasuryAccountTitle: 'حساب جاری بانک ملت (اصلی)',
-      description: 'پرداخت اجاره بهای مهرماه مغازه خرازی',
+      description: 'پرداخت اجاره بهای مهرماه فروشگاه',
       recipientOrPayer: 'مالک تجاری پاساژ نگین',
     },
     {
@@ -131,7 +131,7 @@ export const ExpensesModule: React.FC = () => {
 
   // Form: General Expense
   const [genFormType, setGenFormType] = useState<'expense' | 'income'>('expense');
-  const [genFormCategory, setGenFormCategory] = useState('کرایه حمل و باربری ملزومات خرازی');
+  const [genFormCategory, setGenFormCategory] = useState('کرایه حمل و باربری کالا');
   const [genFormAmount, setGenFormAmount] = useState('');
   const [genFormTreasuryId, setGenFormTreasuryId] = useState('');
   const [genFormRecipient, setGenFormRecipient] = useState('');
@@ -361,7 +361,7 @@ export const ExpensesModule: React.FC = () => {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
         <div>
           <div className="flex items-center gap-2">
-            <h2 className="text-lg font-black text-slate-800">هزینه‌های جانبی و خرج‌کار خرازی</h2>
+            <h2 className="text-lg font-black text-slate-800">هزینه‌های جانبی و خرج‌کار بازرگانی</h2>
             <span className="text-xs bg-amber-50 text-amber-700 px-2.5 py-0.5 rounded-full font-bold border border-amber-200">
               مدیریت بهای تمام‌شده و تسهیم دقیق
             </span>
@@ -573,7 +573,7 @@ export const ExpensesModule: React.FC = () => {
       {activeTab === 'cost_types' && (
         <div className="space-y-4">
           <div className="bg-indigo-50/60 p-4 rounded-xl border border-indigo-100 text-xs text-indigo-900 leading-relaxed">
-            💡 <strong>انعطاف‌پذیری نحوه تخصیص:</strong> هر کارگاه یا فروشگاه خرازی ممکن است هزینه‌های جانبی را به روش خاص خود سرشکن کند. در این بخش می‌توانید نوع هزینه و روش پیش‌فرض آن را (بر اساس تعداد، ارزش ریالی، وزن کیلوگرمی، طول متراژ یا سربار) تعریف نمایید تا دقیقاً منطبق بر تعریف کسب‌وکار شما باشد.
+            💡 <strong>انعطاف‌پذیری نحوه تخصیص:</strong> هر بنگاه یا فروشگاه تجاری ممکن است هزینه‌های جانبی را به روش خاص خود سرشکن کند. در این بخش می‌توانید نوع هزینه و روش پیش‌فرض آن را (بر اساس تعداد، ارزش ریالی، وزن کیلوگرمی، طول متراژ یا سربار) تعریف نمایید تا دقیقاً منطبق بر تعریف کسب‌وکار شما باشد.
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -701,7 +701,7 @@ export const ExpensesModule: React.FC = () => {
             <form onSubmit={handleSaveAccessoryCost} className="flex-1 overflow-y-auto py-4 space-y-4 text-xs">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="sm:col-span-2">
-                  <label className="block font-bold text-slate-700 mb-1">عنوان هزینه یا خرج‌کار *</label>
+                  <label className="block font-medium text-slate-500 mb-1">عنوان هزینه یا خرج‌کار *</label>
                   <input
                     type="text"
                     required
@@ -713,7 +713,7 @@ export const ExpensesModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">نوع خرج‌کار / هزینه</label>
+                  <label className="block font-medium text-slate-500 mb-1">نوع خرج‌کار / هزینه</label>
                   <select
                     value={accCostTypeId}
                     onChange={(e) => handleCostTypeChange(e.target.value)}
@@ -730,7 +730,7 @@ export const ExpensesModule: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">مبلغ کل هزینه (ریال) *</label>
+                  <label className="block font-medium text-slate-500 mb-1">مبلغ کل هزینه (ریال) *</label>
                   <input
                     type="number"
                     min="1"
@@ -742,7 +742,7 @@ export const ExpensesModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">روش تسهیم (قابل تنظیم) *</label>
+                  <label className="block font-medium text-slate-500 mb-1">روش تسهیم (قابل تنظیم) *</label>
                   <select
                     value={accMethod}
                     onChange={(e) => setAccMethod(e.target.value as AllocationMethod)}
@@ -758,7 +758,7 @@ export const ExpensesModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">صندوق یا بانک پرداخت‌کننده</label>
+                  <label className="block font-medium text-slate-500 mb-1">صندوق یا بانک پرداخت‌کننده</label>
                   <select
                     value={accTreasuryId}
                     onChange={(e) => setAccTreasuryId(e.target.value)}
@@ -878,7 +878,7 @@ export const ExpensesModule: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">طرف‌حساب / باربری / مجری</label>
+                  <label className="block font-medium text-slate-500 mb-1">طرف‌حساب / باربری / مجری</label>
                   <input
                     type="text"
                     placeholder="مثلا: باربری وطن، کارگاه دکمه‌کوبی، چاپخانه نگین"
@@ -889,7 +889,7 @@ export const ExpensesModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 mb-1">یادداشت و شماره بارنامه</label>
+                  <label className="block font-medium text-slate-500 mb-1">یادداشت و شماره بارنامه</label>
                   <input
                     type="text"
                     placeholder="شماره بیجک یا رسید پرداخت"
@@ -943,7 +943,7 @@ export const ExpensesModule: React.FC = () => {
 
             <form onSubmit={handleSaveCostType} className="mt-4 space-y-4 text-xs">
               <div>
-                <label className="block font-bold text-slate-700 mb-1">نام عنوان هزینه / خرج‌کار *</label>
+                <label className="block font-medium text-slate-500 mb-1">نام عنوان هزینه / خرج‌کار *</label>
                 <input
                   type="text"
                   required
@@ -955,7 +955,7 @@ export const ExpensesModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">دسته‌بندی ماهیتی</label>
+                <label className="block font-medium text-slate-500 mb-1">دسته‌بندی ماهیتی</label>
                 <select
                   value={typeForm.category || 'notion'}
                   onChange={(e) => setTypeForm({ ...typeForm, category: e.target.value as any })}
@@ -970,7 +970,7 @@ export const ExpensesModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">روش تخصیص پیش‌فرض کسب‌وکار</label>
+                <label className="block font-medium text-slate-500 mb-1">روش تخصیص پیش‌فرض کسب‌وکار</label>
                 <select
                   value={typeForm.defaultAllocationMethod || 'quantity'}
                   onChange={(e) =>
@@ -987,7 +987,7 @@ export const ExpensesModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">توضیحات و شیوه انتساب</label>
+                <label className="block font-medium text-slate-500 mb-1">توضیحات و شیوه انتساب</label>
                 <textarea
                   rows={2}
                   placeholder="توضیحات مربوط به استاندارد حسابداری این هزینه..."
@@ -1140,14 +1140,14 @@ export const ExpensesModule: React.FC = () => {
 
             <form onSubmit={handleSaveGeneralExpense} className="mt-4 space-y-4 text-xs">
               <div>
-                <label className="block font-bold text-slate-700 mb-1">سرفصل هزینه</label>
+                <label className="block font-medium text-slate-500 mb-1">سرفصل هزینه</label>
                 <select
                   value={genFormCategory}
                   onChange={(e) => setGenFormCategory(e.target.value)}
                   className="w-full border border-slate-200 rounded-xl px-3 py-2 text-slate-800 font-bold outline-none focus:border-indigo-500 cursor-pointer"
                 >
                   <option value="اجاره و شارژ ماهانه فروشگاه">اجاره و شارژ ماهانه فروشگاه</option>
-                  <option value="کرایه حمل و باربری ملزومات خرازی">کرایه حمل و باربری ملزومات خرازی</option>
+                  <option value="کرایه حمل و باربری کالا">کرایه حمل و باربری کالا</option>
                   <option value="حقوق و دستمزد پرسنل و شاگرد">حقوق و دستمزد پرسنل و شاگرد</option>
                   <option value="ملزومات بسته‌بندی، کارتن و پاکت">ملزومات بسته‌بندی، کارتن و پاکت</option>
                   <option value="قبوض برق، آب و اینترنت">قبوض برق، آب و اینترنت</option>
@@ -1157,7 +1157,7 @@ export const ExpensesModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">مبلغ هزینه (ریال) *</label>
+                <label className="block font-medium text-slate-500 mb-1">مبلغ هزینه (ریال) *</label>
                 <input
                   type="number"
                   required
@@ -1169,7 +1169,7 @@ export const ExpensesModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">صندوق یا بانک پرداخت‌کننده</label>
+                <label className="block font-medium text-slate-500 mb-1">صندوق یا بانک پرداخت‌کننده</label>
                 <select
                   value={genFormTreasuryId}
                   onChange={(e) => setGenFormTreasuryId(e.target.value)}
@@ -1184,7 +1184,7 @@ export const ExpensesModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">دریافت‌کننده وجه</label>
+                <label className="block font-medium text-slate-500 mb-1">دریافت‌کننده وجه</label>
                 <input
                   type="text"
                   placeholder="نام شخص یا شرکت دریافت‌کننده"
@@ -1195,7 +1195,7 @@ export const ExpensesModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">شرح هزینه</label>
+                <label className="block font-medium text-slate-500 mb-1">شرح هزینه</label>
                 <textarea
                   rows={2}
                   placeholder="توضیحات تکمیلی..."

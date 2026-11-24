@@ -290,7 +290,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
           </div>
           <div>
             <h2 className="text-base font-black text-slate-800 dark:text-slate-100">
-              کاتالوگ کالاها و ملزومات خرازی
+              کاتالوگ کالاها و خدمات
             </h2>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
               تعریف کالا با واحدهای دوگانه (متر، رول، بسته)، قیمت‌گذاری چندسطحی و کنترل نقطه سفارش
@@ -682,7 +682,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
             <div className="flex border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 px-4 text-xs">
               {[
                 { id: 'general', label: 'مشخصات پایه' },
-                { id: 'specs', label: 'ویژگی‌های خرازی' },
+                { id: 'specs', label: 'ویژگی‌ها و مشخصات فنی' },
                 { id: 'pricing', label: 'قیمت‌گذاری' },
                 { id: 'units', label: 'انبار و واحدها' },
               ].map((tab) => (
@@ -706,7 +706,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                         کد اختصاصی کالا *
                       </label>
                       <input
@@ -719,7 +719,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                     </div>
 
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                         دسته‌بندی کالا *
                       </label>
                       <select
@@ -737,7 +737,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                   </div>
 
                   <div>
-                    <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                    <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                       نام کامل کالا *
                     </label>
                     <input
@@ -750,7 +750,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                   </div>
 
                   <div>
-                    <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">برند</label>
+                    <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">برند</label>
                     <input
                       type="text"
                       value={editingProduct.brand || ''}
@@ -765,7 +765,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">رنگ</label>
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">رنگ</label>
                       <input
                         type="text"
                         value={editingProduct.color || ''}
@@ -774,7 +774,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                       />
                     </div>
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">سایز / نمره</label>
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">سایز / نمره</label>
                       <input
                         type="text"
                         value={editingProduct.size || ''}
@@ -783,7 +783,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                       />
                     </div>
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">مدل</label>
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">مدل</label>
                       <input
                         type="text"
                         value={editingProduct.model || ''}
@@ -792,7 +792,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                       />
                     </div>
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">جنس</label>
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">جنس</label>
                       <input
                         type="text"
                         value={editingProduct.material || ''}
@@ -847,7 +847,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {confidential.canViewPurchasePrice ? (
                       <div>
-                        <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                           قیمت خرید (ریال) *
                         </label>
                         <input
@@ -862,7 +862,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                       </div>
                     ) : (
                       <div>
-                        <label className="block font-bold text-slate-400 mb-1">قیمت خرید</label>
+                        <label className="block font-medium text-slate-400 mb-1">قیمت خرید</label>
                         <div className="p-2.5 bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-400 flex items-center gap-1">
                           <Lock className="w-3.5 h-3.5" /> محرمانه (عدم دسترسی صندوق‌دار)
                         </div>
@@ -870,7 +870,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                     )}
 
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                         قیمت فروش تک (ریال) *
                       </label>
                       <input
@@ -887,7 +887,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                         قیمت فروش عمده
                       </label>
                       <input
@@ -901,7 +901,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                       />
                     </div>
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                         قیمت همکار
                       </label>
                       <input
@@ -915,7 +915,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                       />
                     </div>
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                         حداقل قیمت مجاز
                       </label>
                       <input
@@ -950,7 +950,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                         واحد پایه سنجش *
                       </label>
                       <select
@@ -967,7 +967,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                     </div>
 
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                         موجودی اولیه / فعلی
                       </label>
                       <input
@@ -982,7 +982,7 @@ export const ProductsModule: React.FC<ProductsModuleProps> = ({ initialOpenCreat
                     </div>
 
                     <div>
-                      <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                         نقطه سفارش
                       </label>
                       <input

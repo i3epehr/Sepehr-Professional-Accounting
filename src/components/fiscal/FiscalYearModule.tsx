@@ -833,7 +833,7 @@ export const FiscalYearModule: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap items-center gap-2">
-              <label className="text-xs font-bold text-slate-600 dark:text-slate-300">انتخاب سال مالی باز:</label>
+              <label className="text-xs font-medium text-slate-600 dark:text-slate-400">انتخاب سال مالی باز:</label>
               <select
                 value={openingForm.fiscalYearId}
                 onChange={(e) => {
@@ -985,7 +985,7 @@ export const FiscalYearModule: React.FC = () => {
               </div>
               <div className="p-4 space-y-3 text-xs">
                 <div className="flex items-center justify-between gap-3">
-                  <label className="font-bold text-slate-700 dark:text-slate-200">
+                  <label className="font-medium text-slate-500 dark:text-slate-400">
                     سرمایه اولیه (حساب ۳۰۱ - بستانکار):
                   </label>
                   <input
@@ -1003,7 +1003,7 @@ export const FiscalYearModule: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between gap-3">
-                  <label className="font-bold text-slate-700 dark:text-slate-200">شرح سند افتتاحیه:</label>
+                  <label className="font-medium text-slate-500 dark:text-slate-400">شرح سند افتتاحیه:</label>
                   <input
                     type="text"
                     value={openingForm.description || ''}
@@ -1547,7 +1547,7 @@ export const FiscalYearModule: React.FC = () => {
                           <span>کلیه کنترل‌های اجباری (توازن اسناد، عدم وجود سند موقت و موجودی انبار) با موفقیت تایید شدند.</span>
                         </div>
                         {preClosingAudit.warningsCount > 0 && (
-                          <label className="flex items-center gap-2 pt-2 cursor-pointer font-bold text-amber-800 dark:text-amber-300">
+                          <label className="flex items-center gap-2 pt-2 cursor-pointer font-medium text-amber-800 dark:text-amber-300">
                             <input
                               type="checkbox"
                               checked={acknowledgedWarnings}
@@ -1644,7 +1644,7 @@ export const FiscalYearModule: React.FC = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 text-xs">
                       <div>
-                        <label className="block font-bold mb-1">کد سال مالی جدید:</label>
+                        <label className="block font-medium mb-1">کد سال مالی جدید:</label>
                         <input
                           type="text"
                           value={nextYearConfig.nextYearCode}
@@ -1660,7 +1660,7 @@ export const FiscalYearModule: React.FC = () => {
                         />
                       </div>
                       <div>
-                        <label className="block font-bold mb-1">عنوان سال مالی جدید:</label>
+                        <label className="block font-medium mb-1">عنوان سال مالی جدید:</label>
                         <input
                           type="text"
                           value={nextYearConfig.nextYearTitle}
@@ -1669,7 +1669,7 @@ export const FiscalYearModule: React.FC = () => {
                         />
                       </div>
                       <div>
-                        <label className="block font-bold mb-1">یادداشت انتقال سال:</label>
+                        <label className="block font-medium mb-1">یادداشت انتقال سال:</label>
                         <input
                           type="text"
                           value={nextYearConfig.notes}
@@ -1820,7 +1820,7 @@ export const FiscalYearModule: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap items-center gap-2">
-              <label className="text-xs font-bold text-slate-600">انتخاب سال مالی جهت مشاهده آرشیو:</label>
+              <label className="text-xs font-medium text-slate-600">انتخاب سال مالی جهت مشاهده آرشیو:</label>
               <select
                 value={archiveYearId}
                 onChange={(e) => setArchiveYearId(e.target.value)}
@@ -2208,7 +2208,7 @@ export const FiscalYearModule: React.FC = () => {
             </div>
             <form onSubmit={handleSaveFiscalYear} className="p-5 space-y-4 text-xs">
               <div>
-                <label className="block font-bold mb-1">کد چهاررقمی سال شمسی (مثلاً ۱۴۰۴):</label>
+                <label className="block font-medium mb-1">کد چهاررقمی سال شمسی (مثلاً ۱۴۰۴):</label>
                 <input
                   type="text"
                   required
@@ -2218,7 +2218,7 @@ export const FiscalYearModule: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block font-bold mb-1">عنوان دوره مالی:</label>
+                <label className="block font-medium mb-1">عنوان دوره مالی:</label>
                 <input
                   type="text"
                   required
@@ -2229,7 +2229,7 @@ export const FiscalYearModule: React.FC = () => {
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold mb-1">تاریخ شروع (شمسی):</label>
+                  <label className="block font-medium mb-1">تاریخ شروع (شمسی):</label>
                   <input
                     type="text"
                     required
@@ -2239,7 +2239,7 @@ export const FiscalYearModule: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block font-bold mb-1">تاریخ پایان (شمسی):</label>
+                  <label className="block font-medium mb-1">تاریخ پایان (شمسی):</label>
                   <input
                     type="text"
                     required
@@ -2250,7 +2250,7 @@ export const FiscalYearModule: React.FC = () => {
                 </div>
               </div>
               <div>
-                <label className="block font-bold mb-1">توضیحات:</label>
+                <label className="block font-medium mb-1">توضیحات:</label>
                 <input
                   type="text"
                   value={yearForm.description}

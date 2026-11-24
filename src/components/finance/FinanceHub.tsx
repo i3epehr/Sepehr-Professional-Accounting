@@ -1057,7 +1057,7 @@ export const FinanceHub: React.FC = () => {
           <form onSubmit={handleSaveTransaction} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   نوع تراکنش مالی *
                 </label>
                 <select
@@ -1073,7 +1073,7 @@ export const FinanceHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   صندوق / حساب بانکی مرتبط *
                 </label>
                 <select
@@ -1109,7 +1109,7 @@ export const FinanceHub: React.FC = () => {
               )}
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   مبلغ تراکنش (ریال) *
                 </label>
                 <input
@@ -1124,7 +1124,7 @@ export const FinanceHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   روش پرداخت *
                 </label>
                 <select
@@ -1140,7 +1140,7 @@ export const FinanceHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   شماره پیگیری / ارجاع بانکی
                 </label>
                 <input
@@ -1153,7 +1153,7 @@ export const FinanceHub: React.FC = () => {
               </div>
 
               <div className="sm:col-span-2">
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   شرح و توضیحات تراکنش
                 </label>
                 <input
@@ -1213,7 +1213,7 @@ export const FinanceHub: React.FC = () => {
 
             {targetChequeStatus === 'deposited' || targetChequeStatus === 'collected' ? (
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   حساب بانکی مقصد وصول:
                 </label>
                 <select
@@ -1252,7 +1252,7 @@ export const FinanceHub: React.FC = () => {
             ) : null}
 
             <div>
-              <label className="block text-[11px] font-bold text-slate-600 mb-1">
+              <label className="block text-[11px] font-medium text-slate-600 mb-1">
                 توضیحات سند حسابداری:
               </label>
               <input
@@ -1297,7 +1297,7 @@ export const FinanceHub: React.FC = () => {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="block text-[11px] font-bold mb-1">نوع چک *</label>
+              <label className="block text-[11px] font-medium mb-1">نوع چک *</label>
               <select
                 value={newChequeType}
                 onChange={(e) => setNewChequeType(e.target.value as any)}
@@ -1326,7 +1326,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">شماره سریال چک *</label>
+              <label className="block text-[11px] font-medium mb-1">شماره سریال چک *</label>
               <input
                 type="text"
                 required
@@ -1338,7 +1338,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">شناسه ۱۶ رقمی صیادی *</label>
+              <label className="block text-[11px] font-medium mb-1">شناسه ۱۶ رقمی صیادی *</label>
               <input
                 type="text"
                 value={newSayadNumber}
@@ -1349,7 +1349,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">نام بانک صادرکننده</label>
+              <label className="block text-[11px] font-medium mb-1">نام بانک صادرکننده</label>
               <input
                 type="text"
                 value={newChequeBank}
@@ -1359,7 +1359,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">تاریخ سررسید چک *</label>
+              <label className="block text-[11px] font-medium mb-1">تاریخ سررسید چک *</label>
               <input
                 type="text"
                 value={newChequeDueDate}
@@ -1369,7 +1369,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div className="sm:col-span-2">
-              <label className="block text-[11px] font-bold mb-1">مبلغ چک (ریال) *</label>
+              <label className="block text-[11px] font-medium mb-1">مبلغ چک (ریال) *</label>
               <input
                 type="number"
                 min="0"
@@ -1413,7 +1413,7 @@ export const FinanceHub: React.FC = () => {
         >
           <div className="space-y-3">
             <div>
-              <label className="block text-[11px] font-bold mb-1">حساب مبدأ (کسر می‌شود) *</label>
+              <label className="block text-[11px] font-medium mb-1">حساب مبدأ (کسر می‌شود) *</label>
               <select
                 value={trfSourceId}
                 onChange={(e) => setTrfSourceId(e.target.value)}
@@ -1428,7 +1428,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">حساب مقصد (واریز می‌شود) *</label>
+              <label className="block text-[11px] font-medium mb-1">حساب مقصد (واریز می‌شود) *</label>
               <select
                 value={trfDestId}
                 onChange={(e) => setTrfDestId(e.target.value)}
@@ -1443,7 +1443,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">مبلغ انتقال (ریال) *</label>
+              <label className="block text-[11px] font-medium mb-1">مبلغ انتقال (ریال) *</label>
               <input
                 type="number"
                 min="0"
@@ -1455,7 +1455,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">شرح انتقال</label>
+              <label className="block text-[11px] font-medium mb-1">شرح انتقال</label>
               <input
                 type="text"
                 value={trfDesc}
@@ -1497,7 +1497,7 @@ export const FinanceHub: React.FC = () => {
         >
           <div className="space-y-3">
             <div>
-              <label className="block text-[11px] font-bold mb-1">عنوان حساب *</label>
+              <label className="block text-[11px] font-medium mb-1">عنوان حساب *</label>
               <input
                 type="text"
                 value={newAccTitle}
@@ -1508,7 +1508,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">نوع مرکز مالی</label>
+              <label className="block text-[11px] font-medium mb-1">نوع مرکز مالی</label>
               <select
                 value={newAccType}
                 onChange={(e) => setNewAccType(e.target.value as any)}
@@ -1521,7 +1521,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">نام بانک</label>
+              <label className="block text-[11px] font-medium mb-1">نام بانک</label>
               <input
                 type="text"
                 value={newAccBankName}
@@ -1531,7 +1531,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">شماره حساب / شبا</label>
+              <label className="block text-[11px] font-medium mb-1">شماره حساب / شبا</label>
               <input
                 type="text"
                 value={newAccNumber}
@@ -1541,7 +1541,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">موجودی اولیه (ریال)</label>
+              <label className="block text-[11px] font-medium mb-1">موجودی اولیه (ریال)</label>
               <input
                 type="number"
                 min="0"
@@ -1584,7 +1584,7 @@ export const FinanceHub: React.FC = () => {
         >
           <div className="space-y-3">
             <div>
-              <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-[11px] font-medium text-slate-500 dark:text-slate-400 mb-1">
                 عنوان سرفصل *
               </label>
               <input
@@ -1598,7 +1598,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-[11px] font-medium text-slate-500 dark:text-slate-400 mb-1">
                 نوع ماهیت حساب
               </label>
               <select
@@ -1612,7 +1612,7 @@ export const FinanceHub: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-[11px] font-medium text-slate-500 dark:text-slate-400 mb-1">
                 توضیحات تکمیلی
               </label>
               <textarea

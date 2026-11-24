@@ -1341,7 +1341,7 @@ export const AccountingModule: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  <label className="block text-xs font-semibold text-slate-500 mb-1.5">
                     تاریخ سند:
                   </label>
                   <input
@@ -1354,7 +1354,7 @@ export const AccountingModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  <label className="block text-xs font-semibold text-slate-500 mb-1.5">
                     شرح کلی سند:
                   </label>
                   <input
@@ -1663,7 +1663,7 @@ export const AccountingModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                <label className="block text-xs font-semibold text-slate-500 mb-1.5">
                   دلیل مستند صدور سند اصلاحی معکوس:
                 </label>
                 <textarea

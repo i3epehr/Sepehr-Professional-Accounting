@@ -240,7 +240,7 @@ export const HolooInvoicePrint: React.FC<HolooInvoicePrintProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* رنگ‌بندی */}
             <div>
-              <label className="block text-slate-600 dark:text-slate-300 font-bold mb-1.5">
+              <label className="block text-slate-600 dark:text-slate-400 font-medium mb-1.5">
                 تم رنگی چاپ
               </label>
               <div className="grid grid-cols-2 gap-1.5">
@@ -270,7 +270,7 @@ export const HolooInvoicePrint: React.FC<HolooInvoicePrintProps> = ({
 
             {/* ابعاد کاغذ */}
             <div>
-              <label className="block text-slate-600 dark:text-slate-300 font-bold mb-1.5">
+              <label className="block text-slate-600 dark:text-slate-400 font-medium mb-1.5">
                 ابعاد و جهت کاغذ
               </label>
               <div className="space-y-1.5">
@@ -325,7 +325,7 @@ export const HolooInvoicePrint: React.FC<HolooInvoicePrintProps> = ({
 
             {/* ستون‌ها */}
             <div>
-              <label className="block text-slate-600 dark:text-slate-300 font-bold mb-1.5">
+              <label className="block text-slate-600 dark:text-slate-400 font-medium mb-1.5">
                 ستون‌های جدول
               </label>
               <div className="grid grid-cols-2 gap-1 text-[11px]">
@@ -370,7 +370,7 @@ export const HolooInvoicePrint: React.FC<HolooInvoicePrintProps> = ({
 
             {/* اجزای پاورقی */}
             <div>
-              <label className="block text-slate-600 dark:text-slate-300 font-bold mb-1.5">
+              <label className="block text-slate-600 dark:text-slate-400 font-medium mb-1.5">
                 اجزای فاکتور
               </label>
               <div className="grid grid-cols-2 gap-1 text-[11px]">
@@ -416,7 +416,7 @@ export const HolooInvoicePrint: React.FC<HolooInvoicePrintProps> = ({
 
           <div className="mt-3 pt-3 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 md:grid-cols-3 gap-3">
             <div>
-              <label className="block text-slate-500 text-[10px] mb-1 font-bold">عنوان سند</label>
+              <label className="block text-slate-500 text-[10px] mb-1 font-medium">عنوان سند</label>
               <input
                 type="text"
                 value={customTitle}
@@ -425,7 +425,7 @@ export const HolooInvoicePrint: React.FC<HolooInvoicePrintProps> = ({
               />
             </div>
             <div>
-              <label className="block text-slate-500 text-[10px] mb-1 font-bold">زیرعنوان فروشگاه</label>
+              <label className="block text-slate-500 text-[10px] mb-1 font-medium">زیرعنوان فروشگاه</label>
               <input
                 type="text"
                 value={customSlogan}
@@ -434,7 +434,7 @@ export const HolooInvoicePrint: React.FC<HolooInvoicePrintProps> = ({
               />
             </div>
             <div>
-              <label className="block text-slate-500 text-[10px] mb-1 font-bold">توضیحات پاورقی</label>
+              <label className="block text-slate-500 text-[10px] mb-1 font-medium">توضیحات پاورقی</label>
               <input
                 type="text"
                 value={customFooterNote}

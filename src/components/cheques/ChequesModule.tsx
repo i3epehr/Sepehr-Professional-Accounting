@@ -546,7 +546,7 @@ export const ChequesModule: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-2.5">
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">شماره سریال چک *</label>
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">شماره سریال چک *</label>
                   <input
                     type="text"
                     required
@@ -557,7 +557,7 @@ export const ChequesModule: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">شناسه صیاد (۱۶ رقم)</label>
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">شناسه صیاد (۱۶ رقم)</label>
                   <input
                     type="text"
                     maxLength={16}
@@ -571,7 +571,7 @@ export const ChequesModule: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-2.5">
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">بانک عامل *</label>
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">بانک عامل *</label>
                   <input
                     type="text"
                     required
@@ -581,7 +581,7 @@ export const ChequesModule: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">شعبه</label>
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">شعبه</label>
                   <input
                     type="text"
                     placeholder="شعبه بازار"
@@ -593,7 +593,7 @@ export const ChequesModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                   {chequeType === 'received' ? 'واگذارکننده چک (مشتری بستانکارشونده) *' : 'گیرنده چک (بنکدار بدهکارشونده) *'}
                 </label>
                 <select
@@ -612,7 +612,7 @@ export const ChequesModule: React.FC = () => {
 
               {chequeType === 'received' && directEndorse && (
                 <div>
-                  <label className="block font-bold text-purple-700 dark:text-purple-300 mb-1">
+                  <label className="block font-medium text-purple-700 dark:text-purple-300 mb-1">
                     گیرنده خرج چک (تأمین‌کننده / شخص ثالث بدهکارشونده) *
                   </label>
                   <select
@@ -634,7 +634,7 @@ export const ChequesModule: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-2.5">
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">مبلغ چک (ریال) *</label>
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">مبلغ چک (ریال) *</label>
                   <input
                     type="number"
                     min="1"
@@ -645,7 +645,7 @@ export const ChequesModule: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">تاریخ سررسید *</label>
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">تاریخ سررسید *</label>
                   <input
                     type="text"
                     required
@@ -657,7 +657,7 @@ export const ChequesModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">توضیحات</label>
+                <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">توضیحات</label>
                 <input
                   type="text"
                   value={notes}
@@ -722,7 +722,7 @@ export const ChequesModule: React.FC = () => {
 
               {(targetStatus === 'deposited' || targetStatus === 'collected') && (
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">حساب بانکی مرتبط *</label>
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">حساب بانکی مرتبط *</label>
                   <select
                     value={bankAccountId}
                     onChange={(e) => setBankAccountId(e.target.value)}
@@ -742,7 +742,7 @@ export const ChequesModule: React.FC = () => {
               {targetStatus === 'transferred' && (
                 <div className="space-y-3">
                   <div>
-                    <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                    <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                       انتخاب شخص گیرنده چک (تأمین‌کننده / شخص ثالث) *
                     </label>
                     <select
@@ -796,7 +796,7 @@ export const ChequesModule: React.FC = () => {
 
               {targetStatus === 'bounced' && (
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">علت برگشت *</label>
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">علت برگشت *</label>
                   <select
                     value={bounceReason}
                     onChange={(e) => setBounceReason(e.target.value)}
@@ -810,7 +810,7 @@ export const ChequesModule: React.FC = () => {
               )}
 
               <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">شرح سند حسابداری</label>
+                <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">شرح سند حسابداری</label>
                 <input
                   type="text"
                   placeholder="توضیحات..."

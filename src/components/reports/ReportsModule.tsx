@@ -190,13 +190,13 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
 
   // پیکربندی خروجی Excel / CSV / PDF بر اساس تب فعال فعلی
   const currentExportConfig = useMemo((): ExportReportConfig => {
-    const storeName = reportData?.metadata?.storeSettings?.storeName || 'فروشگاه خرازی و ملزومات خیاطی نگین';
+    const storeName = reportData?.metadata?.storeSettings?.storeName || 'فروشگاه بازرگانی سپهر';
     const fiscalYear = reportData?.metadata?.storeSettings?.activeFiscalYear || '۱۴۰۳';
 
     if (!reportData) {
       return {
         filename: 'kharrazi-report',
-        reportTitle: 'گزارش سیستم حسابداری خرازی',
+        reportTitle: 'گزارش سیستم حسابداری سپهر',
         storeName,
         fiscalYear,
         activeFiltersText,
@@ -399,8 +399,8 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
         filename: `report-products-${rankingSubTab}`,
         reportTitle:
           rankingSubTab === 'least_selling'
-            ? 'گزارش کم‌فروش‌ترین و کالاهای راکد انبار خرازی'
-            : 'گزارش رتبه‌بندی پرفروش‌ترین کالاهای خرازی',
+            ? 'گزارش کم‌فروش‌ترین و کالاهای راکد انبار'
+            : 'گزارش رتبه‌بندی پرفروش‌ترین کالاها',
         storeName,
         fiscalYear,
         activeFiltersText,
@@ -618,7 +618,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
       }));
       return {
         filename: 'report-expenses-breakdown',
-        reportTitle: 'گزارش جامع هزینه‌های عملیاتی، اداری و خرج‌کار خرازی',
+        reportTitle: 'گزارش جامع هزینه‌های عملیاتی، اداری و خرج‌کار بازرگانی',
         storeName,
         fiscalYear,
         activeFiltersText,
@@ -784,7 +784,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
       const bs = reportData.financialStatements.balanceSheet;
       if (financialSubTab === 'income_statement') {
         const rows = [
-          { step: '۱', title: 'فروش ناخالص کالا و ملزومات خرازی', amount: formatCurrency(inc.grossSales), sign: 'مثبت (+)' },
+          { step: '۱', title: 'فروش ناخالص کالا و خدمات', amount: formatCurrency(inc.grossSales), sign: 'مثبت (+)' },
           { step: '۲', title: 'کسر می‌شود: تخفیفات فروش', amount: formatCurrency(inc.salesDiscounts), sign: 'کاهنده (-)' },
           { step: '۳', title: 'کسر می‌شود: برگشت از فروش و مرجوعی', amount: formatCurrency(inc.salesReturns), sign: 'کاهنده (-)' },
           { step: '۴', title: 'فروش خالص عملیاتی دوره', amount: formatCurrency(inc.netSales), sign: 'حاصل (=)' },
@@ -813,7 +813,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
           { group: 'دارایی‌های جاری', title: 'موجودی صندوق‌های نقدی، بانک‌ها و کارتخوان POS', amount: formatCurrency(bs.assets.totalCashAndBank) },
           { group: 'دارایی‌های جاری', title: 'حساب‌های دریافتنی تجاری (مطالبات از مشتریان)', amount: formatCurrency(bs.assets.accountsReceivable) },
           { group: 'دارایی‌های جاری', title: 'اسناد دریافتنی (چک‌های صیادی نزد صندوق و در جریان وصول)', amount: formatCurrency(bs.assets.notesReceivable) },
-          { group: 'دارایی‌های جاری', title: 'موجودی کالای انبار خرازی (ارزش‌گذاری به بهای خرید)', amount: formatCurrency(bs.assets.inventoryValuation) },
+          { group: 'دارایی‌های جاری', title: 'موجودی کالای انبار (ارزش‌گذاری به بهای خرید)', amount: formatCurrency(bs.assets.inventoryValuation) },
           { group: 'جمع دارایی‌ها', title: 'جمع کل دارایی‌ها (سمت راست ترازنامه)', amount: formatCurrency(bs.assets.totalAssets) },
           { group: 'بدهی‌های جاری', title: 'حساب‌های پرداختنی تجاری (بستانکاران و بنکداران)', amount: formatCurrency(bs.liabilities.accountsPayable) },
           { group: 'بدهی‌های جاری', title: 'اسناد پرداختنی (چک‌های صادره پرداختنی)', amount: formatCurrency(bs.liabilities.notesPayable) },
@@ -1073,7 +1073,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-2.5 text-xs">
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 mb-1">از تاریخ (شمسی):</label>
+                <label className="block text-[10px] font-medium text-slate-500 mb-1">از تاریخ (شمسی):</label>
                 <input
                   type="text"
                   value={dateFrom}
@@ -1085,7 +1085,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 mb-1">تا تاریخ (شمسی):</label>
+                <label className="block text-[10px] font-medium text-slate-500 mb-1">تا تاریخ (شمسی):</label>
                 <input
                   type="text"
                   value={dateTo}
@@ -1097,7 +1097,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 mb-1">شخص / طرف حساب:</label>
+                <label className="block text-[10px] font-medium text-slate-500 mb-1">شخص / طرف حساب:</label>
                 <select
                   value={personId}
                   onChange={(e) => {
@@ -1116,7 +1116,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 mb-1">کالا و ملزومات:</label>
+                <label className="block text-[10px] font-medium text-slate-500 mb-1">کالا و ملزومات:</label>
                 <select
                   value={productId}
                   onChange={(e) => setProductId(e.target.value)}
@@ -1132,7 +1132,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 mb-1">گروه / دسته‌بندی کالا:</label>
+                <label className="block text-[10px] font-medium text-slate-500 mb-1">گروه / دسته‌بندی کالا:</label>
                 <select
                   value={categoryId}
                   onChange={(e) => setCategoryId(e.target.value)}
@@ -1148,7 +1148,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 mb-1">انبار:</label>
+                <label className="block text-[10px] font-medium text-slate-500 mb-1">انبار:</label>
                 <select
                   value={warehouseId}
                   onChange={(e) => setWarehouseId(e.target.value)}
@@ -1164,7 +1164,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 mb-1">جستجوی متنی سریع:</label>
+                <label className="block text-[10px] font-medium text-slate-500 mb-1">جستجوی متنی سریع:</label>
                 <div className="relative">
                   <input
                     type="text"
@@ -2947,11 +2947,11 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
               {financialSubTab === 'income_statement' ? (
                 <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs space-y-3 text-xs">
                   <h3 className="text-sm font-black text-slate-800 dark:text-slate-100 border-b border-slate-100 dark:border-slate-800 pb-3">
-                    صورت سود و زیان رسمی فروشگاه خرازی نگین ({activeFiltersText})
+                    صورت سود و زیان رسمی فروشگاه ({activeFiltersText})
                   </h3>
 
                   <div className="flex justify-between items-center p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
-                    <span className="font-bold">۱. فروش ناخالص کالا و ملزومات خرازی:</span>
+                    <span className="font-bold">۱. فروش ناخالص کالا و خدمات:</span>
                     <span className="font-bold text-slate-800 dark:text-slate-100">
                       {formatCurrency(reportData.financialStatements.incomeStatement.grossSales)}
                     </span>
@@ -3068,7 +3068,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
                           <span className="font-bold">{formatCurrency(reportData.financialStatements.balanceSheet.assets.notesReceivable)}</span>
                         </div>
                         <div className="flex justify-between py-2 px-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
-                          <span>موجودی کالای انبار خرازی (به بهای تمام‌شده خرید)</span>
+                          <span>موجودی کالای انبار (به بهای تمام‌شده خرید)</span>
                           <span className="font-bold">{formatCurrency(reportData.financialStatements.balanceSheet.assets.inventoryValuation)}</span>
                         </div>
                       </div>
@@ -3408,7 +3408,7 @@ export const ReportsModule: React.FC<ReportsModuleProps> = ({ initialTab = 'prof
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-dashed border-slate-400 text-center text-[11px] text-slate-600">
                 <div>مهر و امضای حسابدار / تهیه‌کننده گزارش</div>
                 <div>مهر و امضای مسئول انبار و خزانه</div>
-                <div>مهر و امضای مدیریت فروشگاه خرازی نگین</div>
+                <div>مهر و امضای مدیریت فروشگاه</div>
               </div>
             </div>
             </div>

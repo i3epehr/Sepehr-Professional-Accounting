@@ -695,7 +695,7 @@ export const PersonsModule: React.FC = () => {
                 {/* کد طرف حساب */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
-                    <label className="font-bold text-slate-700 dark:text-slate-300">
+                    <label className="font-medium text-slate-500 dark:text-slate-400">
                       کد طرف حساب (یکتا) <span className="text-rose-500">*</span>
                     </label>
                     <button
@@ -725,7 +725,7 @@ export const PersonsModule: React.FC = () => {
 
                 {/* نوع شخص */}
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     نقش / نوع طرف حساب <span className="text-rose-500">*</span>
                   </label>
                   <select
@@ -747,7 +747,7 @@ export const PersonsModule: React.FC = () => {
 
               {/* نام کامل */}
               <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                   نام کامل یا عنوان فروشگاه / مزون <span className="text-rose-500">*</span>
                 </label>
                 <input
@@ -763,7 +763,7 @@ export const PersonsModule: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* گروه شخص */}
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     گروه‌بندی طرف حساب
                   </label>
                   <select
@@ -790,7 +790,7 @@ export const PersonsModule: React.FC = () => {
 
                 {/* سقف اعتبار */}
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     سقف اعتبار مالی (ریال)
                   </label>
                   <input
@@ -811,7 +811,7 @@ export const PersonsModule: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* شماره تلفن همراه */}
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     شماره همراه (موبایل) <span className="text-rose-500">*</span>
                   </label>
                   <input
@@ -828,7 +828,7 @@ export const PersonsModule: React.FC = () => {
 
                 {/* تلفن ثابت */}
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     تلفن ثابت
                   </label>
                   <input
@@ -846,7 +846,7 @@ export const PersonsModule: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* کد ملی */}
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     کد ملی / شناسه ملی
                   </label>
                   <input
@@ -862,7 +862,7 @@ export const PersonsModule: React.FC = () => {
 
                 {/* کد اقتصادی */}
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     کد اقتصادی
                   </label>
                   <input
@@ -879,7 +879,7 @@ export const PersonsModule: React.FC = () => {
 
               {/* آدرس */}
               <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                   آدرس پستی یا نشانی کارگاه / فروشگاه
                 </label>
                 <textarea

@@ -768,7 +768,7 @@ export const InventoryHub: React.FC = () => {
         <div className="space-y-4">
           <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="w-full sm:w-80">
-              <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+              <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                 انتخاب کالا جهت مشاهده گردش کاردکس:
               </label>
               <select
@@ -1215,7 +1215,7 @@ export const InventoryHub: React.FC = () => {
             {/* Essential Fields */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   نام کامل کالا *
                 </label>
                 <input
@@ -1229,7 +1229,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   کد کالا *
                 </label>
                 <input
@@ -1242,7 +1242,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   دسته‌بندی کالا *
                 </label>
                 <select
@@ -1266,7 +1266,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   واحد پایه سنجش *
                 </label>
                 <select
@@ -1290,7 +1290,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   قیمت خرید پایه (ریال)
                 </label>
                 <input
@@ -1305,7 +1305,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   قیمت تک‌فروشی مصرف‌کننده (ریال) *
                 </label>
                 <input
@@ -1320,7 +1320,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   قیمت عمده‌فروشی (ریال)
                 </label>
                 <input
@@ -1335,7 +1335,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   حداقل موجودی هشدار (نقطه سفارش)
                 </label>
                 <input
@@ -1364,7 +1364,7 @@ export const InventoryHub: React.FC = () => {
               {showAdvancedSpecs && (
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3 pt-3 border-t border-slate-200 dark:border-slate-700 animate-in fade-in">
                   <div>
-                    <label className="block text-[10.5px] font-bold text-slate-500 mb-1">رنگ کالا</label>
+                    <label className="block text-[10.5px] font-medium text-slate-500 mb-1">رنگ کالا</label>
                     <input
                       type="text"
                       value={editingProduct.color || ''}
@@ -1374,7 +1374,7 @@ export const InventoryHub: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10.5px] font-bold text-slate-500 mb-1">سایز / اندازه</label>
+                    <label className="block text-[10.5px] font-medium text-slate-500 mb-1">سایز / اندازه</label>
                     <input
                       type="text"
                       value={editingProduct.size || ''}
@@ -1384,7 +1384,7 @@ export const InventoryHub: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10.5px] font-bold text-slate-500 mb-1">جنس / متریال</label>
+                    <label className="block text-[10.5px] font-medium text-slate-500 mb-1">جنس / متریال</label>
                     <input
                       type="text"
                       value={editingProduct.material || ''}
@@ -1394,7 +1394,7 @@ export const InventoryHub: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10.5px] font-bold text-slate-500 mb-1">برند کالا</label>
+                    <label className="block text-[10.5px] font-medium text-slate-500 mb-1">برند کالا</label>
                     <input
                       type="text"
                       value={editingProduct.brand || ''}
@@ -1404,7 +1404,7 @@ export const InventoryHub: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10.5px] font-bold text-slate-500 mb-1">بارکد کالا</label>
+                    <label className="block text-[10.5px] font-medium text-slate-500 mb-1">بارکد کالا</label>
                     <input
                       type="text"
                       value={editingProduct.barcode || ''}
@@ -1413,7 +1413,7 @@ export const InventoryHub: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10.5px] font-bold text-slate-500 mb-1">توضیحات</label>
+                    <label className="block text-[10.5px] font-medium text-slate-500 mb-1">توضیحات</label>
                     <input
                       type="text"
                       value={editingProduct.notes || ''}
@@ -1457,7 +1457,7 @@ export const InventoryHub: React.FC = () => {
         >
           <div className="space-y-3">
             <div>
-              <label className="block text-[11px] font-bold mb-1">نام دسته‌بندی *</label>
+              <label className="block text-[11px] font-medium mb-1">نام دسته‌بندی *</label>
               <input
                 type="text"
                 value={newCatName}
@@ -1467,7 +1467,7 @@ export const InventoryHub: React.FC = () => {
               />
             </div>
             <div>
-              <label className="block text-[11px] font-bold mb-1">کد دسته‌بندی</label>
+              <label className="block text-[11px] font-medium mb-1">کد دسته‌بندی</label>
               <input
                 type="text"
                 value={newCatCode}
@@ -1508,7 +1508,7 @@ export const InventoryHub: React.FC = () => {
           }
         >
           <div>
-            <label className="block text-[11px] font-bold mb-1">نام برند یا تولیدکننده *</label>
+            <label className="block text-[11px] font-medium mb-1">نام برند یا تولیدکننده *</label>
             <input
               type="text"
               value={newBrandName}
@@ -1551,7 +1551,7 @@ export const InventoryHub: React.FC = () => {
           <div className="space-y-3">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   نام تأمین‌کننده / فروشنده
                 </label>
                 <input
@@ -1564,7 +1564,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   انبار مقصد *
                 </label>
                 <select
@@ -1581,7 +1581,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   انتخاب کالای وارده *
                 </label>
                 <select
@@ -1606,7 +1606,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   مقدار وارده *
                 </label>
                 <input
@@ -1622,7 +1622,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   قیمت خرید هر واحد (ریال)
                 </label>
                 <input
@@ -1637,7 +1637,7 @@ export const InventoryHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   توضیحات بارنامه یا رسید
                 </label>
                 <input

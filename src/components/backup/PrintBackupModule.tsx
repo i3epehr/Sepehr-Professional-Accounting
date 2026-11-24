@@ -122,7 +122,7 @@ export const PrintBackupModule: React.FC = () => {
 
           <div className="space-y-3 text-xs">
             <div>
-              <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1.5">
+              <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1.5">
                 سایز پیش‌فرض چاپ فاکتور
               </label>
               <div className="grid grid-cols-3 gap-2">
@@ -172,7 +172,7 @@ export const PrintBackupModule: React.FC = () => {
             </div>
 
             <div>
-              <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                 متن پاورقی فاکتور
               </label>
               <textarea

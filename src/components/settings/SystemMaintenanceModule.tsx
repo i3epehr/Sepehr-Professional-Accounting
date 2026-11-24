@@ -22,6 +22,7 @@ import { api } from '../../lib/api.ts';
 import { formatCurrency, toPersianDigits } from '../../lib/formatters.ts';
 import { StandardModal } from '../common/StandardModal.tsx';
 import { OnboardingWizardModal } from '../common/OnboardingWizardModal.tsx';
+import { APP_VERSION } from '../../version.ts';
 
 export const SystemMaintenanceModule: React.FC = () => {
   // Update state
@@ -256,7 +257,7 @@ export const SystemMaintenanceModule: React.FC = () => {
             <span>به‌روزرسانی آنلاین نرم‌افزار از گیت‌هاب (Online Auto-Update)</span>
           </div>
           <span className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-0.5 rounded-full font-mono font-bold">
-            v1.1.1
+            v{APP_VERSION}
           </span>
         </div>
 

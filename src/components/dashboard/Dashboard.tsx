@@ -117,7 +117,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
             </span>
             <span className="text-xs text-indigo-200">{currentUser?.fullName}</span>
           </div>
-          <h2 className="text-lg lg:text-xl font-black">پیشخوان مدیریت مالی و خزانه‌داری</h2>
+          <h2 className="text-lg lg:text-xl font-black">پیشخوان مدیریت مالی</h2>
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
@@ -523,7 +523,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
 
               {targetStatus === 'collected' && (
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     حساب بانکی مقصد / مبدأ *
                   </label>
                   <select
@@ -544,7 +544,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
 
               {targetStatus === 'transferred' && (
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     گیرنده چک (تأمین‌کننده / شخص ثالث) جهت کسر بدهی *
                   </label>
                   <select
@@ -565,7 +565,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
               )}
 
               <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">توضیحات سند</label>
+                <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">توضیحات سند</label>
                 <input
                   type="text"
                   value={transitionDesc}

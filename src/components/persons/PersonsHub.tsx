@@ -593,7 +593,7 @@ export const PersonsHub: React.FC = () => {
         <div className="space-y-4">
           <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="w-full sm:w-80">
-              <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+              <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                 انتخاب طرف حساب جهت مشاهده معین مالی:
               </label>
               <select
@@ -764,7 +764,7 @@ export const PersonsHub: React.FC = () => {
           <form onSubmit={handleSavePerson} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   نام و نام خانوادگی / عنوان تجاری *
                 </label>
                 <input
@@ -778,7 +778,7 @@ export const PersonsHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   کد حساب *
                 </label>
                 <input
@@ -791,7 +791,7 @@ export const PersonsHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   نوع طرف حساب *
                 </label>
                 <select
@@ -808,7 +808,7 @@ export const PersonsHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   گروه شخص
                 </label>
                 <select
@@ -832,7 +832,7 @@ export const PersonsHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   شماره همراه (موبایل)
                 </label>
                 <input
@@ -845,7 +845,7 @@ export const PersonsHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   سقف اعتبار مجاز نسیه (ریال)
                 </label>
                 <input
@@ -874,7 +874,7 @@ export const PersonsHub: React.FC = () => {
               {showAdvancedSpecs && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 pt-3 border-t border-slate-200 dark:border-slate-700 animate-in fade-in">
                   <div>
-                    <label className="block text-[10.5px] font-bold text-slate-500 mb-1">کد ملی / شناسه ملی</label>
+                    <label className="block text-[10.5px] font-medium text-slate-500 mb-1">کد ملی / شناسه ملی</label>
                     <input
                       type="text"
                       value={editingPerson.nationalCode || ''}
@@ -883,7 +883,7 @@ export const PersonsHub: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10.5px] font-bold text-slate-500 mb-1">کد اقتصادی</label>
+                    <label className="block text-[10.5px] font-medium text-slate-500 mb-1">کد اقتصادی</label>
                     <input
                       type="text"
                       value={editingPerson.economicCode || ''}
@@ -892,7 +892,7 @@ export const PersonsHub: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10.5px] font-bold text-slate-500 mb-1">تلفن ثابت</label>
+                    <label className="block text-[10.5px] font-medium text-slate-500 mb-1">تلفن ثابت</label>
                     <input
                       type="text"
                       value={editingPerson.phone || ''}
@@ -901,7 +901,7 @@ export const PersonsHub: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[10.5px] font-bold text-slate-500 mb-1">آدرس کامل</label>
+                    <label className="block text-[10.5px] font-medium text-slate-500 mb-1">آدرس کامل</label>
                     <input
                       type="text"
                       value={editingPerson.address || ''}
@@ -945,7 +945,7 @@ export const PersonsHub: React.FC = () => {
         >
           <div className="space-y-3">
             <div>
-              <label className="block text-[11px] font-bold mb-1">نام گروه *</label>
+              <label className="block text-[11px] font-medium mb-1">نام گروه *</label>
               <input
                 type="text"
                 value={newGroupName}
@@ -955,7 +955,7 @@ export const PersonsHub: React.FC = () => {
               />
             </div>
             <div>
-              <label className="block text-[11px] font-bold mb-1">سقف اعتبار پیش‌فرض (ریال)</label>
+              <label className="block text-[11px] font-medium mb-1">سقف اعتبار پیش‌فرض (ریال)</label>
               <input
                 type="number"
                 min="0"

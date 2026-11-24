@@ -17,6 +17,7 @@ export const SettingsModule: React.FC = () => {
   const { settings, updateSettings } = useSettings();
   const [formData, setFormData] = useState<StoreSettings>({
     ...settings,
+    currency: 'ریال',
     guildName: settings.guildName || 'صنف بازرگانی و فروشگاهی',
     economicCode: settings.economicCode || '۴۱۱۵۶۷۸۹۲۳۴۱',
     nationalId: settings.nationalId || '۱۰۱۰۲۸۳۴۷۵۶',
@@ -31,7 +32,7 @@ export const SettingsModule: React.FC = () => {
     e.preventDefault();
     try {
       setIsSaving(true);
-      await updateSettings(formData);
+      await updateSettings({ ...formData, currency: 'ریال' });
       setSavedSuccess(true);
       setTimeout(() => setSavedSuccess(false), 3500);
     } catch (err: any) {
@@ -55,7 +56,7 @@ export const SettingsModule: React.FC = () => {
             </span>
           </div>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-            ویرایش نام صنف و رسته شغلی، کد اقتصادی، واحد پولی، قواعد انبار و تنظیمات چاپ فاکتور
+            ویرایش نام صنف و رسته شغلی، کد اقتصادی، واحد پولی رسمی (ریال)، قواعد انبار و تنظیمات چاپ فاکتور
           </p>
         </div>
 
@@ -97,7 +98,7 @@ export const SettingsModule: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 نام فروشگاه / تابلوی تجاری *
               </label>
               <input
@@ -105,12 +106,12 @@ export const SettingsModule: React.FC = () => {
                 required
                 value={formData.storeName}
                 onChange={(e) => setFormData({ ...formData, storeName: e.target.value })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold focus:outline-indigo-500"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold focus:outline-indigo-500 text-slate-800 dark:text-slate-100"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 نام صنف و رسته شغلی *
               </label>
               <input
@@ -124,19 +125,19 @@ export const SettingsModule: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 صاحب امتیاز / مدیر فروشگاه
               </label>
               <input
                 type="text"
                 value={formData.storeOwner}
                 onChange={(e) => setFormData({ ...formData, storeOwner: e.target.value })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs focus:outline-indigo-500"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-100 focus:outline-indigo-500"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 کد اقتصادی (شماره اقتصادی ۱۲ رقمی)
               </label>
               <input
@@ -144,12 +145,12 @@ export const SettingsModule: React.FC = () => {
                 value={formData.economicCode || ''}
                 onChange={(e) => setFormData({ ...formData, economicCode: e.target.value })}
                 placeholder="مثال: ۴۱۱۵۶۷۸۹۲۳۴۱"
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold text-slate-800 dark:text-slate-100"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 شناسه ملی / کد ملی صاحب کسب‌وکار
               </label>
               <input
@@ -157,12 +158,12 @@ export const SettingsModule: React.FC = () => {
                 value={formData.nationalId || ''}
                 onChange={(e) => setFormData({ ...formData, nationalId: e.target.value })}
                 placeholder="مثال: ۱۰۱۰۲۸۳۴۷۵۶"
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold text-slate-800 dark:text-slate-100"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 کد پستی ۱۰ رقمی
               </label>
               <input
@@ -170,43 +171,43 @@ export const SettingsModule: React.FC = () => {
                 value={formData.postalCode || ''}
                 onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
                 placeholder="مثال: ۱۱۶۳۸۴۷۲۹۱"
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold text-slate-800 dark:text-slate-100"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 تلفن تماس فروشگاه
               </label>
               <input
                 type="text"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold text-slate-800 dark:text-slate-100"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 سال مالی فعال سیستم
               </label>
               <input
                 type="text"
                 value={formData.activeFiscalYear}
                 onChange={(e) => setFormData({ ...formData, activeFiscalYear: e.target.value })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold text-slate-800 dark:text-slate-100"
               />
             </div>
 
             <div className="sm:col-span-2 lg:col-span-1">
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 آدرس کامل واحد صنفی
               </label>
               <input
                 type="text"
                 value={formData.address}
                 onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-medium text-slate-800 dark:text-slate-100"
               />
             </div>
           </div>
@@ -220,22 +221,21 @@ export const SettingsModule: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* واحد پول ثابت رسمی: ریال */}
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                واحد پول سیستم
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
+                واحد پول رسمی سیستم
               </label>
-              <select
-                value={formData.currency}
-                onChange={(e) => setFormData({ ...formData, currency: e.target.value as 'تومان' | 'ریال' })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold"
-              >
-                <option value="ریال">ریال (واحد رسمی - پیش‌فرض سیستم)</option>
-                <option value="تومان">تومان</option>
-              </select>
+              <div className="w-full px-3 py-2 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-indigo-700 dark:text-indigo-300 flex items-center justify-between">
+                <span>ریال (واحد رسمی کشوری)</span>
+                <span className="text-[10px] bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-2 py-0.5 rounded-md font-bold">
+                  پیش‌فرض قطعی
+                </span>
+              </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 درصد ارزش افزوده پیش‌فرض
               </label>
               <input
@@ -244,18 +244,18 @@ export const SettingsModule: React.FC = () => {
                 max="100"
                 value={formData.defaultTaxPercent}
                 onChange={(e) => setFormData({ ...formData, defaultTaxPercent: parseFloat(e.target.value) || 0 })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold text-slate-800 dark:text-slate-100"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 سیاست فروش با کسری موجودی
               </label>
               <select
                 value={formData.allowNegativeStock ? 'true' : 'false'}
                 onChange={(e) => setFormData({ ...formData, allowNegativeStock: e.target.value === 'true' })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-100"
               >
                 <option value="false">غیرمجاز (جلوگیری از صدور فاکتور در کمبود کالا)</option>
                 <option value="true">مجاز (ثبت با هشدار کسری انبار)</option>
@@ -263,13 +263,13 @@ export const SettingsModule: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 کنترل توازن بدهکار/بستانکار اسناد
               </label>
               <select
                 value={formData.requireBalancedVouchers ? 'true' : 'false'}
                 onChange={(e) => setFormData({ ...formData, requireBalancedVouchers: e.target.value === 'true' })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-100"
               >
                 <option value="true">اجباری (جلوگیری از ثبت سند نامتوازن)</option>
                 <option value="false">اختیاری (ثبت پیش‌نویس موقت)</option>
@@ -297,26 +297,26 @@ export const SettingsModule: React.FC = () => {
 
           <div className="space-y-4">
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 شعار یا عبارت بالای فاکتور (Header Note)
               </label>
               <input
                 type="text"
                 value={formData.printHeaderNote}
                 onChange={(e) => setFormData({ ...formData, printHeaderNote: e.target.value })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs text-slate-800 dark:text-slate-100"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                 شرایط تسویه و پیام تشکر پایین فاکتور (Footer Note)
               </label>
               <textarea
                 rows={2}
                 value={formData.printFooterNote}
                 onChange={(e) => setFormData({ ...formData, printFooterNote: e.target.value })}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs text-slate-800 dark:text-slate-100"
               />
             </div>
           </div>

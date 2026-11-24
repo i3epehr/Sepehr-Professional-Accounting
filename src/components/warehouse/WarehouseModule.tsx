@@ -644,7 +644,7 @@ export const WarehouseModule: React.FC = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
-                سیستم جامع خرید و انبارداری خرازی
+                سیستم جامع خرید و انبارداری
                 <span className="text-xs font-normal px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-950/80 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
                   اتصال به پایگاه داده دیسک و تراکنش‌های اتمیک
                 </span>
@@ -907,7 +907,7 @@ export const WarehouseModule: React.FC = () => {
           {/* Filters & Product Selector Bar */}
           <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
             <div className="flex-1 flex flex-col sm:flex-row items-center gap-3">
-              <label className="text-xs font-semibold text-slate-600 dark:text-slate-300 whitespace-nowrap">
+              <label className="text-xs font-semibold text-slate-600 dark:text-slate-400 whitespace-nowrap">
                 انتخاب کالا جهت مشاهده کاردکس:
               </label>
               <select
@@ -924,7 +924,7 @@ export const WarehouseModule: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <label className="text-xs font-semibold text-slate-600 dark:text-slate-300 whitespace-nowrap">
+              <label className="text-xs font-semibold text-slate-600 dark:text-slate-400 whitespace-nowrap">
                 فیلتر انبار:
               </label>
               <select
@@ -1155,7 +1155,7 @@ export const WarehouseModule: React.FC = () => {
                 <div>
                   <h3 className="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-2">
                     <Truck className="w-4 h-4 text-emerald-600" />
-                    رسیدهای ورود بار و محموله‌های ملزومات خرازی
+                    رسیدهای ورود بار و محموله‌ها
                   </h3>
                   <p className="text-[11px] text-slate-500 mt-0.5">
                     اسناد با وضعیت پیش‌نویس بر موجودی اثر ندارند؛ پس از بازبینی و ثبت قطعی، گردش رسمی انبار و کاردکس ایجاد می‌شود.
@@ -2036,7 +2036,7 @@ export const WarehouseModule: React.FC = () => {
             <form onSubmit={handleSaveReceipt} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-xs font-semibold text-slate-600 dark:text-slate-300 block mb-1">تأمین‌کننده طرف حساب:</label>
+                  <label className="text-xs font-semibold text-slate-600 dark:text-slate-400 block mb-1">تأمین‌کننده طرف حساب:</label>
                   <select
                     value={receiptForm.supplierId}
                     onChange={(e) => setReceiptForm({ ...receiptForm, supplierId: e.target.value })}
@@ -2052,7 +2052,7 @@ export const WarehouseModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-slate-600 dark:text-slate-300 block mb-1">انبار مقصد ورود کالا:</label>
+                  <label className="text-xs font-semibold text-slate-600 dark:text-slate-400 block mb-1">انبار مقصد ورود کالا:</label>
                   <select
                     value={receiptForm.warehouseId}
                     onChange={(e) => setReceiptForm({ ...receiptForm, warehouseId: e.target.value })}
@@ -2068,7 +2068,7 @@ export const WarehouseModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-slate-600 dark:text-slate-300 block mb-1">نام راننده و شماره بارنامه:</label>
+                  <label className="text-xs font-semibold text-slate-600 dark:text-slate-400 block mb-1">نام راننده و شماره بارنامه:</label>
                   <input
                     type="text"
                     value={receiptForm.driverName}
@@ -2079,7 +2079,7 @@ export const WarehouseModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-slate-600 dark:text-slate-300 block mb-1">وضعیت ثبت سند:</label>
+                  <label className="text-xs font-semibold text-slate-600 dark:text-slate-400 block mb-1">وضعیت ثبت سند:</label>
                   <select
                     value={receiptForm.status}
                     onChange={(e) => setReceiptForm({ ...receiptForm, status: e.target.value as any })}
@@ -2173,7 +2173,7 @@ export const WarehouseModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-300 block mb-1">توضیحات رسید انبار:</label>
+                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400 block mb-1">توضیحات رسید انبار:</label>
                 <input
                   type="text"
                   value={receiptForm.notes}
@@ -2211,7 +2211,7 @@ export const WarehouseModule: React.FC = () => {
           <div className="bg-white dark:bg-slate-800 rounded-2xl max-w-xl w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-700">
             <h2 className="text-base font-bold text-slate-800 dark:text-white flex items-center gap-2 mb-4 border-b pb-3 border-slate-100 dark:border-slate-700">
               <FileText className="w-5 h-5 text-indigo-600" />
-              ثبت پیش‌فاکتور خرید / استعلام ملزومات خرازی
+              ثبت پیش‌فاکتور خرید / استعلام کالا
             </h2>
 
             <form onSubmit={handleSaveProforma} className="space-y-4">

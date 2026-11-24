@@ -150,7 +150,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                     نام فروشگاه / شرکت *
                   </label>
                   <input
@@ -163,7 +163,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                     نام و نام خانوادگی مدیر
                   </label>
                   <input
@@ -176,7 +176,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                     صنف و حوزه فعالیت
                   </label>
                   <input
@@ -189,7 +189,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                     تلفن تماس
                   </label>
                   <input
@@ -202,7 +202,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                     نشانی فروشگاه (جهت درج در سربرگ فاکتور)
                   </label>
                   <input
@@ -227,7 +227,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                     سال مالی جاری *
                   </label>
                   <input
@@ -243,7 +243,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">
                     نام انبار اصلی
                   </label>
                   <input
@@ -278,7 +278,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                   <h4 className="font-bold text-xs text-slate-800 dark:text-white">۱. صندوق نقدی</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     <div>
-                      <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">
+                      <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                         عنوان صندوق:
                       </label>
                       <input
@@ -289,7 +289,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">
+                      <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                         موجودی اول دوره (ریال):
                       </label>
                       <input
@@ -306,7 +306,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                   <h4 className="font-bold text-xs text-slate-800 dark:text-white">۲. حساب بانکی / کارتخوان</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                     <div>
-                      <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">
+                      <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                         عنوان حساب / بانک:
                       </label>
                       <input
@@ -317,7 +317,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">
+                      <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                         شماره حساب / شبا:
                       </label>
                       <input
@@ -329,7 +329,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">
+                      <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                         موجودی اول دوره (ریال):
                       </label>
                       <input

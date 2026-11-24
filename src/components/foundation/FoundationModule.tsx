@@ -590,7 +590,7 @@ export const FoundationModule: React.FC = () => {
               </div>
               <div className="p-3.5 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 space-y-1">
                 <span className="font-bold text-emerald-900 dark:text-emerald-200 block">
-                  ✓ انبارداری چندواحدی خرازی، خرید، فروش و مرجوعی (عملیاتی ۱۰۰٪)
+                  ✓ انبارداری چندواحدی، خرید، فروش و مرجوعی (عملیاتی ۱۰۰٪)
                 </span>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                   ضرایب تبدیل واحد (رول به متر، قواره به عدد)، کاردکس تعدادی/ریالی، سرشکن هزینه‌های جانبی باربری روی بهای تمام‌شده، تسویه ترکیبی و کنترل سقف مجاز مرجوعی.

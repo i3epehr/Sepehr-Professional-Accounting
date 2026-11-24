@@ -798,7 +798,7 @@ export const AccountingHub: React.FC = () => {
           <div className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[11px] font-bold mb-1">تاریخ سند *</label>
+                <label className="block text-[11px] font-medium mb-1">تاریخ سند *</label>
                 <input
                   type="text"
                   value={voucherDate}
@@ -808,7 +808,7 @@ export const AccountingHub: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold mb-1">شرح کلی سند *</label>
+                <label className="block text-[11px] font-medium mb-1">شرح کلی سند *</label>
                 <input
                   type="text"
                   value={voucherDesc}
@@ -1015,7 +1015,7 @@ export const AccountingHub: React.FC = () => {
             </p>
 
             <div>
-              <label className="block text-[11px] font-bold mb-1">دلیل اصلاح یا معکوس‌سازی *</label>
+              <label className="block text-[11px] font-medium mb-1">دلیل اصلاح یا معکوس‌سازی *</label>
               <textarea
                 rows={3}
                 value={reverseReason}

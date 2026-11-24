@@ -571,7 +571,7 @@ export const ReturnsModule: React.FC = () => {
               {/* Type, Original Invoice, Warehouse */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-slate-50 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-200 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     نوع مرجوعی
                   </label>
                   <select
@@ -590,7 +590,7 @@ export const ReturnsModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-200 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     فاکتور اصلی مرجع <span className="text-rose-600">*</span>
                   </label>
                   <select
@@ -609,7 +609,7 @@ export const ReturnsModule: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-700 dark:text-slate-200 mb-1">
+                  <label className="block font-medium text-slate-500 dark:text-slate-400 mb-1">
                     انبار مقصد / مبدا
                   </label>
                   <select
@@ -787,7 +787,7 @@ export const ReturnsModule: React.FC = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                     <div>
-                      <label className="block text-slate-600 dark:text-slate-300 mb-1">
+                      <label className="block text-slate-600 dark:text-slate-400 mb-1">
                         روش استرداد وجه / تسویه
                       </label>
                       <select

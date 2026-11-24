@@ -788,7 +788,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
             {/* Counterparty Selector with Searchable Modal */}
             <div className="lg:col-span-4">
               <div className="flex items-center justify-between mb-1">
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400">
                   {currentDocConfig.partyLabel}
                 </label>
               </div>
@@ -947,7 +947,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
             {/* Warehouse & Date */}
             <div className="lg:col-span-3 grid grid-cols-2 gap-2">
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   انبار مرتبط
                 </label>
                 <select
@@ -963,7 +963,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
                 </select>
               </div>
               <div>
-                <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                   تاریخ سند
                 </label>
                 <input
@@ -982,7 +982,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-12 gap-2.5 items-start">
             {/* Product Selector with Direct Advanced Catalog Trigger */}
             <div className="md:col-span-5">
-              <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1.5">
+              <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1.5">
                 انتخاب کالا از کاتالوگ
               </label>
               <button
@@ -1008,7 +1008,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
 
             {/* Quantity */}
             <div className="md:col-span-1">
-              <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1.5">
+              <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1.5">
                 مقدار
               </label>
               <input
@@ -1023,7 +1023,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
 
             {/* Unit */}
             <div className="md:col-span-1">
-              <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1.5">
+              <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1.5">
                 واحد
               </label>
               <select
@@ -1041,7 +1041,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
 
             {/* Unit Price (aligned on the same row) */}
             <div className="md:col-span-3">
-              <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1.5">
+              <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1.5">
                 فی واحد (ریال)
               </label>
               {currentDocConfig.usesPurchasePrice && !confidential.canViewPurchasePrice ? (
@@ -1062,7 +1062,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
 
             {/* Row Discount */}
             <div className="md:col-span-1">
-              <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1.5">
+              <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1.5">
                 تخفیف
               </label>
               <input
@@ -1076,7 +1076,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
 
             {/* Add Button */}
             <div className="md:col-span-1">
-              <label className="block text-[11px] font-bold text-transparent mb-1.5 select-none pointer-events-none">
+              <label className="block text-[11px] font-medium text-transparent mb-1.5 select-none pointer-events-none">
                 عملیات
               </label>
               <button
@@ -1328,7 +1328,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
                 <div>
-                  <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                  <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                     تخفیف کلی سند (ریال)
                   </label>
                   <input
@@ -1340,7 +1340,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                  <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                     هزینه حمل / باربری (ریال)
                   </label>
                   <input
@@ -1352,7 +1352,7 @@ export const InvoicesModule: React.FC<InvoicesModuleProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                  <label className="block text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1">
                     توضیحات سند
                   </label>
                   <input

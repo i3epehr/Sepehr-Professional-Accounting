@@ -248,7 +248,7 @@ export const DatabaseStatusModal: React.FC<DatabaseStatusModalProps> = ({ isOpen
                 <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
                   <div className="flex items-center gap-2 font-bold text-indigo-900 mb-1">
                     <Table className="w-4 h-4 text-indigo-600" />
-                    <span>products (کالاهای تخصصی خرازی)</span>
+                    <span>products (کالاها و خدمات فروشگاه)</span>
                   </div>
                   <p className="text-[11px] text-slate-500">
                     شامل: barcode, code, name, color, size, material, brand, base_unit_id, current_stock, min_stock_alert, purchase_price, retail_price, wholesale_price, min_allowed_price
