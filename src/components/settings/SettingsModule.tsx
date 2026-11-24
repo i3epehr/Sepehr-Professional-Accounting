@@ -1,31 +1,16 @@
 import React, { useState } from 'react';
 import {
-  Settings,
   Store,
   DollarSign,
   Printer,
-  Calendar,
   CheckCircle2,
   Save,
-  Building,
   Sliders,
-  ShieldCheck,
-  FileText,
-  Hash,
-  AlertTriangle,
-  Trash2,
-  RefreshCw,
   Sparkles,
-  Terminal,
-  Download,
-  GitBranch,
 } from 'lucide-react';
 import { useSettings } from '../../context/SettingsContext.tsx';
 import { StoreSettings } from '../../types/index.ts';
 import { InvoiceCustomizerModal } from '../invoices/InvoiceCustomizerModal.tsx';
-import { toPersianDigits } from '../../lib/formatters.ts';
-import { api } from '../../lib/api.ts';
-import { StandardModal } from '../common/StandardModal.tsx';
 import { OnboardingWizardModal } from '../common/OnboardingWizardModal.tsx';
 
 export const SettingsModule: React.FC = () => {
@@ -41,91 +26,6 @@ export const SettingsModule: React.FC = () => {
   const [savedSuccess, setSavedSuccess] = useState<boolean>(false);
   const [isCustomizerOpen, setIsCustomizerOpen] = useState<boolean>(false);
   const [isOnboardingOpen, setIsOnboardingOpen] = useState<boolean>(false);
-  const [isResetConfirmOpen, setIsResetConfirmOpen] = useState<boolean>(false);
-  const [isResetting, setIsResetting] = useState<boolean>(false);
-  const [isUpdating, setIsUpdating] = useState<boolean>(false);
-  const [updateMsg, setUpdateMsg] = useState<string | null>(null);
-  const [updateInfo, setUpdateInfo] = useState<{
-    hasUpdates: boolean;
-    behindCount: number;
-    commits: string[];
-    branch?: string;
-  } | null>(null);
-
-  const handleExecuteFactoryReset = async () => {
-    try {
-      setIsResetting(true);
-      await api.factoryReset();
-      setIsResetConfirmOpen(false);
-      setIsOnboardingOpen(true);
-      setSavedSuccess(true);
-      alert('نرم‌افزار با موفقیت صفر شد. اکنون می‌توانید اطلاعات مشتری را گام به گام وارد فرمایید.');
-    } catch (err: any) {
-      alert(`خطا در پاکسازی برنامه: ${err.message}`);
-    } finally {
-      setIsResetting(false);
-    }
-  };
-
-  const handleCheckUpdates = async () => {
-    try {
-      setIsUpdating(true);
-      setUpdateMsg('در حال اتصال به گیت‌هاب و بررسی نسخه‌های جدید...');
-      const res = await api.checkUpdates();
-      if (!res.success) {
-        setUpdateMsg(res.message || 'خطا در بررسی به‌روزرسانی.');
-        setUpdateInfo(null);
-      } else if (res.hasUpdates) {
-        setUpdateInfo({
-          hasUpdates: true,
-          behindCount: res.behindCount,
-          commits: res.commits,
-          branch: res.branch,
-        });
-        setUpdateMsg(`تعداد ${toPersianDigits(res.behindCount)} کامیت جدید در گیت‌هاب یافت شد. جهت اعمال، دکمه «نصب به‌روزرسانی آنلاین» را بزنید.`);
-      } else {
-        setUpdateInfo({
-          hasUpdates: false,
-          behindCount: 0,
-          commits: [],
-          branch: res.branch,
-        });
-        setUpdateMsg(res.message || 'نرم‌افزار شما کاملاً به‌روز است و هیچ تغییری وجود ندارد.');
-      }
-    } catch (e: any) {
-      setUpdateMsg(`خطا در بررسی به‌روزرسانی: ${e.message}`);
-      setUpdateInfo(null);
-    } finally {
-      setIsUpdating(false);
-    }
-  };
-
-  const handleTriggerOnlineUpdate = async () => {
-    try {
-      setIsUpdating(true);
-      setUpdateMsg('در حال تهیه نسخه پشتیبان از دیتابیس، دریافت تغییرات از گیت‌هاب و بیلد برنامه... لطفاً شکیبا باشید.');
-      const res = await api.triggerUpdate();
-      if (res.success) {
-        let count = 5;
-        setUpdateMsg(`✅ ${res.message} صفحه تا ${toPersianDigits(count)} ثانیه دیگر به‌روزرسانی می‌شود...`);
-        const timer = setInterval(() => {
-          count -= 1;
-          if (count > 0) {
-            setUpdateMsg(`✅ به‌روزرسانی با موفقیت انجام شد و دیتابیس حفظ گردید. صفحه تا ${toPersianDigits(count)} ثانیه دیگر رفرش می‌شود...`);
-          } else {
-            clearInterval(timer);
-            window.location.reload();
-          }
-        }, 1000);
-      } else {
-        setUpdateMsg(`خطا: ${res.message}`);
-        setIsUpdating(false);
-      }
-    } catch (e: any) {
-      setUpdateMsg(`خطا در فرآیند به‌روزرسانی: ${e.message}`);
-      setIsUpdating(false);
-    }
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -147,7 +47,7 @@ export const SettingsModule: React.FC = () => {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs">
         <div>
           <div className="flex items-center gap-2">
-            <h2 className="text-lg font-black text-slate-800 dark:text-white">
+            <h2 className="text-base sm:text-lg font-black text-slate-800 dark:text-white">
               تنظیمات عمومی، مشخصات صنف و قواعد مالی
             </h2>
             <span className="text-xs bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 px-2.5 py-0.5 rounded-full font-bold border border-indigo-100 dark:border-indigo-800">
@@ -216,7 +116,7 @@ export const SettingsModule: React.FC = () => {
               <input
                 type="text"
                 required
-                placeholder="مثال: صنف خرازی، خیاطی و ملزومات پوشاک"
+                placeholder="مثال: صنف بازرگانی، فروشگاهی و ملزومات"
                 value={formData.guildName || ''}
                 onChange={(e) => setFormData({ ...formData, guildName: e.target.value })}
                 className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-indigo-600 dark:text-indigo-400 focus:outline-indigo-500"
@@ -435,109 +335,6 @@ export const SettingsModule: React.FC = () => {
         </div>
       </form>
 
-      {/* ۴. به‌روزرسانی آنلاین از گیت‌هاب و اجرای خودکار در پس‌زمینه */}
-      <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs space-y-4">
-        <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
-          <div className="flex items-center gap-2 text-slate-800 dark:text-slate-100 font-bold text-sm">
-            <Terminal className="w-5 h-5 text-indigo-600" />
-            <span>به‌روزرسانی آنلاین از گیت‌هاب و راه‌اندازی پس‌زمینه (Online Auto-Update & Silent Launcher)</span>
-          </div>
-          <span className="text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full font-mono">
-            v1.1.0-sepehr
-          </span>
-        </div>
-
-        <p className="text-xs text-slate-500 leading-relaxed">
-          نرم‌افزار با اسکریپت <code>start_server.bat</code> دارای حلقه خودکار (Auto-Restart Loop) است و با <code>run_hidden.vbs</code> بدون نمایش پنجره سیاه ترمینال در پس‌زمینه اجرا می‌شود. با کلیک بر روی دکمه به‌روزرسانی، ابتدا نسخه پشتیبان اضطراری از داده‌ها در پوشه <code>backups/</code> ذخیره شده، سپس تغییرات جدید از گیت‌هاب دریافت و بیلد می‌شود و سرور به صورت خودکار بدون نیاز به بستن دستی (End Task) مجدداً اجرا می‌گردد.
-        </p>
-
-        {updateMsg && (
-          <div className="p-3 bg-indigo-50 dark:bg-indigo-950/40 text-indigo-900 dark:text-indigo-200 rounded-xl text-xs font-bold border border-indigo-200 dark:border-indigo-800 space-y-2">
-            <div>{updateMsg}</div>
-            {updateInfo && updateInfo.commits && updateInfo.commits.length > 0 && (
-              <div className="mt-2 pt-2 border-t border-indigo-200 dark:border-indigo-800">
-                <div className="text-[11px] text-slate-600 dark:text-slate-400 mb-1">لیست تغییرات آماده نصب:</div>
-                <ul className="space-y-1 font-mono text-[10.5px]">
-                  {updateInfo.commits.map((c, i) => (
-                    <li key={i} className="flex items-center gap-1.5 text-indigo-700 dark:text-indigo-300">
-                      <GitBranch className="w-3 h-3 shrink-0" />
-                      <span>{c}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        )}
-
-        <div className="flex flex-wrap gap-2 pt-1">
-          <button
-            type="button"
-            disabled={isUpdating}
-            onClick={handleCheckUpdates}
-            className="px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer transition shadow-xs disabled:opacity-50"
-          >
-            <RefreshCw className={`w-4 h-4 ${isUpdating ? 'animate-spin' : ''}`} />
-            <span>بررسی تغییرات جدید در گیت‌هاب</span>
-          </button>
-
-          <button
-            type="button"
-            disabled={isUpdating}
-            onClick={handleTriggerOnlineUpdate}
-            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer transition shadow-xs disabled:opacity-50"
-          >
-            <Download className="w-4 h-4" />
-            <span>نصب به‌روزرسانی آنلاین و راه‌اندازی مجدد</span>
-          </button>
-        </div>
-
-        {/* راهنمای استارتاپ ویندوز */}
-        <div className="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/80 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300 space-y-1.5">
-          <div className="font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-            <Sparkles className="w-4 h-4 text-amber-500" />
-            <span>راهنمای اجرای خودکار و مخفی با روشن شدن ویندوز (Windows Startup):</span>
-          </div>
-          <ol className="list-decimal list-inside space-y-1 text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
-            <li>کلیدهای <kbd className="px-1.5 py-0.5 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded text-xs font-mono">Win + R</kbd> را بفشارید و عبارت <code className="text-indigo-600 dark:text-indigo-400 font-bold">shell:startup</code> را تایپ و اینتر بزنید.</li>
-            <li>از فایل <code className="text-indigo-600 dark:text-indigo-400 font-bold">run_hidden.vbs</code> در ریشه این پروژه یک میانبر (Shortcut) بسازید و آن را داخل پوشه بازشده قرار دهید.</li>
-            <li>از این پس با روشن شدن کامپیوتر، سرور برنامه به صورت ۱۰۰٪ مخفی و در پس‌زمینه آماده به کار خواهد بود.</li>
-          </ol>
-        </div>
-      </div>
-
-      {/* ۵. صفر کردن و پاکسازی برنامه جهت تحویل به مشتری (Factory Reset) */}
-      <div className="bg-rose-50/50 dark:bg-rose-950/20 p-6 rounded-2xl border border-rose-200 dark:border-rose-900/60 shadow-xs space-y-4">
-        <div className="flex items-center gap-2 text-rose-700 dark:text-rose-400 font-bold text-sm border-b border-rose-200 dark:border-rose-900/60 pb-3">
-          <AlertTriangle className="w-5 h-5 text-rose-600" />
-          <span>صفر کردن برنامه جهت تحویل به مشتری (Factory Reset)</span>
-        </div>
-
-        <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-          این گزینه کلیه فاکتورهای آزمایشی، اسناد دوبل حسابداری، دریافت/پرداخت‌ها، گردش کاردکس کالاها، چک‌ها و مانده طرف‌حساب‌ها را کاملاً صفر نموده و سامانه را به وضعیت راه‌اندازی اولیه جهت ورود مرحله به مرحله اطلاعات فروشگاه مشتری بازمی‌گرداند.
-        </p>
-
-        <div className="flex items-center justify-between pt-1">
-          <button
-            type="button"
-            onClick={() => setIsResetConfirmOpen(true)}
-            className="px-4 py-2.5 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer transition shadow-xs"
-          >
-            <Trash2 className="w-4 h-4" />
-            <span>صفر کردن کامل برنامه و شروع ویزارد</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setIsOnboardingOpen(true)}
-            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 cursor-pointer shadow-xs"
-          >
-            <Sparkles className="w-4 h-4 text-amber-300" />
-            <span>راه‌اندازی گام به گام (ویزارد)</span>
-          </button>
-        </div>
-      </div>
-
       {/* Invoice Customizer Modal */}
       <InvoiceCustomizerModal
         isOpen={isCustomizerOpen}
@@ -558,44 +355,6 @@ export const SettingsModule: React.FC = () => {
           setTimeout(() => setSavedSuccess(false), 4000);
         }}
       />
-
-      {/* Reset Confirmation Modal */}
-      {isResetConfirmOpen && (
-        <StandardModal
-          isOpen={isResetConfirmOpen}
-          onClose={() => setIsResetConfirmOpen(false)}
-          title="هشدار: صفر کردن کامل پایگاه داده و تحویل به مشتری"
-          subtitle="کلیه فاکتورها، کاردکس‌ها، چک‌ها و اسناد دوبل حسابداری جاری حذف خواهند شد."
-          icon={AlertTriangle}
-          maxWidth="md"
-          footer={
-            <div className="flex items-center justify-end gap-2 w-full">
-              <button
-                type="button"
-                onClick={() => setIsResetConfirmOpen(false)}
-                className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold cursor-pointer"
-              >
-                انصراف
-              </button>
-              <button
-                type="button"
-                disabled={isResetting}
-                onClick={handleExecuteFactoryReset}
-                className="px-5 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
-              >
-                <Trash2 className="w-4 h-4" />
-                <span>{isResetting ? 'در حال پاکسازی...' : 'تایید و صفر کردن قطعی برنامه'}</span>
-              </button>
-            </div>
-          }
-        >
-          <div className="space-y-3 p-1 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-            <p>
-              آیا از صفر کردن کامل نرم‌افزار اطمینان دارید؟ با تایید این عملیات، تمامی تراکنش‌های تستی پاک شده و پنجره راهنمای گام به گام جهت دریافت اطلاعات مشتری باز خواهد شد.
-            </p>
-          </div>
-        </StandardModal>
-      )}
     </div>
   );
 };
